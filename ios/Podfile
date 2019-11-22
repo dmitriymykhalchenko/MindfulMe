@@ -36,6 +36,7 @@ target 'MindfulMe' do
 
   pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
 
+
   target 'MindfulMeTests' do
     inherit! :search_paths
     # Pods for testing
