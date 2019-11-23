@@ -34,24 +34,36 @@
 // }
 // //export default createAppContainer(TabNavigator);
 
-
 import React from 'react';
-import { Button, View, Text, FlatList, StyleSheet, ActivityIndicator, Image,TouchableOpacity} from 'react-native';
+import {
+  Button,
+  View,
+  Text,
+  FlatList,
+  StyleSheet,
+  ActivityIndicator,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import HomeScreen from './client/screens/HomeScreen';
 import SettingScreen from './client/screens/SettingScreen';
 import ProfileScreen from './client/screens/ProfileScreen';
-// import {incrementCounter, decrementCounter} from './client/redux/actions';
-// import {connect} from 'react-redux';
-
-
+import MeditationScreen from './client/screens/Meditation';
+import SosScreen from './client/screens/Sos';
+import KouchScreen from './client/screens/Kouch';
+import {incrementCounter, decrementCounter} from './client/redux/actions';
+import {connect} from 'react-redux';
 
 const RootStack = createStackNavigator(
   {
     Home: HomeScreen,
     Profile: ProfileScreen,
-    Setting:SettingScreen,
+    Setting: SettingScreen,
+    MeditationScreen: MeditationScreen,
+    SosScreen:SosScreen,
+    KouchScreen:KouchScreen
   },
   {
     initialRouteName: 'Home',

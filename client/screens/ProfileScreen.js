@@ -1,34 +1,129 @@
 import React from 'react';
-import { Text, View,SafeAreaView,TouchableOpacity,Image } from 'react-native';
-import {  createAppContainer } from 'react-navigation';
-import { createBottomTabNavigator } from 'react-navigation-tabs';
-import { h, w, isIphoneX } from '../../constants'
+import {Text, View, SafeAreaView, TouchableOpacity, Image} from 'react-native';
+import {createAppContainer} from 'react-navigation';
+import {createBottomTabNavigator} from 'react-navigation-tabs';
+import {h, w, isIphoneX} from '../../constants';
 import Icon from '../styles/icon';
 
- export default class ProfileScreen extends React.Component {
-   static navigationOptions = ({navigation, navigationOptions}) => {
-     return {
-       tabBarOptions: {
-         labelStyle: {
-           fontSize: 12,
-         },
-         tabStyle: {
-           width: 10,
-         },
-         style: {
-           //backgroundColor: 'red',
-         },
-       },
-     };
-   };
+export default class ProfileScreen extends React.Component {
+  static navigationOptions = ({navigation, navigationOptions}) => {
+    return {
+      title: 'Profile',
+      headerRight: (
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Setting')}
+          style={{
+            marginRight: 20,
+            paddingLeft: 20,
+            alignSelf: 'center',
+            justifyContent: 'center',
+          }}>
+          <Image source={Icon.SETTINGS} style={{width: 25, height: 25}} />
+        </TouchableOpacity>
+      ),
+      tabBarOptions: {
+        labelStyle: {
+          fontSize: 12,
+        },
+        tabStyle: {
+          width: 10,
+        },
+        style: {
+          //backgroundColor: 'red',
+        },
+      },
+    };
+  };
   render() {
     return (
-      <SafeAreaView style={{flex: 1, backgroundColor: 'rgb(24,12,53)'}}>
+      <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
+        <View
+          style={{
+            marginTop: 30,
+            marginBottom: 50,
+            flex: 1 / 4,
+            backgroundColor: 'white',
+            alignItems: 'center',
+          }}>
+          <Image
+            source={Icon.USERPROFILE}
+            style={{
+              width: 130,
+              height: 130,
+              tintColor: 'gray',
+              backgroundColor: 'lightgray',
+              borderRadius: 75,
+              borderWidth: 25,
+              borderColor: 'lightgray',
+            }}
+          />
+        </View>
+
+        <View
+          style={{
+            flex: 1 / 5,
+            flexDirection: 'row',
+            backgroundColor: 'white',
+            width: '100%',
+          }}>
+          <View style={{width: '33%', alignItems: 'center'}}>
+            <Text
+              numberOfLines={2}
+              style={{
+                color: 'black',
+                width: 90,
+                fontWeight: '600',
+                fontSize: 14,
+              }}>
+              General time of meditation
+            </Text>
+            <Text
+              numberOfLines={2}
+              style={{marginTop: 10, color: 'black', textAlign: 'center'}}>
+              60
+            </Text>
+          </View>
+          <View style={{width: '33%', alignItems: 'center'}}>
+            <Text style={{color: 'black', fontWeight: '600', fontSize: 14}}>
+              Streak
+            </Text>
+            <Text
+              numberOfLines={2}
+              style={{marginTop: 25, color: 'black', textAlign: 'center'}}>
+              10
+            </Text>
+          </View>
+          <View style={{width: '33%', alignItems: 'center'}}>
+            <Text
+              numberOfLines={2}
+              style={{
+                color: 'black',
+                width: 90,
+                fontWeight: '600',
+                fontSize: 14,
+              }}>
+              1 session - meditate
+            </Text>
+            <Text
+              numberOfLines={2}
+              style={{marginTop: 10, color: 'black', textAlign: 'center'}}>
+              5
+            </Text>
+          </View>
+        </View>
+        <TouchableOpacity style={{margin:20}}>
+          <Text style={{color: 'black',fontWeight: '600', fontSize: 18}}>Invite</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={{margin:20}}>
+          <Text style={{color: 'black',fontWeight: '600', fontSize: 18}}>Community?</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={{margin:20}}>
+          <Text style={{color: 'black',fontWeight: '600', fontSize: 18}}>Background</Text>
+        </TouchableOpacity>
         <View
           style={{
             flex: 1,
             flexDirection: 'row',
-            margin: 5,
             backgroundColor: 'rgb(46,33,80)',
             position: 'absolute',
             //  top: 0 ,

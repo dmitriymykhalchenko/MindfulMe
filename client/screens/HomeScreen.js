@@ -120,10 +120,13 @@ import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import Icon from '../styles/icon';
 import {h, w, isIphoneX} from '../../constants';
-export default class HomeScreen extends React.Component {
+import {incrementCounter, decrementCounter} from '../redux/actions';
+
+import {connect} from 'react-redux';
+class HomeScreen extends React.Component {
   static navigationOptions = ({navigation, navigationOptions}) => {
     return {
-      title: 'Медитации',
+      //title: 'Медитации',
       headerStyle: {
         backgroundColor: 'rgb(24,12,53)',
         elevation: 0,
@@ -182,23 +185,111 @@ export default class HomeScreen extends React.Component {
     const {navigation} = this.props;
     const DATA = this.state.dataSource;
     return (
-      <SafeAreaView style={{flex: 1, backgroundColor: 'rgb(24,12,53)'}}>
+      <SafeAreaView style={{flex: 1, backgroundColor: 'rgb(24,12,53)',}}>
+      <View style = {{flex: 1/3.5, backgroundColor:'transparent',justifyContent:'space-around',}}>
+      <Text style = {{marginLeft:20,paddingBottom:10,color:'white', fontSize:20}}>Медитации</Text>
+      <FlatList
+      horizontal={true}
+      style ={{flexDirection:'row'}}
+            data={DATA}
+            renderItem={({item, index}) => (
+              <View style={{}}>
+                <TouchableOpacity
+                  onPress={() =>
+                    this.props.navigation.navigate('MeditationScreen', {
+                      dataSource: item,
+                    })
+                  }>
+                  <Image style={styles.image} source={{uri: item.urls.small}} />
+                </TouchableOpacity>
+                <Text style={styles.text}>{item.user.name}</Text>
+              </View>
+            )}
+            keyExtractor={({id}, index) => id}
+          />
+      </View>
+      <View style = {{flex: 1/3.5,marginTop:10, backgroundColor:'transparent',justifyContent:'space-around',}}>
+      <Text style = {{marginLeft:20,paddingTop:5,paddingBottom:10,color:'white', fontSize:20}}>SOS прогрaммы</Text>
+      <FlatList
+      horizontal={true}
+      style ={{flexDirection:'row'}}
+            data={DATA}
+            renderItem={({item, index}) => (
+              <View style={{}}>
+                <TouchableOpacity
+                  onPress={() =>
+                    this.props.navigation.navigate('SosScreen', {
+                      dataSource: item,
+                    })
+                  }>
+                  <Image style={styles.image} source={{uri: item.urls.small}} />
+                </TouchableOpacity>
+                <Text style={styles.text}>{item.user.name}</Text>
+              </View>
+            )}
+            keyExtractor={({id}, index) => id}
+          />
+      </View>
+      <View style = {{flex: 1/3.7,marginTop:10, justifyContent:'space-around',backgroundColor:'transparent'}}>
+      <Text style = {{marginLeft:20,paddingTop:5,paddingBottom:10,color:'white', fontSize:20,}}>Коуч Сессии</Text>
+      <FlatList
+      horizontal={true}
+      style ={{flexDirection:'row'}}
+            data={DATA}
+            renderItem={({item, index}) => (
+              <View style={{}}>
+                <TouchableOpacity
+                  onPress={() =>
+                    this.props.navigation.navigate('KouchScreen', {
+                      dataSource: item,
+                    })
+                  }>
+                  <Image style={styles.image} source={{uri: item.urls.small}} />
+                </TouchableOpacity>
+                <Text style={styles.text}>{item.user.name}</Text>
+              </View>
+            )}
+            keyExtractor={({id}, index) => id}
+          />
+      </View>
+        {/*<View
+          style={{
+            flex: 1/3,
+            backgroundColor: 'white',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'row',
+          }}>
+          <TouchableOpacity
+            style={{margin: 20, padding: 20, backgroundColor: 'lightblue'}}
+            onPress={() => this.props.incrementCounter()}>
+            <Text>+1</Text>
+          </TouchableOpacity>
+
+          <Text style={{margin: 20}}>{'Counter = ' + this.props.counter}</Text>
+
+          <TouchableOpacity
+            style={{margin: 20, padding: 20, backgroundColor: 'lightblue'}}
+            onPress={() => this.props.decrementCounter()}>
+            <Text>-1</Text>
+          </TouchableOpacity>
+        </View>*/}
         <View
           style={{
             flex: 1,
             flexDirection: 'row',
-            margin: 5,
+
             backgroundColor: 'rgb(46,33,80)',
             position: 'absolute',
             //  top: 0 ,
             //left: 0,
             height: '10%', // висота
-            width: '100%',
+            width: w,
             bottom: 0,
           }}>
           <TouchableOpacity
             style={{
-              width: '33%',
+              width: '34%',
               height: '140%',
               backgroundColor: 'rgb(24,12,53)',
               justifyContent: 'center',
@@ -215,7 +306,7 @@ export default class HomeScreen extends React.Component {
           </TouchableOpacity>
           <TouchableOpacity
             style={{
-              width: '33%',
+              width: '34%',
               height: '140%',
               backgroundColor: 'rgb(46,33,80)',
               justifyContent: 'center',
@@ -232,7 +323,7 @@ export default class HomeScreen extends React.Component {
           </TouchableOpacity>
           <TouchableOpacity
             style={{
-              width: '33%',
+              width: '34%',
               height: '140%',
               backgroundColor: 'rgb(46,33,80)',
               justifyContent: 'center',
@@ -288,14 +379,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: 160,
-    height: 220,
+    width: 115,
+    height: 80,
     margin: 10,
     justifyContent: 'center',
+    borderRadius:5,
   },
   text: {
     width: 100,
     textAlign: 'center',
+    color:'white'
   },
   detView: {
     flex: 1,
@@ -317,3 +410,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+function mapStateToProps(state) {
+  return {
+    counter: state.appData.get('counter'),
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    incrementCounter() {
+      dispatch(incrementCounter());
+    },
+    decrementCounter() {
+      dispatch(decrementCounter());
+    },
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(HomeScreen);

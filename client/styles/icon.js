@@ -3,5 +3,7 @@ export default Icons = {
   USERHOME: require('../img/user.png'),
   HOMES: require('../img/HOMES.png'),
   FAVORITE: require('../img/icon.png'),
+  USERPROFILE: require('../img/user-profile.png'),
+  SETTINGS: require('../img/settings.png'),
 
 }
