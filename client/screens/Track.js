@@ -1,18 +1,42 @@
 import React from 'react';
-import {Text, View, SafeAreaView,ScrollView, TouchableOpacity,StyleSheet,FlatList, Image} from 'react-native';
+import {
+  Text,
+  View,
+  SafeAreaView,
+  ScrollView,
+  TouchableOpacity,
+  StyleSheet,
+  FlatList,
+  Image,
+} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {h, w, isIphoneX} from '../../constants';
 import Icon from '../styles/icon';
 
 import {connect} from 'react-redux';
-class MeditationScreen extends React.Component {
+class TrackScreen extends React.Component {
   static navigationOptions = ({navigation, navigationOptions}) => {
     return {
-      title: 'Коуч сесии',
+      title: 'Track',
       headerBackTitleStyle: {
-      color: 'transparent',
-    },
+        color: 'transparent',
+      },
+      headerRight: (
+        <TouchableOpacity
+          onPress={() => navigation.navigate('')}
+          style={{
+            marginRight: 20,
+            paddingLeft: 20,
+            alignSelf: 'center',
+            justifyContent: 'center',
+          }}>
+          <Image
+            source={Icon.DOWNLOAD}
+            style={{width: 20, height: 20, tintColor: 'white'}}
+          />
+        </TouchableOpacity>
+      ),
       headerStyle: {
         backgroundColor: 'rgb(24,12,53)',
         elevation: 0,
@@ -23,7 +47,7 @@ class MeditationScreen extends React.Component {
         flex: 1,
         textAlign: 'center',
       },
-      headerRight: <TouchableOpacity style={{height: 60, width: 60}} />,
+      //headerRight: <TouchableOpacity style={{height: 60, width: 60}} />,
       // tabBarOptions: {
       //   labelStyle: {
       //     fontSize: 12,
@@ -43,6 +67,7 @@ class MeditationScreen extends React.Component {
     this.state = {
       isLoading: true,
       dataSource: [],
+      heart:false,
     };
   }
 
@@ -72,39 +97,62 @@ class MeditationScreen extends React.Component {
     const DATA = this.state.dataSource;
     return (
       <SafeAreaView style={{flex: 1, backgroundColor: 'rgb(24,12,53)'}}>
-      <View style = {{flex: 1, backgroundColor:'red',flexWrap:'wrap',
-flexWrap:'wrap',}}>
-      <FlatList
-      horizontal={true}
-      style ={{}}
+        <View
+          style={{
+            flex: 1,
+            backgroundColor: 'red',
+
+          }}>
+          <FlatList
+            //horizontal={true}
+            style={{}}
             data={DATA}
             renderItem={({item, index}) => (
-              <View style={{width:w/2,marginTop:30,padding:20,}}>
+              <View
+                style={{
+                  width: w,
+                  marginTop: 15,
+                  marginLeft: 15,
+                  justifyContent: 'space-between',
+                  flexDirection: 'row',
+                  width:w/1.1,
+                  //backgroundColor:'gold'
+                }}>
                 <TouchableOpacity
+                  // style={{
+                  //   justifyContent: 'center',
+                  //   alignSelf: 'flex-start',
+                  // }}
                   onPress={() =>
-                    this.props.navigation.navigate('TrackScreen', {
+                    this.props.navigation.navigate('Details', {
                       dataSource: item,
                     })
                   }>
-                  <Image style={{width: 150,
-                  height: 220,
-                  margin: 10,
-                  justifyContent: 'center',
-                  borderRadius:5,}} source={{uri: item.urls.small}} />
-                  <Image style={{width: 150,
-                  height: 220,
-                  margin: 10,
-                  justifyContent: 'center',
-                  borderRadius:5,}} source={{uri: item.urls.small}} />
+                  <Text
+                    style={{color: 'white',fontSize:18}}>
+                    {index + 1}. {item.user.name}
+                  </Text>
                 </TouchableOpacity>
-                <Text style={{width: 100,
-                textAlign: 'center',
-                color:'white'}}>{item.user.name}</Text>
+                <TouchableOpacity
+                onPress={() => this.setState({heart:!this.state.heart})
+                  }
+
+                  // style={{
+                  //   justifyContent: 'flex-start',
+                  //   alignSelf: 'flex-end',
+                  //   paddingRight: 30,
+                  // }}
+                  >
+                  <Image
+                    source={Icon.HEART}
+                    style={!!this.state.heart ? styles.heartblack :styles.heart}
+                  />
+                </TouchableOpacity>
               </View>
             )}
             keyExtractor={({id}, index) => id}
           />
-      </View>
+        </View>
 
         <View
           style={{
@@ -195,6 +243,8 @@ flexWrap:'wrap',}}>
   }
 }
 const styles = StyleSheet.create({
+  heart:{width: 20, height: 20, tintColor: 'white'},
+  heartblack:{width: 20, height: 20, tintColor: 'black'},
   container: {
     flex: 1,
     alignItems: 'center',
@@ -209,19 +259,19 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     justifyContent: 'center',
     alignItems: 'center',
-    width:'50%'
+    width: '50%',
   },
   image: {
     width: 115,
     height: 80,
     margin: 10,
     justifyContent: 'center',
-    borderRadius:5,
+    borderRadius: 5,
   },
   text: {
     width: 100,
     textAlign: 'center',
-    color:'white'
+    color: 'white',
   },
   detView: {
     flex: 1,
@@ -264,4 +314,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(MeditationScreen);
+)(TrackScreen);

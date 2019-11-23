@@ -53,6 +53,7 @@ import ProfileScreen from './client/screens/ProfileScreen';
 import MeditationScreen from './client/screens/Meditation';
 import SosScreen from './client/screens/Sos';
 import KouchScreen from './client/screens/Kouch';
+import TrackScreen from './client/screens/Track';
 import {incrementCounter, decrementCounter} from './client/redux/actions';
 import {connect} from 'react-redux';
 
@@ -63,7 +64,8 @@ const RootStack = createStackNavigator(
     Setting: SettingScreen,
     MeditationScreen: MeditationScreen,
     SosScreen:SosScreen,
-    KouchScreen:KouchScreen
+    KouchScreen:KouchScreen,
+    TrackScreen:TrackScreen
   },
   {
     initialRouteName: 'Home',

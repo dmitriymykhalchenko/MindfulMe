@@ -68,7 +68,7 @@ export default class SettingScreen extends React.Component {
           <Text style={{color: 'white', fontSize: 18, padding: 10}}>
             Account Info
           </Text>
-          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={{flexDirection: 'row',marginRight:15, justifyContent: 'space-between'}}>
             <Text style={{color: 'white', fontSize: 18, padding: 15}}>
               Animated Scenes
             </Text>
@@ -78,25 +78,25 @@ export default class SettingScreen extends React.Component {
               value={this.state.showPass}
             />
           </View>
-          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <Text style={{color: 'white', fontSize: 18, padding: 15}}>
-            Do Not Disturb
-          </Text>
-          <Switch
-            style={{backgroundColor: 'transparent', color: 'red'}}
-            onValueChange={this.toggleSwitch}
-            value={this.state.showPass}
-          />
+          <View style={{flexDirection: 'row',marginRight:15, justifyContent: 'space-between'}}>
+            <Text style={{color: 'white', fontSize: 18, padding: 15}}>
+              Do Not Disturb
+            </Text>
+            <Switch
+              style={{backgroundColor: 'transparent', color: 'red'}}
+              onValueChange={this.toggleSwitch}
+              value={this.state.showPass}
+            />
           </View>
-          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <Text style={{color: 'white', fontSize: 18, padding: 15}}>
-            Reminder
-          </Text>
-          <Switch
-            style={{backgroundColor: 'transparent', color: 'red'}}
-            onValueChange={this.toggleSwitch}
-            value={this.state.showPass}
-          />
+          <View style={{flexDirection: 'row',marginRight:15, justifyContent: 'space-between'}}>
+            <Text style={{color: 'white', fontSize: 18, padding: 15}}>
+              Reminder
+            </Text>
+            <Switch
+              style={{backgroundColor: 'transparent', color: 'red'}}
+              onValueChange={this.toggleSwitch}
+              value={this.state.showPass}
+            />
           </View>
           <Text style={{color: 'white', fontSize: 18, padding: 15}}>
             Help & Support
