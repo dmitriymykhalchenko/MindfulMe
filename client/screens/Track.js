@@ -100,7 +100,7 @@ class TrackScreen extends React.Component {
         <View
           style={{
             flex: 1,
-            backgroundColor: 'red',
+            backgroundColor: 'transparent',
 
           }}>
           <FlatList
@@ -124,7 +124,7 @@ class TrackScreen extends React.Component {
                   //   alignSelf: 'flex-start',
                   // }}
                   onPress={() =>
-                    this.props.navigation.navigate('Details', {
+                    this.props.navigation.navigate('PlayerScreen', {
                       dataSource: item,
                     })
                   }>

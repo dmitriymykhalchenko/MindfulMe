@@ -72,7 +72,7 @@ class MeditationScreen extends React.Component {
     const DATA = this.state.dataSource;
     return (
       <SafeAreaView style={{flex: 1, backgroundColor: 'rgb(24,12,53)'}}>
-      <View style = {{flex: 1, backgroundColor:'red',flexWrap:'wrap',}}>
+      <View style = {{flex: 1, backgroundColor:'transparent',flexWrap:'wrap',}}>
       <FlatList
       horizontal={true}
       style ={{flexWrap:'wrap',flexShrink:2,}}
