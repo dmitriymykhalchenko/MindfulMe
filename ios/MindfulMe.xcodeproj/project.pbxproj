@@ -16,6 +16,11 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* MindfulMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MindfulMeTests.m */; };
+		39109668677142A3A012A168 /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */; };
+		462C1D71238AAC880072A63C /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */; };
+		462C1D72238AAC880072A63C /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */; };
+		462C1D73238AAC880072A63C /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */; };
+		46938BCC238AC7D5006891DD /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46938BCB238AC7D5006891DD /* dummy.swift */; };
 		86907A55AE20ABD4DC1774FB /* libPods-MindfulMe-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A03B155F452436DA48E01FC2 /* libPods-MindfulMe-tvOS.a */; };
 		8A94BFC8EEC39E78CC2874E1 /* libPods-MindfulMeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4A42F5FFF9A335DF904D62 /* libPods-MindfulMeTests.a */; };
 		B589B82DCB49F63728AEE690 /* libPods-MindfulMe-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC9D22203557D1A365A38B3 /* libPods-MindfulMe-tvOSTests.a */; };
@@ -54,7 +59,10 @@
 		21FE67AC07BD0CC6A2AC1774 /* Pods-MindfulMe-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-MindfulMe-tvOSTests/Pods-MindfulMe-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* MindfulMe-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindfulMe-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* MindfulMe-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MindfulMe-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46938BCB238AC7D5006891DD /* dummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
+		46938BD0238AEA61006891DD /* MindfulMe-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MindfulMe-Bridging-Header.h"; path = "../MindfulMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		4C931A2CB32E1D3506F262A5 /* libPods-MindfulMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MindfulMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; path = RNPlaceholder.swift; sourceTree = "<group>"; };
 		5B4D5278B22B75F4E043C4D9 /* Pods-MindfulMe-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MindfulMe-tvOSTests/Pods-MindfulMe-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		95882835AD5186F5DF201473 /* Pods-MindfulMe-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-MindfulMe-tvOS/Pods-MindfulMe-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		95DDB17D04525D2300B9C147 /* Pods-MindfulMe-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe-tvOS.release.xcconfig"; path = "Target Support Files/Pods-MindfulMe-tvOS/Pods-MindfulMe-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +133,8 @@
 		13B07FAE1A68108700A75B9A /* MindfulMe */ = {
 			isa = PBXGroup;
 			children = (
+				46938BD0238AEA61006891DD /* MindfulMe-Bridging-Header.h */,
+				46938BCB238AC7D5006891DD /* dummy.swift */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -149,6 +159,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		462C1D74238AAC880072A63C /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +184,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				9EB7BB18B6DEA15A9BE8F407 /* Pods */,
 				88DEA2C98AD944198CDEEB44 /* Resources */,
+				462C1D74238AAC880072A63C /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -188,7 +207,6 @@
 			children = (
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		9EB7BB18B6DEA15A9BE8F407 /* Pods */ = {
@@ -203,7 +221,6 @@
 				C80B12E35F5DB6910184ABED /* Pods-MindfulMeTests.debug.xcconfig */,
 				F372531377906126956FF406 /* Pods-MindfulMeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -317,6 +334,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -530,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E356F31AD99517003FC87E /* MindfulMeTests.m in Sources */,
+				462C1D71238AAC880072A63C /* RNPlaceholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +558,8 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				46938BCC238AC7D5006891DD /* dummy.swift in Sources */,
+				39109668677142A3A012A168 /* RNPlaceholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +569,7 @@
 			files = (
 				2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */,
 				2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */,
+				462C1D72238AAC880072A63C /* RNPlaceholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DCD954D1E0B4F2C00145EB5 /* MindfulMeTests.m in Sources */,
+				462C1D73238AAC880072A63C /* RNPlaceholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +619,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MindfulMeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -606,6 +630,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindfulMe.app/MindfulMe";
 			};
 			name = Debug;
@@ -616,6 +641,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MindfulMeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -626,6 +652,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindfulMe.app/MindfulMe";
 			};
 			name = Release;
@@ -637,6 +664,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MindfulMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -644,8 +672,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.MindfulMe;
 				PRODUCT_NAME = MindfulMe;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -656,6 +686,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MindfulMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -663,8 +694,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.MindfulMe;
 				PRODUCT_NAME = MindfulMe;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -682,6 +715,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "MindfulMe-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -692,6 +726,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.MindfulMe-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -710,6 +745,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "MindfulMe-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -720,6 +756,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.MindfulMe-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -737,6 +774,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "MindfulMe-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -747,6 +785,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.MindfulMe-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindfulMe-tvOS.app/MindfulMe-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
@@ -764,6 +803,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "MindfulMe-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -774,6 +814,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.MindfulMe-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindfulMe-tvOS.app/MindfulMe-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
@@ -829,6 +870,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -874,6 +916,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

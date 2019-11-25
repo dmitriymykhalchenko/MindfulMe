@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:MindfulMe.xcodeproj">
+      location = "group:/Users/dmytromykhalchenko/MindfulMe/ios/MindfulMe.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

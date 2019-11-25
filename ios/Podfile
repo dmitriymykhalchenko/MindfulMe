@@ -1,4 +1,6 @@
-platform :ios, '9.0'
+platform :ios, '10.0'
+
+
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
 target 'MindfulMe' do
@@ -30,6 +32,7 @@ target 'MindfulMe' do
   pod 'ReactCommon/turbomodule/core', :path => "../node_modules/react-native/ReactCommon"
   pod 'Yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
 
+
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
@@ -53,4 +56,14 @@ target 'MindfulMe-tvOS' do
     # Pods for testing
   end
 
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if ['react-native-track-player'].include? target.name
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '5'
+      end
+    end
+  end
 end
