@@ -3,8 +3,8 @@ platform :ios, '10.0'
 
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'MindfulMe' do
-  # Pods for MindfulMe
+target 'MindSelf' do
+  # Pods for MindSelf
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -40,7 +40,7 @@ target 'MindfulMe' do
   pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
 
 
-  target 'MindfulMeTests' do
+  target 'MindSelfTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -48,10 +48,10 @@ target 'MindfulMe' do
   use_native_modules!
 end
 
-target 'MindfulMe-tvOS' do
-  # Pods for MindfulMe-tvOS
+target 'MindSelf-tvOS' do
+  # Pods for MindSelf-tvOS
 
-  target 'MindfulMe-tvOSTests' do
+  target 'MindSelf-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

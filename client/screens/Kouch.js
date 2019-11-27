@@ -9,7 +9,7 @@ import {connect} from 'react-redux';
 class MeditationScreen extends React.Component {
   static navigationOptions = ({navigation, navigationOptions}) => {
     return {
-      title: 'Коуч сесии',
+      title: 'Мастер-классы',
       headerBackTitleStyle: {
       color: 'transparent',
     },

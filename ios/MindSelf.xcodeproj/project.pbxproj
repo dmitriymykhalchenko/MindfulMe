@@ -12,6 +12,8 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1852DF52900234066BD81D79 /* libPods-MindSelfTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2464533A46184D22D299C97B /* libPods-MindSelfTests.a */; };
+		29E80D1DB3B37C12F45E622B /* libPods-MindSelf-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD89B084FB5A4A5AD1CB3AC /* libPods-MindSelf-tvOSTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -21,10 +23,11 @@
 		462C1D72238AAC880072A63C /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */; };
 		462C1D73238AAC880072A63C /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */; };
 		46938BCC238AC7D5006891DD /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46938BCB238AC7D5006891DD /* dummy.swift */; };
-		86907A55AE20ABD4DC1774FB /* libPods-MindfulMe-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A03B155F452436DA48E01FC2 /* libPods-MindfulMe-tvOS.a */; };
-		8A94BFC8EEC39E78CC2874E1 /* libPods-MindfulMeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4A42F5FFF9A335DF904D62 /* libPods-MindfulMeTests.a */; };
-		B589B82DCB49F63728AEE690 /* libPods-MindfulMe-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC9D22203557D1A365A38B3 /* libPods-MindfulMe-tvOSTests.a */; };
-		D97A75BAB7298EBA76E07219 /* libPods-MindfulMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C931A2CB32E1D3506F262A5 /* libPods-MindfulMe.a */; };
+		46BD9EAC238C1ADE0018299B /* SFUIText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46BD9EAB238C1ADD0018299B /* SFUIText-Regular.otf */; };
+		46BD9EB2238C29F00018299B /* SFUIText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46BD9EB1238C29F00018299B /* SFUIText-Bold.otf */; };
+		46BD9EB4238C2A0E0018299B /* SFUIText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46BD9EB3238C2A0E0018299B /* SFUIText-Light.otf */; };
+		E52ED0076306D829D50A48F5 /* libPods-MindSelf-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0162B37C84C0283C8BA71D04 /* libPods-MindSelf-tvOS.a */; };
+		F1504889FBD9E23BD880DCAC /* libPods-MindSelf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6CED487E550E5CF0FE94E0 /* libPods-MindSelf.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,32 +49,43 @@
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* MindfulMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindfulMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* MindSelfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindSelfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* MindfulMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MindfulMeTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* MindfulMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindfulMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0162B37C84C0283C8BA71D04 /* libPods-MindSelf-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MindSelf-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02337F1F3870DEFFD295B1D9 /* Pods-MindSelf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSelf.release.xcconfig"; path = "Target Support Files/Pods-MindSelf/Pods-MindSelf.release.xcconfig"; sourceTree = "<group>"; };
+		0309679FB2B688A64F70484C /* Pods-MindSelf-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSelf-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MindSelf-tvOSTests/Pods-MindSelf-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		05D4ABA491562B3249E82C43 /* Pods-MindSelf-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSelf-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-MindSelf-tvOSTests/Pods-MindSelf-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* MindSelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindSelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MindfulMe/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MindfulMe/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MindfulMe/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MindfulMe/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MindfulMe/main.m; sourceTree = "<group>"; };
+		1F6CED487E550E5CF0FE94E0 /* libPods-MindSelf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MindSelf.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21FE67AC07BD0CC6A2AC1774 /* Pods-MindfulMe-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-MindfulMe-tvOSTests/Pods-MindfulMe-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* MindfulMe-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindfulMe-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* MindfulMe-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MindfulMe-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2464533A46184D22D299C97B /* libPods-MindSelfTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MindSelfTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* MindSelf-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindSelf-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* MindSelf-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MindSelf-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46938BCB238AC7D5006891DD /* dummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 		46938BD0238AEA61006891DD /* MindfulMe-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MindfulMe-Bridging-Header.h"; path = "../MindfulMe-Bridging-Header.h"; sourceTree = "<group>"; };
-		4C931A2CB32E1D3506F262A5 /* libPods-MindfulMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MindfulMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46BD9EAB238C1ADD0018299B /* SFUIText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Regular.otf"; sourceTree = "<group>"; };
+		46BD9EB1238C29F00018299B /* SFUIText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Bold.otf"; sourceTree = "<group>"; };
+		46BD9EB3238C2A0E0018299B /* SFUIText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Light.otf"; sourceTree = "<group>"; };
+		4BD89B084FB5A4A5AD1CB3AC /* libPods-MindSelf-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MindSelf-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; path = RNPlaceholder.swift; sourceTree = "<group>"; };
+		4FD2818A2DCEC28D7F0F8832 /* Pods-MindSelfTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSelfTests.debug.xcconfig"; path = "Target Support Files/Pods-MindSelfTests/Pods-MindSelfTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A2685464BB7851E8D6057E2 /* Pods-MindSelf-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSelf-tvOS.release.xcconfig"; path = "Target Support Files/Pods-MindSelf-tvOS/Pods-MindSelf-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		5B4D5278B22B75F4E043C4D9 /* Pods-MindfulMe-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MindfulMe-tvOSTests/Pods-MindfulMe-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		95882835AD5186F5DF201473 /* Pods-MindfulMe-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-MindfulMe-tvOS/Pods-MindfulMe-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		95DDB17D04525D2300B9C147 /* Pods-MindfulMe-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe-tvOS.release.xcconfig"; path = "Target Support Files/Pods-MindfulMe-tvOS/Pods-MindfulMe-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		9EC9D22203557D1A365A38B3 /* libPods-MindfulMe-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MindfulMe-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A03B155F452436DA48E01FC2 /* libPods-MindfulMe-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MindfulMe-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A348FF22A8573293B9D11F /* Pods-MindfulMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe.release.xcconfig"; path = "Target Support Files/Pods-MindfulMe/Pods-MindfulMe.release.xcconfig"; sourceTree = "<group>"; };
-		AB4A42F5FFF9A335DF904D62 /* libPods-MindfulMeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MindfulMeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C517D3AA6CCD242A55B886DF /* Pods-MindSelf-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSelf-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-MindSelf-tvOS/Pods-MindSelf-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C51BF284E693CDB68DE56BC2 /* Pods-MindfulMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe.debug.xcconfig"; path = "Target Support Files/Pods-MindfulMe/Pods-MindfulMe.debug.xcconfig"; sourceTree = "<group>"; };
 		C80B12E35F5DB6910184ABED /* Pods-MindfulMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMeTests.debug.xcconfig"; path = "Target Support Files/Pods-MindfulMeTests/Pods-MindfulMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBEC1473E91D229E97A451B0 /* Pods-MindSelfTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSelfTests.release.xcconfig"; path = "Target Support Files/Pods-MindSelfTests/Pods-MindSelfTests.release.xcconfig"; sourceTree = "<group>"; };
+		DAF5E52EE97FEC0942CEF111 /* Pods-MindSelf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSelf.debug.xcconfig"; path = "Target Support Files/Pods-MindSelf/Pods-MindSelf.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F372531377906126956FF406 /* Pods-MindfulMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMeTests.release.xcconfig"; path = "Target Support Files/Pods-MindfulMeTests/Pods-MindfulMeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A94BFC8EEC39E78CC2874E1 /* libPods-MindfulMeTests.a in Frameworks */,
+				1852DF52900234066BD81D79 /* libPods-MindSelfTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D97A75BAB7298EBA76E07219 /* libPods-MindfulMe.a in Frameworks */,
+				F1504889FBD9E23BD880DCAC /* libPods-MindSelf.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86907A55AE20ABD4DC1774FB /* libPods-MindfulMe-tvOS.a in Frameworks */,
+				E52ED0076306D829D50A48F5 /* libPods-MindSelf-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B589B82DCB49F63728AEE690 /* libPods-MindfulMe-tvOSTests.a in Frameworks */,
+				29E80D1DB3B37C12F45E622B /* libPods-MindSelf-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +152,9 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				46BD9EB3238C2A0E0018299B /* SFUIText-Light.otf */,
+				46BD9EB1238C29F00018299B /* SFUIText-Bold.otf */,
+				46BD9EAB238C1ADD0018299B /* SFUIText-Regular.otf */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
@@ -151,10 +168,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				4C931A2CB32E1D3506F262A5 /* libPods-MindfulMe.a */,
-				A03B155F452436DA48E01FC2 /* libPods-MindfulMe-tvOS.a */,
-				9EC9D22203557D1A365A38B3 /* libPods-MindfulMe-tvOSTests.a */,
-				AB4A42F5FFF9A335DF904D62 /* libPods-MindfulMeTests.a */,
+				1F6CED487E550E5CF0FE94E0 /* libPods-MindSelf.a */,
+				0162B37C84C0283C8BA71D04 /* libPods-MindSelf-tvOS.a */,
+				4BD89B084FB5A4A5AD1CB3AC /* libPods-MindSelf-tvOSTests.a */,
+				2464533A46184D22D299C97B /* libPods-MindSelfTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,10 +211,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* MindfulMe.app */,
-				00E356EE1AD99517003FC87E /* MindfulMeTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* MindfulMe-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* MindfulMe-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* MindSelf.app */,
+				00E356EE1AD99517003FC87E /* MindSelfTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* MindSelf-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* MindSelf-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,6 +237,14 @@
 				21FE67AC07BD0CC6A2AC1774 /* Pods-MindfulMe-tvOSTests.release.xcconfig */,
 				C80B12E35F5DB6910184ABED /* Pods-MindfulMeTests.debug.xcconfig */,
 				F372531377906126956FF406 /* Pods-MindfulMeTests.release.xcconfig */,
+				DAF5E52EE97FEC0942CEF111 /* Pods-MindSelf.debug.xcconfig */,
+				02337F1F3870DEFFD295B1D9 /* Pods-MindSelf.release.xcconfig */,
+				C517D3AA6CCD242A55B886DF /* Pods-MindSelf-tvOS.debug.xcconfig */,
+				5A2685464BB7851E8D6057E2 /* Pods-MindSelf-tvOS.release.xcconfig */,
+				0309679FB2B688A64F70484C /* Pods-MindSelf-tvOSTests.debug.xcconfig */,
+				05D4ABA491562B3249E82C43 /* Pods-MindSelf-tvOSTests.release.xcconfig */,
+				4FD2818A2DCEC28D7F0F8832 /* Pods-MindSelfTests.debug.xcconfig */,
+				CBEC1473E91D229E97A451B0 /* Pods-MindSelfTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -227,9 +252,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* MindfulMeTests */ = {
+		00E356ED1AD99517003FC87E /* MindSelfTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MindfulMeTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MindSelfTests" */;
 			buildPhases = (
 				1C7F4C627E75F1076E86017C /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -241,14 +266,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = MindfulMeTests;
+			name = MindSelfTests;
 			productName = MindfulMeTests;
-			productReference = 00E356EE1AD99517003FC87E /* MindfulMeTests.xctest */;
+			productReference = 00E356EE1AD99517003FC87E /* MindSelfTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* MindfulMe */ = {
+		13B07F861A680F5B00A75B9A /* MindSelf */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MindfulMe" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MindSelf" */;
 			buildPhases = (
 				FBEFA097C915A703FE0270D3 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -261,14 +286,14 @@
 			);
 			dependencies = (
 			);
-			name = MindfulMe;
+			name = MindSelf;
 			productName = MindfulMe;
-			productReference = 13B07F961A680F5B00A75B9A /* MindfulMe.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* MindSelf.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* MindfulMe-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* MindSelf-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "MindfulMe-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "MindSelf-tvOS" */;
 			buildPhases = (
 				4555153AACB1BBF18158FF7F /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -281,14 +306,14 @@
 			);
 			dependencies = (
 			);
-			name = "MindfulMe-tvOS";
+			name = "MindSelf-tvOS";
 			productName = "MindfulMe-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* MindfulMe-tvOS.app */;
+			productReference = 2D02E47B1E0B4A5D006451C7 /* MindSelf-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* MindfulMe-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* MindSelf-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "MindfulMe-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "MindSelf-tvOSTests" */;
 			buildPhases = (
 				BBAB7EE712FB7D424C353CC2 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -300,9 +325,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "MindfulMe-tvOSTests";
+			name = "MindSelf-tvOSTests";
 			productName = "MindfulMe-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* MindfulMe-tvOSTests.xctest */;
+			productReference = 2D02E4901E0B4A5D006451C7 /* MindSelf-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -329,7 +354,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MindfulMe" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MindSelf" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -343,10 +368,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* MindfulMe */,
-				00E356ED1AD99517003FC87E /* MindfulMeTests */,
-				2D02E47A1E0B4A5D006451C7 /* MindfulMe-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* MindfulMe-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* MindSelf */,
+				00E356ED1AD99517003FC87E /* MindSelfTests */,
+				2D02E47A1E0B4A5D006451C7 /* MindSelf-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* MindSelf-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -363,8 +388,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BD9EB4238C2A0E0018299B /* SFUIText-Light.otf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				46BD9EB2238C29F00018299B /* SFUIText-Bold.otf in Resources */,
+				46BD9EAC238C1ADE0018299B /* SFUIText-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +443,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MindfulMeTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MindSelfTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -451,7 +479,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MindfulMe-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MindSelf-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -473,7 +501,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MindfulMe-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MindSelf-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -495,7 +523,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MindfulMe-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MindSelf-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -587,12 +615,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* MindfulMe */;
+			target = 13B07F861A680F5B00A75B9A /* MindSelf */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* MindfulMe-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* MindSelf-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -612,7 +640,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C80B12E35F5DB6910184ABED /* Pods-MindfulMeTests.debug.xcconfig */;
+			baseConfigurationReference = 4FD2818A2DCEC28D7F0F8832 /* Pods-MindSelfTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -631,13 +659,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindfulMe.app/MindfulMe";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindSelf.app/MindSelf";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F372531377906126956FF406 /* Pods-MindfulMeTests.release.xcconfig */;
+			baseConfigurationReference = CBEC1473E91D229E97A451B0 /* Pods-MindSelfTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -653,13 +681,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindfulMe.app/MindfulMe";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindSelf.app/MindSelf";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C51BF284E693CDB68DE56BC2 /* Pods-MindfulMe.debug.xcconfig */;
+			baseConfigurationReference = DAF5E52EE97FEC0942CEF111 /* Pods-MindSelf.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -672,8 +700,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.MindfulMe;
-				PRODUCT_NAME = MindfulMe;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.MindSelf;
+				PRODUCT_NAME = MindSelf;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -682,7 +710,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2A348FF22A8573293B9D11F /* Pods-MindfulMe.release.xcconfig */;
+			baseConfigurationReference = 02337F1F3870DEFFD295B1D9 /* Pods-MindSelf.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -694,8 +722,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.MindfulMe;
-				PRODUCT_NAME = MindfulMe;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.MindSelf;
+				PRODUCT_NAME = MindSelf;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -704,7 +732,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95882835AD5186F5DF201473 /* Pods-MindfulMe-tvOS.debug.xcconfig */;
+			baseConfigurationReference = C517D3AA6CCD242A55B886DF /* Pods-MindSelf-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -734,7 +762,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95DDB17D04525D2300B9C147 /* Pods-MindfulMe-tvOS.release.xcconfig */;
+			baseConfigurationReference = 5A2685464BB7851E8D6057E2 /* Pods-MindSelf-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -764,7 +792,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B4D5278B22B75F4E043C4D9 /* Pods-MindfulMe-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 0309679FB2B688A64F70484C /* Pods-MindSelf-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -786,14 +814,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindfulMe-tvOS.app/MindfulMe-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindSelf-tvOS.app/MindSelf-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21FE67AC07BD0CC6A2AC1774 /* Pods-MindfulMe-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 05D4ABA491562B3249E82C43 /* Pods-MindSelf-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -815,7 +843,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindfulMe-tvOS.app/MindfulMe-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindSelf-tvOS.app/MindSelf-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -924,7 +952,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MindfulMeTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MindSelfTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -933,7 +961,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MindfulMe" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MindSelf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -942,7 +970,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "MindfulMe-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "MindSelf-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -951,7 +979,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "MindfulMe-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "MindSelf-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -960,7 +988,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MindfulMe" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MindSelf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
