@@ -6,10 +6,10 @@ import {h, w, isIphoneX} from '../../constants';
 import Icon from '../styles/icon';
 
 import {connect} from 'react-redux';
-class MeditationScreen extends React.Component {
+export default class MeditationScreen extends React.Component {
   static navigationOptions = ({navigation, navigationOptions}) => {
     return {
-      title: 'Медитации',
+      title: 'Медитации1111',
       headerBackTitleStyle: {
       color: 'transparent',
     },
@@ -105,90 +105,8 @@ class MeditationScreen extends React.Component {
           />
       </View>
 
-        <View
-          style={{
-            flex: 1,
-            flexDirection: 'row',
+        
 
-            backgroundColor: 'rgb(46,33,80)',
-            position: 'absolute',
-            //  top: 0 ,
-            //left: 0,
-            height: '10%', // висота
-            width: w,
-            bottom: 0,
-          }}>
-          <TouchableOpacity
-            style={{
-              width: '34%',
-              height: '140%',
-              backgroundColor: 'rgb(46,33,80)',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-            onPress={() => {
-              this.props.navigation.navigate('Home');
-            }}>
-            <Image
-              source={Icon.HOMES}
-              style={{width: 24, height: 24, tintColor: 'white'}}
-            />
-            <Text style={{color: 'white'}}>Home!</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              width: '34%',
-              height: '140%',
-              backgroundColor: 'rgb(46,33,80)',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-            onPress={() => {
-              this.props.navigation.navigate('Profile');
-            }}>
-            <Image
-              source={Icon.USERHOME}
-              style={{width: 24, height: 24, tintColor: 'white'}}
-            />
-            <Text style={{color: 'white'}}>Profile</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              width: '34%',
-              height: '140%',
-              backgroundColor: 'rgb(46,33,80)',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-            onPress={() => {
-              this.props.navigation.navigate('Setting');
-            }}>
-            <Image
-              source={Icon.FAVORITE}
-              style={{width: 24, height: 24, tintColor: 'white'}}
-            />
-            <Text style={{color: 'white'}}>Setting</Text>
-          </TouchableOpacity>
-        </View>
-        {/*// <View style={styles.secondcontainer}>
-      //   <FlatList
-      //     data={DATA}
-      //     renderItem={({item, index}) => (
-      //       <View style={styles.touch}>
-      //         <TouchableOpacity
-      //           onPress={() =>
-      //             this.props.navigation.navigate('Profile', {
-      //               dataSource: item,
-      //             })
-      //           }>
-      //           <Image style={styles.image} source={{uri: item.urls.small}} />
-      //         </TouchableOpacity>
-      //         <Text style={styles.text}>{item.user.name}</Text>
-      //       </View>
-      //     )}
-      //     keyExtractor={({id}, index) => id}
-      //   />
-      // </View>*/}
       </SafeAreaView>
     );
   }
@@ -243,24 +161,24 @@ const styles = StyleSheet.create({
   },
 });
 
-function mapStateToProps(state) {
-  return {
-    counter: state.appData.get('counter'),
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    incrementCounter() {
-      dispatch(incrementCounter());
-    },
-    decrementCounter() {
-      dispatch(decrementCounter());
-    },
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(MeditationScreen);
+// function mapStateToProps(state) {
+//   return {
+//     counter: state.appData.get('counter'),
+//   };
+// }
+//
+// function mapDispatchToProps(dispatch) {
+//   return {
+//     incrementCounter() {
+//       dispatch(incrementCounter());
+//     },
+//     decrementCounter() {
+//       dispatch(decrementCounter());
+//     },
+//   };
+// }
+//
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps,
+// )(MeditationScreen);

@@ -64,41 +64,461 @@ export default class FavoriteComponent extends React.Component {
     return (
       <SafeAreaView
         style={{flex: 1, marginTop: -20, backgroundColor: 'rgb(24,12,53)'}}>
-        <ImageBackground
+        <Image
           source={Icon.MINDSELF}
-          style={{width: '100%', height: '100%',color:'rgba(0, 0, 0, 0.12)',tintColor:'rgba(0, 0, 0, 0.12)',backgroundColor:'rgba(0, 0, 0, 0.12)',}}>
-          <LinearGradient
-            colors={[
-              '#302b63',
-              'rgba(41, 37, 87, 1)',
-              'rgba(34, 31, 75, 0.99)',
-              'rgba(27, 25, 63, 0.99)',
-              'rgba(20, 20, 52, 0.98)',
-              'rgba(15, 12, 41, 0.98)',
+          style={{
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0,
+            opacity: 0.12,
+          }}
+        />
 
-
-            ]}
-            style={{flex: 1}}>
-            {/* section */}
+        {/* section */}
+        <View
+          style={{
+            paddingTop: isIphoneX() ? 63 : 33,
+            alignItems: 'center',
+          }}>
+          <View style={{marginBottom: 63}}>
+            <Text
+              style={{
+                fontSize: 16,
+                fontFamily: 'SFUIText-Regular',
+                textAlign: 'center',
+                color: '#ffffff',
+              }}>
+              Избранное
+            </Text>
+          </View>
+          <View style={{backgroundColor: 'rgba(43,38,77,0.5)'}}>
             <View
               style={{
-                paddingTop: isIphoneX() ? 63 : 33,
-                //marginTop: 33,
-                //marginBottom: 50,
-                //flex: 1,
-                //marginBottom:40,
-                //  backgroundColor: 'white',
+                backgroundColor: 'rgba(43,38,77,0.5)',
+                paddingLeft: 14,
+                flexDirection: 'row',
                 alignItems: 'center',
+                paddingBottom: isIphoneX() ? 20 : 0,
+                // height: isIphoneX() ? 70 : 50, // висота
+                width: w,
               }}>
-              <View style={{}}>
+              <View style={{justifyContent: 'space-between'}}>
                 <Text
-                  style={{fontSize: 16,fontFamily:'SFUIText-Regular', textAlign: 'center', color: '#ffffff'}}>
-                  Избранное
+                  style={{
+                    fontSize: 16,
+                    color: '#ababb6',
+                    paddingTop: 12,
+                    fontFamily: 'SFUIText-Light',
+                  }}>
+                  1
                 </Text>
-                </View>
-                </View>
-                </LinearGradient>
-        </ImageBackground>
+              </View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  marginLeft: 10,
+                  paddingTop: 12,
+                  backgroundColor: 'rgba(43,38,77,0.5)',
+                }}>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    color: '#ffffff',
+                    fontFamily: 'SFUIText-Regular',
+                  }}>
+                  Track One
+                </Text>
+
+                <Image
+                  source={Icon.TICK}
+                  style={{
+                    width: 12,
+                    height: 7,
+                    marginLeft: 21,
+                    tintColor: '#7ed321',
+                  }}
+                />
+                <Text
+                  style={{
+                    marginLeft: 18,
+                    color: '#ffffff',
+                    fontFamily: 'SFUIText-Light',
+                  }}>
+                  Done
+                </Text>
+                <TouchableOpacity>
+                  <Image
+                    source={Icon.HEARTNB}
+                    style={{
+                      width: 18.8,
+                      height: 16.7,
+                      marginLeft: 124,
+                      tintColor: '#1488cc',
+                    }}
+                  />
+                </TouchableOpacity>
+              </View>
+            </View>
+            <View
+              style={{
+                backgroundColor: 'rgba(43,38,77,0.5)',
+                paddingLeft: 32,
+                justifyContent: 'flex-start',
+              }}>
+              <Text
+                style={{
+                  color: '#ffffff',
+                  fontSize: 12,
+                  fontFamily: 'SFUIText-Light',
+                  paddingBottom: 16,
+                }}>
+                Коллекция «Концентрация»
+              </Text>
+            </View>
+          </View>
+          <View style={{backgroundColor: 'rgba(43,38,77,0.5)'}}>
+            <View
+              style={{
+                backgroundColor: 'rgba(43,38,77,0.5)',
+                paddingLeft: 14,
+                flexDirection: 'row',
+                alignItems: 'center',
+                paddingBottom: isIphoneX() ? 20 : 0,
+                // height: isIphoneX() ? 70 : 50, // висота
+                width: w,
+              }}>
+              <View style={{justifyContent: 'space-between'}}>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    color: '#ababb6',
+                    paddingTop: 12,
+                    fontFamily: 'SFUIText-Light',
+                  }}>
+                  1
+                </Text>
+              </View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  marginLeft: 10,
+                  paddingTop: 12,
+                  backgroundColor: 'rgba(43,38,77,0.5)',
+                }}>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    color: '#ffffff',
+                    fontFamily: 'SFUIText-Regular',
+                  }}>
+                  Track One
+                </Text>
+
+                <Image
+                  source={Icon.TICK}
+                  style={{
+                    width: 12,
+                    height: 7,
+                    marginLeft: 21,
+                    tintColor: '#7ed321',
+                  }}
+                />
+                <Text
+                  style={{
+                    marginLeft: 18,
+                    color: '#ffffff',
+                    fontFamily: 'SFUIText-Light',
+                  }}>
+                  Done
+                </Text>
+                <TouchableOpacity>
+                  <Image
+                    source={Icon.HEARTNB}
+                    style={{
+                      width: 18.8,
+                      height: 16.7,
+                      marginLeft: 124,
+                      tintColor: '#1488cc',
+                    }}
+                  />
+                </TouchableOpacity>
+              </View>
+            </View>
+            <View
+              style={{
+                backgroundColor: 'rgba(43,38,77,0.5)',
+                paddingLeft: 32,
+                justifyContent: 'flex-start',
+              }}>
+              <Text
+                style={{
+                  color: '#ffffff',
+                  fontSize: 12,
+                  fontFamily: 'SFUIText-Light',
+                  paddingBottom: 16,
+                }}>
+                Коллекция «Концентрация»
+              </Text>
+            </View>
+          </View>
+          <View style={{backgroundColor: 'rgba(43,38,77,0.5)'}}>
+            <View
+              style={{
+                backgroundColor: 'rgba(43,38,77,0.5)',
+                paddingLeft: 14,
+                flexDirection: 'row',
+                alignItems: 'center',
+                paddingBottom: isIphoneX() ? 20 : 0,
+                // height: isIphoneX() ? 70 : 50, // висота
+                width: w,
+              }}>
+              <View style={{justifyContent: 'space-between'}}>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    color: '#ababb6',
+                    paddingTop: 12,
+                    fontFamily: 'SFUIText-Light',
+                  }}>
+                  1
+                </Text>
+              </View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  marginLeft: 10,
+                  paddingTop: 12,
+                  backgroundColor: 'rgba(43,38,77,0.5)',
+                }}>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    color: '#ffffff',
+                    fontFamily: 'SFUIText-Regular',
+                  }}>
+                  Track One
+                </Text>
+
+                <Image
+                  source={Icon.TICK}
+                  style={{
+                    width: 12,
+                    height: 7,
+                    marginLeft: 21,
+                    tintColor: '#7ed321',
+                  }}
+                />
+                <Text
+                  style={{
+                    marginLeft: 18,
+                    color: '#ffffff',
+                    fontFamily: 'SFUIText-Light',
+                  }}>
+                  Done
+                </Text>
+                <TouchableOpacity>
+                  <Image
+                    source={Icon.HEARTNB}
+                    style={{
+                      width: 18.8,
+                      height: 16.7,
+                      marginLeft: 124,
+                      tintColor: '#1488cc',
+                    }}
+                  />
+                </TouchableOpacity>
+              </View>
+            </View>
+            <View
+              style={{
+                backgroundColor: 'rgba(43,38,77,0.5)',
+                paddingLeft: 32,
+                justifyContent: 'flex-start',
+              }}>
+              <Text
+                style={{
+                  color: '#ffffff',
+                  fontSize: 12,
+                  fontFamily: 'SFUIText-Light',
+                  paddingBottom: 16,
+                }}>
+                Коллекция «Концентрация»
+              </Text>
+            </View>
+          </View>
+          <View style={{backgroundColor: 'rgba(43,38,77,0.5)'}}>
+            <View
+              style={{
+                backgroundColor: 'rgba(43,38,77,0.5)',
+                paddingLeft: 14,
+                flexDirection: 'row',
+                alignItems: 'center',
+                paddingBottom: isIphoneX() ? 20 : 0,
+                // height: isIphoneX() ? 70 : 50, // висота
+                width: w,
+              }}>
+              <View style={{justifyContent: 'space-between'}}>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    color: '#ababb6',
+                    paddingTop: 12,
+                    fontFamily: 'SFUIText-Light',
+                  }}>
+                  1
+                </Text>
+              </View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  marginLeft: 10,
+                  paddingTop: 12,
+                  backgroundColor: 'rgba(43,38,77,0.5)',
+                }}>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    color: '#ffffff',
+                    fontFamily: 'SFUIText-Regular',
+                  }}>
+                  Track One
+                </Text>
+
+                <Image
+                  source={Icon.TICK}
+                  style={{
+                    width: 12,
+                    height: 7,
+                    marginLeft: 21,
+                    tintColor: '#7ed321',
+                  }}
+                />
+                <Text
+                  style={{
+                    marginLeft: 18,
+                    color: '#ffffff',
+                    fontFamily: 'SFUIText-Light',
+                  }}>
+                  Done
+                </Text>
+                <TouchableOpacity>
+                  <Image
+                    source={Icon.HEARTNB}
+                    style={{
+                      width: 18.8,
+                      height: 16.7,
+                      marginLeft: 124,
+                      tintColor: '#1488cc',
+                    }}
+                  />
+                </TouchableOpacity>
+              </View>
+            </View>
+            <View
+              style={{
+                backgroundColor: 'rgba(43,38,77,0.5)',
+                paddingLeft: 32,
+                justifyContent: 'flex-start',
+              }}>
+              <Text
+                style={{
+                  color: '#ffffff',
+                  fontSize: 12,
+                  fontFamily: 'SFUIText-Light',
+                  paddingBottom: 16,
+                }}>
+                Коллекция «Концентрация»
+              </Text>
+            </View>
+          </View>
+          <View style={{backgroundColor: 'rgba(43,38,77,0.5)'}}>
+            <View
+              style={{
+                backgroundColor: 'rgba(43,38,77,0.5)',
+                paddingLeft: 14,
+                flexDirection: 'row',
+                alignItems: 'center',
+                paddingBottom: isIphoneX() ? 20 : 0,
+                // height: isIphoneX() ? 70 : 50, // висота
+                width: w,
+              }}>
+              <View style={{justifyContent: 'space-between'}}>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    color: '#ababb6',
+                    paddingTop: 12,
+                    fontFamily: 'SFUIText-Light',
+                  }}>
+                  1
+                </Text>
+              </View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  marginLeft: 10,
+                  paddingTop: 12,
+                  backgroundColor: 'rgba(43,38,77,0.5)',
+                }}>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    color: '#ffffff',
+                    fontFamily: 'SFUIText-Regular',
+                  }}>
+                  Track One
+                </Text>
+
+                <Image
+                  source={Icon.TICK}
+                  style={{
+                    width: 12,
+                    height: 7,
+                    marginLeft: 21,
+                    tintColor: '#7ed321',
+                  }}
+                />
+                <Text
+                  style={{
+                    marginLeft: 18,
+                    color: '#ffffff',
+                    fontFamily: 'SFUIText-Light',
+                  }}>
+                  Done
+                </Text>
+                <TouchableOpacity>
+                  <Image
+                    source={Icon.HEARTNB}
+                    style={{
+                      width: 18.8,
+                      height: 16.7,
+                      marginLeft: 124,
+                      tintColor: '#1488cc',
+                    }}
+                  />
+                </TouchableOpacity>
+              </View>
+            </View>
+            <View
+              style={{
+                backgroundColor: 'rgba(43,38,77,0.5)',
+                paddingLeft: 32,
+                justifyContent: 'flex-start',
+              }}>
+              <Text
+                style={{
+                  color: '#ffffff',
+                  fontSize: 12,
+                  fontFamily: 'SFUIText-Light',
+                  paddingBottom: 16,
+                }}>
+                Коллекция «Концентрация»
+              </Text>
+            </View>
+          </View>
+        </View>
       </SafeAreaView>
     );
   }

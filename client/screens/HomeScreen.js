@@ -157,7 +157,7 @@ class HomeScreen extends React.Component {
                 FavoriteScreen: true,
               });
             }}>
-            <Image source={Icon.FAVORITE} style={this.state.FavoriteScreen ? styles.imgProfOn : styles.imgProf} />
+            <Image source={this.state.FavoriteScreen ?  Icon.HEARTNB : Icon.HEARTN } style={this.state.FavoriteScreen ? styles.imgProfOn : styles.imgProf} />
             <Text style={this.state.FavoriteScreen ? styles.textFavorOn : styles.textFavor}>Избранное</Text>
           </TouchableOpacity>
         </View>
@@ -233,8 +233,8 @@ const styles = StyleSheet.create({
     height: 16.7,
     tintColor: '#1488cc',
     marginBottom: 5,
-    borderWidth:2,
-    borderColor:'#1488cc',
+    //borderWidth:2,
+    //borderColor:'#1488cc',
     //backgroundColor:'#1488cc',
   },
   touchProf: {

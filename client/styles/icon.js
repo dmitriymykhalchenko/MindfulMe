@@ -8,7 +8,10 @@ export default Icons = {
   SETTINGS: require('../img/settings.png'),
   DOWNLOAD: require('../img/download.png'),
   HEART: require('../img/heart.png'),
+  HEARTN: require('../img/heartn.png'),
+  HEARTNB: require('../img/heartnb.png'),
   MINDSELF: require('../img/MindSelf.png'),
+  TICK: require('../img/tick.png'),
 
 
 }
