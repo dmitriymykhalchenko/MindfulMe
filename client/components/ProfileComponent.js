@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, SafeAreaView, TouchableOpacity, Image} from 'react-native';
+import {Text, View, SafeAreaView, TouchableOpacity,ScrollView ,Image,Switch} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {h, w, isIphoneX} from '../../constants';
@@ -42,17 +42,34 @@ export default class ProfileComponent extends React.Component {
       // },
     };
   };
+  constructor(props) {
+    super(props);
+    this.toggleSwitch = this.toggleSwitch.bind(this);
+    this.state = {
+      showPass: false,
+    };
+  }
+
+  toggleSwitch() {
+    this.setState(
+      {showPass: !this.state.showPass},
+      // () => {
+      //   this.props.navigation.setParams({ rightActionButton: () => this.renderElement() })///????
+      // }
+    );
+  }
   render() {
     const {navigation} = this.props;
     return (
-      <View style={{flex: 1, backgroundColor: 'white'}}>
+      <ScrollView style={{flex: 1, }}>
         <LinearGradient
           colors={[
-            'rgba(15, 12, 41, 0.98)',
-            'rgba(20, 20, 52, 0.98)',
-            'rgba(27, 25, 63, 0.99)',
-            'rgba(34, 31, 75, 0.99)',
+            '#302b63',
             'rgba(41, 37, 87, 1)',
+            'rgba(34, 31, 75, 0.99)',
+            'rgba(27, 25, 63, 0.99)',
+            'rgba(20, 20, 52, 0.98)',
+            'rgba(15, 12, 41, 0.98)',
           ]}
           style={{flex: 1}}>
           {/* section */}
@@ -68,7 +85,7 @@ export default class ProfileComponent extends React.Component {
             }}>
             <View style={{}}>
               <Text
-                style={{fontSize: 16, textAlign: 'center', color: '#ffffff'}}>
+                style={{fontSize: 16,fontFamily:'SFUIText-Regular', textAlign: 'center', color: '#ffffff'}}>
                 Профиль
               </Text>
               <TouchableOpacity
@@ -106,72 +123,98 @@ export default class ProfileComponent extends React.Component {
           <View
             style={{
               flexDirection: 'row',
-              backgroundColor: 'white',
-              width: '100%',marginTop:21,
+              backgroundColor: 'transparent',
+              // width: '100%',
+              marginTop:21,
+              // flex:1,
             }}>
-            <View style={{width: '33%', alignItems: 'center'}}>
+            <View style={{alignItems: 'center',flex:1, justifyContent: 'space-between'}}>
               <Text
-                numberOfLines={2}
+                numberOfLines={3}
                 style={{
-                  color: 'black',
-                  width: 90,
-                  fontWeight: '600',
-                  fontSize: 14,
+                  color: '#ffffff',
+                  //width: 70,
+                  fontFamily:'SFUIText-Light',
+                  fontSize: 12,
+                  textAlign: 'center'
                 }}>
-                General time of meditation
+                Общее время медитаций
               </Text>
               <Text
                 numberOfLines={2}
-                style={{marginTop: 10, color: 'black', textAlign: 'center'}}>
+                style={{marginTop: 11,fontSize:24,fontFamily:'SFUIText-Regular',
+                   color: '#ffffff', textAlign: 'center'}}>
                 60
               </Text>
             </View>
-            <View style={{width: '33%', alignItems: 'center'}}>
-              <Text style={{color: 'black', fontWeight: '600', fontSize: 14}}>
-                Streak
+            <View style={{alignItems: 'center',flex:1, justifyContent: 'space-between'}}>
+              <Text numberOfLines={2} style={{color: '#ffffff', fontFamily:'SFUIText-Light',
+              fontSize: 12, textAlign: 'center'}}>
+                Количество сессий
               </Text>
               <Text
                 numberOfLines={2}
-                style={{marginTop: 25, color: 'black', textAlign: 'center'}}>
+                style={{marginTop: 25,marginTop: 29, color: '#ffffff',fontSize:24,fontFamily:'SFUIText-Regular', textAlign: 'center'}}>
                 10
               </Text>
             </View>
-            <View style={{width: '33%', alignItems: 'center'}}>
+            <View style={{alignItems: 'center',flex:1, justifyContent: 'space-between'}}>
               <Text
-                numberOfLines={2}
+                numberOfLines={3}
                 style={{
-                  color: 'black',
-                  width: 90,
-                  fontWeight: '600',
-                  fontSize: 14,
+                  color: '#ffffff',
+                  fontFamily:'SFUIText-Light',
+                  fontSize: 12,
+                  textAlign: 'center'
                 }}>
-                1 session - meditate
+                Количество ежедневных медитаций
               </Text>
               <Text
                 numberOfLines={2}
-                style={{marginTop: 10, color: 'black', textAlign: 'center'}}>
+                style={{marginTop: 10, color: '#ffffff',fontSize:24,fontFamily:'SFUIText-Regular',textAlign: 'center'}}>
                 5
               </Text>
             </View>
           </View>
-          <TouchableOpacity style={{margin: 20}}>
-            <Text style={{color: 'black', fontWeight: '600', fontSize: 18}}>
-              Invite
+          <TouchableOpacity style={{marginTop: 20,paddingLeft:20,width:w, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}>
+            <Text style={{fontWeight:'300',marginTop:12,marginBottom:12,color: '#f1f1f2',height:24,width:202,fontSize: 16,letterSpacing: 0.5,}}>
+              Настройка фона и звука
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{margin: 20}}>
-            <Text style={{color: 'black', fontWeight: '600', fontSize: 18}}>
-              Community?
+          <View style={{paddingLeft:20,flexDirection: 'row',paddingRight:30, justifyContent: 'space-between',backgroundColor:'rgba(43, 38, 77, 0.5)'}}>
+            <Text style={{fontWeight:'300',marginTop:12,marginBottom:12,color: '#f1f1f2',height:24,width:202,fontSize: 16,letterSpacing: 0.5,}}>
+              Напоминания
+            </Text>
+            <Switch
+              style={{marginTop:8,backgroundColor: 'transparent', color: 'red',marginBottom:8,}}
+              onValueChange={this.toggleSwitch}
+              value={this.state.showPass}
+            />
+          </View>
+          <TouchableOpacity style={{width:w,paddingLeft:20, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}>
+            <Text style={{fontWeight:'300',marginTop:12,marginBottom:12,color: '#f1f1f2',height:24,width:202,fontSize: 16,}}>
+              Загруженные
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{margin: 20}}>
-            <Text style={{color: 'black', fontWeight: '600', fontSize: 18}}>
-              Background
+          <TouchableOpacity style={{width:w,paddingLeft:20, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}>
+            <Text style={{fontWeight:'300',marginTop:12,marginBottom:12,color: '#f1f1f2',height:24,width:202,fontSize: 16,}}>
+              Информация об аккаунте
             </Text>
           </TouchableOpacity>
+          <TouchableOpacity style={{width:w,paddingLeft:20, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}>
+            <Text style={{fontWeight:'300',marginTop:12,marginBottom:12,color: '#f1f1f2',height:24,width:202,fontSize: 16,}}>
+              Помощь
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{width:w,paddingLeft:20, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}>
+            <Text style={{fontWeight:'300',marginTop:12,marginBottom:12,color: '#f1f1f2',height:24,width:202,fontSize: 16,}}>
+              Выйти
+            </Text>
+          </TouchableOpacity>
+          
         </LinearGradient>
-      
-      </View>
+
+      </ScrollView>
     );
   }
 }

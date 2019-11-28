@@ -24,6 +24,7 @@ import {connect} from 'react-redux';
 
 import HomeComponent from '../components/HomeComponent';
 import ProfileComponent from '../components/ProfileComponent';
+import FavoriteComponent from '../components/FavoriteComponent';
 
 // const IMAGE_HEIGHT =
 //   (h - (isIphoneX() ? 74 : 44) - (isIphoneX() ? 70 : 50)) / 3 - (19 + 25 + 13);
@@ -99,8 +100,10 @@ class HomeScreen extends React.Component {
           )}
           {/*// <View style={{height: 200, width: 200, backgroundColor: 'green'}} />*/}
 
-          {this.state.SettingScreen && (
-            <View style={{height: 200, width: 200, backgroundColor: 'red'}} />
+          {this.state.FavoriteScreen && (
+            <FavoriteComponent
+            navigation={navigation}
+            />
           )}
         </LinearGradient>
 
@@ -112,7 +115,7 @@ class HomeScreen extends React.Component {
               this.setState({
                 HomeScreen: true,
                 ProfileScreen: false,
-                SettingScreen: false,
+                FavoriteScreen: false,
               });
               // this.props.navigation.navigate('HomeScreen');
             }}>
@@ -137,11 +140,11 @@ class HomeScreen extends React.Component {
               this.setState({
                 HomeScreen: false,
                 ProfileScreen: true,
-                SettingScreen: false,
+                FavoriteScreen: false,
               });
               // this.props.navigation.navigate('Profile');
             }}>
-            <Image source={Icon.USERHOME} style={this.state.ProfileScreen ? styles.homeImgOn : styles.homeImg } />
+            <Image source={this.state.ProfileScreen ?  Icon.USERHOMEBLUE: Icon.USERHOME } style={this.state.ProfileScreen ? styles.homeImgOn : styles.homeImg } />
             <Text style={this.state.ProfileScreen ? styles.textProf : styles.textProfOn}>Профиль</Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -151,11 +154,11 @@ class HomeScreen extends React.Component {
               this.setState({
                 HomeScreen: false,
                 ProfileScreen: false,
-                SettingScreen: true,
+                FavoriteScreen: true,
               });
             }}>
-            <Image source={Icon.FAVORITE} style={this.state.SettingScreen ? styles.imgProfOn : styles.imgProf} />
-            <Text style={this.state.SettingScreen ? styles.textFavorOn : styles.textFavor}>Избранное</Text>
+            <Image source={Icon.FAVORITE} style={this.state.FavoriteScreen ? styles.imgProfOn : styles.imgProf} />
+            <Text style={this.state.FavoriteScreen ? styles.textFavorOn : styles.textFavor}>Избранное</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -230,6 +233,9 @@ const styles = StyleSheet.create({
     height: 16.7,
     tintColor: '#1488cc',
     marginBottom: 5,
+    borderWidth:2,
+    borderColor:'#1488cc',
+    //backgroundColor:'#1488cc',
   },
   touchProf: {
     flex: 1,
@@ -265,7 +271,7 @@ const styles = StyleSheet.create({
   homeImgOn: {
     width: 15,
     height: 18,
-    // borderColor: '#1488cc',
+    //backgroundColor: '#1488cc',
     resizeMode: 'contain',
     tintColor: '#1488cc',
     marginBottom: 5,
