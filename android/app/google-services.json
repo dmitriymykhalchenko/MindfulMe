@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1024645677413",
+    "firebase_url": "https://mindself-fc895.firebaseio.com",
+    "project_id": "mindself-fc895",
+    "storage_bucket": "mindself-fc895.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024645677413:android:afc5e7412482a25c6b218c",
+        "android_client_info": {
+          "package_name": "com.mindfulme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024645677413-oqpuu1q8n0d6lg2hn6ht7isfqsvdriip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIu0186hcD4u-ZQVyamc0qPV7geEUnKGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024645677413-oqpuu1q8n0d6lg2hn6ht7isfqsvdriip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
