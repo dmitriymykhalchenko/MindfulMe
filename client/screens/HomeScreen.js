@@ -12,6 +12,7 @@ import {
   Image,
   ImageBackground,
   TouchableOpacity,
+  ScrollView,
 } from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
@@ -25,6 +26,13 @@ import {connect} from 'react-redux';
 import HomeComponent from '../components/HomeComponent';
 import ProfileComponent from '../components/ProfileComponent';
 import FavoriteComponent from '../components/FavoriteComponent';
+import MeditationComponent from '../components/MeditationComponent';
+import SosComponent from '../components/SosComponent';
+import MasterComponent from '../components/MasterComponent';
+import HelpComponent from '../components/HelpComponent';
+import WriteComponent from '../components/WriteComponent';
+import FonComponent from '../components/FonComponent';
+import InfoaccComponent from '../components/InfoaccComponent';
 
 // const IMAGE_HEIGHT =
 //   (h - (isIphoneX() ? 74 : 44) - (isIphoneX() ? 70 : 50)) / 3 - (19 + 25 + 13);
@@ -43,9 +51,9 @@ class HomeScreen extends React.Component {
       isLoading: true,
       dataSource: [],
 
-      HomeScreen: true,
-      ProfileScreen: false,
-      SettingScreen: false,
+      homeScreen: true,
+      profileScreen: false,
+      favoriteScreen: false,
     };
   }
 
@@ -86,23 +94,158 @@ class HomeScreen extends React.Component {
             'rgba(20, 20, 52, 0.98)',
           ]}
           style={{flex: 1}}>
-          {this.state.HomeScreen && (
+          {this.state.homeScreen && (
             <HomeComponent
               navigation={navigation}
               dataSource={this.state.dataSource}
+              onAllMeditationPressed={() => {
+                this.setState({
+                  homeScreen: false,
+                  meditationScreen: true,
+                });
+              }}
+              onAllSosPressed={() => {
+                this.setState({
+                  homeScreen: false,
+                  SosScreen: true,
+                });
+              }}
+              onAllMasterPressed={() => {
+                this.setState({
+                  homeScreen: false,
+                  masterScreen: true,
+                });
+              }}
             />
           )}
 
-          {this.state.ProfileScreen && (
+          {this.state.profileScreen && (
             <ProfileComponent
-            navigation={navigation}
+              navigation={navigation}
+              backPressed={() => {
+                this.setState({
+                  homeScreen: true,
+                  profileScreen: false,
+                });
+              }}
+              helpScreen={() => {
+                this.setState({
+                  profileScreen: false,
+                  helpScreen: true,
+                });
+              }}
+
+              fonScreen={() => {
+                this.setState({
+                  profileScreen: false,
+                  fonScreen: true,
+                });
+              }}
+              InfoaccScreen={() => {
+                this.setState({
+                  profileScreen: false,
+                  InfoaccScreen: true,
+                });
+              }}
+              // writeScreen={() => {
+              //   this.setState({
+              //     helpScreen: false,
+              //     writeScreen: true,
+              //   })
+              // }}
+            />
+          )}
+
+          {this.state.fonScreen && (
+            <FonComponent
+              navigation={navigation}
+              backPressed={() => {
+                this.setState({
+                  profileScreen: true,
+                  fonScreen: false,
+                });
+              }}
+            />
+          )}
+          {this.state.InfoaccScreen && (
+            <InfoaccComponent
+              navigation={navigation}
+              backPressed={() => {
+                this.setState({
+                  profileScreen: true,
+                  InfoaccScreen: false,
+                });
+              }}
+            />
+          )}
+
+          {this.state.helpScreen && (
+            <HelpComponent
+              navigation={navigation}
+              backPressed={() => {
+                this.setState({
+                  profileScreen: true,
+                  helpScreen: false,
+                });
+              }}
+
+              writeScreen={() => {
+                this.setState({
+                  helpScreen: false,
+                  writeScreen: true,
+                })
+              }}
             />
           )}
           {/*// <View style={{height: 200, width: 200, backgroundColor: 'green'}} />*/}
 
-          {this.state.FavoriteScreen && (
-            <FavoriteComponent
-            navigation={navigation}
+          {this.state.writeScreen && (
+            <WriteComponent
+              navigation={navigation}
+              backPressed={() => {
+                this.setState({
+                  helpScreen: true,
+                  writeScreen: false,
+                });
+              }}
+            />
+          )}
+
+          {this.state.favoriteScreen && (
+            <FavoriteComponent navigation={navigation} />
+          )}
+
+          {this.state.meditationScreen && (
+            <MeditationComponent
+              navigation={navigation}
+              backPressed={() => {
+                this.setState({
+                  homeScreen: true,
+                  meditationScreen: false,
+                });
+              }}
+            />
+          )}
+          {this.state.SosScreen && (
+            <SosComponent
+              navigation={navigation}
+              backPressed={() => {
+                this.setState({
+                  homeScreen: true,
+                  SosScreen: false,
+                });
+              }}
+            />
+          )}
+          {this.state.masterScreen && (
+            <MasterComponent
+              navigation={navigation}
+              backPressed={() => {
+                this.setState({
+                  homeScreen: true,
+                  masterScreen: false,
+                });
+              }}
             />
           )}
         </LinearGradient>
@@ -113,21 +256,30 @@ class HomeScreen extends React.Component {
             style={styles.homeFoot}
             onPress={() => {
               this.setState({
-                HomeScreen: true,
-                ProfileScreen: false,
-                FavoriteScreen: false,
-              });
-              // this.props.navigation.navigate('HomeScreen');
+                homeScreen: true,
+                profileScreen: false,
+                favoriteScreen: false,
+                meditationScreen: false,
+                SosScreen: false,
+                masterScreen: false,
+                helpScreen: false,
+                writeScreen: false,
+                fonScreen: false,
+                InfoaccScreen:false,
+              }); //clean on HomeScreen
+              // this.props.navigation.navigate('homeScreen');
             }}>
             <Image
               source={Icon.HOMES}
               style={
-                this.state.HomeScreen ? styles.homeFootImg : styles.homeFootImgOn
+                this.state.homeScreen
+                  ? styles.homeFootImg
+                  : styles.homeFootImgOn
               }
             />
             <Text
               style={
-                this.state.HomeScreen
+                this.state.homeScreen
                   ? styles.homeFootText
                   : styles.homeFootTextOn
               }>
@@ -138,27 +290,65 @@ class HomeScreen extends React.Component {
             style={styles.homeTouch}
             onPress={() => {
               this.setState({
-                HomeScreen: false,
-                ProfileScreen: true,
-                FavoriteScreen: false,
+                homeScreen: false,
+                profileScreen: true,
+                favoriteScreen: false,
+                meditationScreen: false,
+                SosScreen: false,
+                masterScreen: false,
+                helpScreen: false,
+                writeScreen: false,
+                fonScreen: false,
+                InfoaccScreen:false,
               });
               // this.props.navigation.navigate('Profile');
             }}>
-            <Image source={this.state.ProfileScreen ?  Icon.USERHOMEBLUE: Icon.USERHOME } style={this.state.ProfileScreen ? styles.homeImgOn : styles.homeImg } />
-            <Text style={this.state.ProfileScreen ? styles.textProf : styles.textProfOn}>Профиль</Text>
+            <Image
+              source={
+                this.state.profileScreen ? Icon.USERHOMEBLUE : Icon.USERHOME
+              }
+              style={
+                this.state.profileScreen ? styles.homeImgOn : styles.homeImg
+              }
+            />
+            <Text
+              style={
+                this.state.profileScreen ? styles.textProf : styles.textProfOn
+              }>
+              Профиль
+            </Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.touchProf}
             onPress={() => {
               // this.props.navigation.navigate('Setting');
               this.setState({
-                HomeScreen: false,
-                ProfileScreen: false,
-                FavoriteScreen: true,
+                homeScreen: false,
+                profileScreen: false,
+                favoriteScreen: true,
+                meditationScreen: false,
+                SosScreen: false,
+                masterScreen: false,
+                helpScreen: false,
+                writeScreen: false,
+                fonScreen: false,
+                InfoaccScreen:false,
               });
             }}>
-            <Image source={this.state.FavoriteScreen ?  Icon.HEARTNB : Icon.HEARTN } style={this.state.FavoriteScreen ? styles.imgProfOn : styles.imgProf} />
-            <Text style={this.state.FavoriteScreen ? styles.textFavorOn : styles.textFavor}>Избранное</Text>
+            <Image
+              source={this.state.favoriteScreen ? Icon.HEARTNB : Icon.HEARTN}
+              style={
+                this.state.favoriteScreen ? styles.imgProfOn : styles.imgProf
+              }
+            />
+            <Text
+              style={
+                this.state.favoriteScreen
+                  ? styles.textFavorOn
+                  : styles.textFavor
+              }>
+              Избранное
+            </Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -204,7 +394,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     //letterSpacing: 0.12,
   },
-
 
   // textProf: {
   //   fontFamily: 'SFUIText-Regular',////////////////

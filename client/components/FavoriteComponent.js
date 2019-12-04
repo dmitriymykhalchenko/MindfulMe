@@ -63,10 +63,11 @@ export default class FavoriteComponent extends React.Component {
 
     return (
       <SafeAreaView
-        style={{flex: 1, marginTop: -20, backgroundColor: 'rgb(24,12,53)'}}>
+        style={{flex: 1, marginTop: -20,width:w,}}>
         <Image
           source={Icon.MINDSELF}
           style={{
+            width:w,
             position: 'absolute',
             left: 0,
             right: 0,

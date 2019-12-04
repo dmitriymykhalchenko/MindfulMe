@@ -1,108 +1,3 @@
-// import React from 'react';
-// import {Text, View, Dimensions, Image, TouchableOpacity} from 'react-native';
-// import {createAppContainer} from 'react-navigation';
-// import {createBottomTabNavigator} from 'react-navigation-tabs';
-// import {h, w, isIphoneX} from '../../constants';
-// import Icon from '../styles/icon';
-//
-// export default class HomeScreen extends React.Component {
-//   // static navigationOptions = ({navigation, navigationOptions}) => {
-//   //   return {
-//   //     tabBarOptions: {
-//   //       activeTintColor: 'tomato',
-//   //       inactiveTintColor: 'gray',
-//   //       backgroundColor: 'black',
-//   //
-//   //       tabStyle: {
-//   //         padding: 0,
-//   //         margin: 0,
-//   //         borderWidth: 2,
-//   //         borderColor: 'green', //Padding 0 here
-//   //       },
-//   //       style: {
-//   //         //backgroundColor: 'blue',
-//   //       },
-//   //       iconStyle: {
-//   //         //backgroundColor: 'black',
-//   //         //tintColor:'yellow',
-//   //         width: 50,
-//   //         height: 100,
-//   //         padding: 0, //Padding 0 here
-//   //       },
-//   //     },
-//   //   };
-//   // };
-//
-//   render() {
-//     const {navigation} = this.props;
-//
-//     return (
-//       <View
-//         style={{
-//           flex: 1,
-//           backgroundColor: 'rgb(44,28,88)',
-//         }}>
-//         <View
-//           style={{
-//             flex: 1,
-//             flexDirection: 'row',
-//             margin: 5,
-//             backgroundColor: 'yellow',
-//             position: 'absolute',
-//             //  top: 0 ,
-//             //left: 0,
-//             height: '5%', // висота
-//             width: '65%',
-//             bottom: 0,
-//           }}>
-//           <TouchableOpacity
-//             style={{
-//               width: '50%',
-//               height: '140%',
-//               backgroundColor: 'red',
-//               justifyContent: 'center',
-//               alignItems: 'center',
-//             }}
-//             onPress={() => {
-//               this.props.navigation.navigate('HomeScreen');
-//             }}>
-//             <Image
-//               source={Icon.HOMES}
-//               style={{width: 24, height: 24, tintColor: 'white'}}
-//             />
-//             <Text>Home!</Text>
-//           </TouchableOpacity>
-//           <TouchableOpacity
-//             style={{
-//               width: '50%',
-//               height: '140%',
-//               backgroundColor: 'red',
-//               justifyContent: 'center',
-//               alignItems: 'center',
-//             }}
-//             onPress={() => {
-//               this.props.navigation.navigate('ProfileScreen');
-//             }}>
-//             <Text>Profile</Text>
-//           </TouchableOpacity>
-//           <TouchableOpacity
-//             style={{
-//               width: '50%',
-//               height: '140%',
-//               backgroundColor: 'red',
-//               justifyContent: 'center',
-//               alignItems: 'center',
-//             }}
-//             onPress={() => {
-//               this.props.navigation.navigate('SettingScreen');
-//             }}>
-//             <Text>Setting</Text>
-//           </TouchableOpacity>
-//         </View>
-//       </View>
-//     );
-//   }
-// }
 import React from 'react';
 import {
   Button,
@@ -126,6 +21,14 @@ import {incrementCounter, decrementCounter} from '../redux/actions';
 import LinearGradient from 'react-native-linear-gradient';
 
 import {connect} from 'react-redux';
+
+const IMAGE_HEIGHT = (h
+  - (isIphoneX() ? 74 : 44)
+  - (isIphoneX() ? 70 : 50)
+  ) / 3 - (19 + 25 + 13)
+
+const IMAGE_WIDTH = IMAGE_HEIGHT / 133 * 154;
+
 class HomeScreen extends React.Component {
   static navigationOptions = ({navigation, navigationOptions}) => {
     return {
@@ -185,8 +88,10 @@ class HomeScreen extends React.Component {
   render() {
     const {navigation} = this.props;
     const DATA = this.state.dataSource;
+    console.log('IMAGE_HEIGHT - ', IMAGE_HEIGHT);
+
     return (
-      <SafeAreaView style={{flex: 1, backgroundColor: 'rgb(41, 37, 87)'}}>
+      <View style={{flex: 1, backgroundColor: '#2b264d'}}>
         <StatusBar backgroundColor="red" barStyle="light-content" />
         <LinearGradient
           colors={[
@@ -196,20 +101,16 @@ class HomeScreen extends React.Component {
             'rgba(20, 20, 52, 0.98)',
           ]}
           style={{flex: 1}}>
+
+          {/* section */}
           <View
             style={{
-              // flex: 1,
-              //marginTop: 34,
-            //  marginLeft: 8,
-              // backgroundColor: 'transparent',
-              justifyContent: 'space-around',
-              width: w,
-              backgroundColor: 'red',
-              // paddingLeft: 20,
-              //paddingTop: 20,
-              // paddingRight: 20,
-              paddingTop: 44,
+              alignSelf: 'stretch',
+              backgroundColor: 'transparent',
+              paddingTop: isIphoneX() ? 74 : 44,
             }}>
+
+            {/* title */}
             <View style={{flexDirection: 'row',marginBottom: 13, justifyContent: 'space-between', alignItems: 'center', paddingLeft: 20, paddingRight: 15}}>
               <Text
                 style={{
@@ -248,12 +149,17 @@ class HomeScreen extends React.Component {
             <FlatList
               horizontal={true}
               style={{
-                flexDirection: 'row',
+                // paddingLeft: 20,
+                // width: w
+              }}
+              contentContainerStyle={{
                 paddingHorizontal: 20,
+                paddingRight: 8,
+                flexDirection: 'row',
               }}
               data={DATA}
               renderItem={({item, index}) => (
-                <View style={{overflow: 'hidden', width: 154, height: 133, marginRight: 12, borderRadius: 8}}>
+                <View style={{overflow: 'hidden', width: IMAGE_WIDTH, height: IMAGE_HEIGHT, marginRight: 12, borderRadius: 8}}>
                   <Image
                     style={styles.imagemed}
                     source={{uri: item.urls.small}}
@@ -291,33 +197,38 @@ class HomeScreen extends React.Component {
               keyExtractor={({id}, index) => id}
             />
           </View>
+
           <View
             style={{
               // flex: 1,
               //marginTop:20,
               //marginLeft: 8,
-              //justifyContent: 'space-around',
+              // justifyContent: 'space-around',
               width: w,
-              backgroundColor: 'gold',
+              backgroundColor: 'transparent',
+              //paddingTop:25
               //paddingBottom:12,
             }}>
             <View
               style={{
+                paddingTop: 25,
                 flexDirection: 'row',
-                paddingLeft: 0,
-                //marginTop: 25,
-                //marginBottom: 2,
+                marginBottom: 13,
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                paddingLeft: 20,
+                paddingRight: 15
               }}>
               <Text
                 style={{
-                  marginTop:25,
-                  marginBottom:13,
-                  width: 111,
-                  height: 19,
+                  // marginTop:25,
+                  // marginBottom:13,
+                  // width: 111,
+                  // height: 19,
                   color: '#f1f1f2',
                   fontFamily: 'SFUIText-Regular',
                   fontSize: 16,
-                  alignSelf: 'flex-start',
+                  //alignSelf: 'flex-start',
                 }}>
                 SOS практики
               </Text>
@@ -329,15 +240,15 @@ class HomeScreen extends React.Component {
                 }>
                 <Text
                   style={{
-                    marginTop:27,
-                    width: 81,
-                    height: 14,
-                    marginBottom:16,
-                    marginLeft: '30%',
+                    // marginTop:27,/////////////////////
+                    // width: 81,
+                    // height: 14,
+                    // marginBottom:16,
+                    // marginLeft: '30%',
                     color: '#9b9b9b',
                     fontFamily: 'SFUIText-Regular',
                     fontSize: 12,
-                    alignSelf: 'flex-end',
+                    //alignSelf: 'flex-end',
                   }}>
                   Смотреть все
                 </Text>
@@ -345,24 +256,31 @@ class HomeScreen extends React.Component {
             </View>
             <FlatList
               horizontal={true}
+              onLayout={e => console.log('onLayout - ', e.nativeEvent)}
               style={{
-                flexDirection: 'row',
+                // flexDirection: 'row',
+                // paddingHorizontal: 20,
+                // paddingRight: 50,
+              }}
+              contentContainerStyle={{
                 paddingHorizontal: 20,
+                paddingRight: 8,
+                flexDirection: 'row',
               }}
               data={DATA}
               renderItem={({item, index}) => (
                 <View
                   style={{
-                    width: 133,
-                    height: 133,
+                    width: IMAGE_HEIGHT,
+                    height: IMAGE_HEIGHT,
                     marginRight: 12,
                     borderRadius: 8,
                     overflow: 'hidden'
                   }}>
                   <Image
                     style={{
-                      width: 133,
-                      height: 133,
+                      width: IMAGE_HEIGHT,
+                      height: IMAGE_HEIGHT,
                       // marginLeft: 12,
                       justifyContent: 'center',
                     }}
@@ -406,25 +324,27 @@ class HomeScreen extends React.Component {
           <View
             style={{
               // flex: 1,
-              //marginLeft: 8,
-              backgroundColor: 'transparent',
+              //marginTop: 34,
+            //  marginLeft: 8,
+              // backgroundColor: 'transparent',
               justifyContent: 'space-around',
               width: w,
               backgroundColor: 'transparent',
-              paddingLeft: 20,
+              // paddingLeft: 20,
+              //paddingTop: 20,
+              // paddingRight: 20,
               paddingTop: 25,
-              paddingRight: 20,
             }}>
-            <View style={{flexDirection: 'row',marginBottom: 13,}}>
+            <View style={{flexDirection: 'row',marginBottom: 13, justifyContent: 'space-between', alignItems: 'center', paddingLeft: 20, paddingRight: 15}}>
               <Text
                 style={{
                   //paddingBottom: 30,
-                  width: 151,
-                  height: 19,
+                  // width: 90,
+                  // height: 19,
                   color: '#f1f1f2',
                   fontFamily: 'SFUIText-Regular',
                   fontSize: 16,
-                  alignSelf: 'flex-start',
+                  // alignSelf: 'flex-start',
                   //backgroundColor:'red'
                 }}>
                 Мастер-классы
@@ -437,15 +357,14 @@ class HomeScreen extends React.Component {
                 }>
                 <Text
                   style={{
-                    width: 81,
-                    height: 14,
-                    marginBottom: 2,
-                    marginTop:3,
-                    marginLeft: '20%',
+                    // width: 81,
+                    // height: 14,
+                    //marginBottom: 15,
+                    // marginLeft: '40%',
                     color: '#9b9b9b',
                     fontFamily: 'SFUIText-Regular',
                     fontSize: 12,
-                    alignSelf: 'flex-end',
+                    // alignSelf: 'flex-end',
                   }}>
                   Смотреть все
                 </Text>
@@ -453,10 +372,18 @@ class HomeScreen extends React.Component {
             </View>
             <FlatList
               horizontal={true}
-              style={{flexDirection: 'row'}}
+              style={{
+                // flexDirection: 'row',
+                // paddingHorizontal: 20,
+              }}
+              contentContainerStyle={{
+                paddingHorizontal: 20,
+                paddingRight: 8,
+                flexDirection: 'row',
+              }}
               data={DATA}
               renderItem={({item, index}) => (
-                <View style={{}}>
+                <View style={{overflow: 'hidden', width: IMAGE_WIDTH, height: IMAGE_HEIGHT, marginRight: 12, borderRadius: 8}}>
                   <Image
                     style={styles.imagemed}
                     source={{uri: item.urls.small}}
@@ -470,25 +397,17 @@ class HomeScreen extends React.Component {
                     style={{
                       position: 'absolute',
                       bottom: 0,
-                      width: 154,
-                      height: 41,
-                      //borderRadius: 8,
+                      top: 0,
+                      right: 0,
+                      left: 0,
                       Zindex: 2,
                     }}
-                  />
-                  <View
-                    style={{
-                      position: 'absolute',
-                      bottom: 12,
-                      width: 154,
-                      height: '20%',
-                      Zindex: 1,
-                    }}>
+                  >
                     <Text
                       style={{
-                        width: 89.3,
-                        height: 14,
-                        marginLeft: 14,
+                        position: 'absolute',
+                        left: 15,
+                        bottom: 12,
                         fontSize: 12,
                         fontFamily: 'SFUIText-Regular',
                         color: '#ffffff',
@@ -496,7 +415,7 @@ class HomeScreen extends React.Component {
                       }}>
                       {item.user.name}
                     </Text>
-                  </View>
+                  </LinearGradient>
                 </View>
               )}
               keyExtractor={({id}, index) => id}
@@ -505,25 +424,26 @@ class HomeScreen extends React.Component {
         </LinearGradient>
         <View
           style={{
-            flex: 1,
+            // flex: 1,
             flexDirection: 'row',
-            paddingBottom:5,
+            alignItems: 'center',
+            paddingBottom: isIphoneX() ? 20 : 0,
             backgroundColor: '#2b264d',
-            position: 'absolute',
+            // position: 'absolute',
             //  top: 0 ,
             //left: 0,
-            height: h/14, // висота
+            height: isIphoneX() ? 70 : 50, // висота
+
             //width: 375,
             width: w,
-            bottom: 0,
+            // bottom: 0,
           }}>
           <TouchableOpacity
             style={{
-              marginTop:12,
-              width: w/3,
+              // marginTop:12,
+              // width: w/3,
+              flex: 1,
               //height: h/12,
-              borderWidth:2,
-              borderColor:'transparent',
               backgroundColor: '#2b264d',
               justifyContent: 'center',
               alignItems: 'center',
@@ -533,17 +453,27 @@ class HomeScreen extends React.Component {
             }}>
             <Image
               source={Icon.HOMES}
-              style={{width: 17, height: 17,borderColor:'#1488cc', tintColor: '#1488cc',marginBottom:5}}
+              style={{
+                width: 17,
+                height: 17,
+                tintColor: '#1488cc',
+                marginBottom: 5
+              }}
             />
-            <Text style={{width:125,height:10,fontFamily:'SFUIText-Regular',color:'#1488cc',fontSize:10,textAlign:'center'}}>Главная</Text>
+            <Text
+              style={{
+                fontFamily:'SFUIText-Regular',
+                color:'#1488cc',
+                fontSize:10,
+                textAlign:'center'
+              }}>Главная</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={{
-              marginTop:12,
-              width: w/3,
-              borderColor:'transparent',
-              borderWidth:2,
+              // marginTop:12,
+              flex: 1,
               //height: '140%',
+              // backgroundColor: 'red',
               backgroundColor: '#2b264d',
               justifyContent: 'center',
               alignItems: 'center',
@@ -553,14 +483,21 @@ class HomeScreen extends React.Component {
             }}>
             <Image
               source={Icon.USERHOME}
-              style={{width: 15, height: 18,borderColor:'#1488cc',resizeMode: 'contain', tintColor: '#8a8a8f',marginBottom:5,}}
+              style={{
+                width: 15,
+                height: 18,
+                borderColor:'#1488cc',
+                resizeMode: 'contain',
+                tintColor: '#8a8a8f',
+                marginBottom: 5
+              }}
             />
-            <Text style={{fontFamily:'SFUIText-Regular',letterSpacing:0.12, fontSize:10,textAlign:'center',marginBottom:5,color: '#8a8a8f',width:125,height:10}}>Профиль</Text>
+            <Text style={{fontFamily:'SFUIText-Regular',letterSpacing:0.12, fontSize:10,textAlign:'center',color: '#8a8a8f'}}>Профиль</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={{
-              marginTop:12,
-              width: w/3,
+              // marginTop:12,
+              flex: 1,
               borderColor:'transparent',
               borderWidth:2,
               backgroundColor: '#2b264d',
@@ -572,12 +509,12 @@ class HomeScreen extends React.Component {
             }}>
             <Image
               source={Icon.FAVORITE}
-              style={{borderColor:'#8a8a8f',width: 18.8, height: 16.7, tintColor: '#8a8a8f',marginBottom:5,}}
+              style={{width: 18.8, height: 16.7, tintColor: '#8a8a8f',marginBottom:5,}}
             />
-            <Text style={{ width:125,height:10, fontFamily:'SFUIText-Regular',fontSize:10,letterSpacing:0.12,marginBottom:5,textAlign:'center',color: '#8a8a8f'}}>Избранное</Text>
+            <Text style={{ fontFamily:'SFUIText-Regular',fontSize:10,letterSpacing:0.12,textAlign:'center',color: '#8a8a8f'}}>Избранное</Text>
           </TouchableOpacity>
         </View>
-      </SafeAreaView>
+      </View>
     );
   }
 }
@@ -598,19 +535,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   imagemed: {
-    width: 154,
-    height: 133,
+    width: IMAGE_WIDTH,
+    height: IMAGE_HEIGHT,
     //margin: 12,
     // marginRight: 12,
     //marginLeft:5,
     justifyContent: 'center',
-  },
-  image: {
-    width: 154,
-    height: 133,
-    margin: 10,
-    justifyContent: 'center',
-    borderRadius: 8,
   },
   text: {
     width: 100,

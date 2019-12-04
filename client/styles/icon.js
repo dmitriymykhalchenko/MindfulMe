@@ -12,6 +12,11 @@ export default Icons = {
   HEARTNB: require('../img/heartnb.png'),
   MINDSELF: require('../img/MindSelf.png'),
   TICK: require('../img/tick.png'),
+  RING: require('../img/ring.png'),
+  BACK: require('../img/back.png'),
+  LEFT: require('../img/left.png'),
+  RIGHT: require('../img/right.png'),
 
+//  RING2: require('../static/images/ring.png')
 
 }

@@ -107,67 +107,127 @@ class MeditationScreen extends React.Component {
 
         <View
           style={{
-            flex: 1,
             flexDirection: 'row',
-
-            backgroundColor: 'rgb(46,33,80)',
-            position: 'absolute',
-            //  top: 0 ,
-            //left: 0,
-            height: '10%', // висота
+            alignItems: 'center',
+            paddingBottom: isIphoneX() ? 20 : 0,
+            backgroundColor: '#2b264d',
+            height: isIphoneX() ? 70 : 50, // висота
             width: w,
-            bottom: 0,
+            // flex: 1,
+            // flexDirection: 'row',
+            //
+            // backgroundColor: 'rgb(46,33,80)',
+            // position: 'absolute',
+            // //  top: 0 ,
+            // //left: 0,
+            // height: '10%', // висота
+            // width: w,
+            // bottom: 0,
           }}>
           <TouchableOpacity
             style={{
-              width: '34%',
-              height: '140%',
-              backgroundColor: 'rgb(46,33,80)',
+              flex: 1,
+              backgroundColor: '#2b264d',
               justifyContent: 'center',
               alignItems: 'center',
+              // width: '34%',
+              // height: '140%',
+              // backgroundColor: 'rgb(46,33,80)',
+              // justifyContent: 'center',
+              // alignItems: 'center',
             }}
             onPress={() => {
               this.props.navigation.navigate('Home');
             }}>
             <Image
               source={Icon.HOMES}
-              style={{width: 24, height: 24, tintColor: 'white'}}
+              style={{
+                width: 17,
+                height: 17,
+                tintColor: '#1488cc',
+                marginBottom: 5,
+              //  width: 24, height: 24, tintColor: 'white'
+              }}
             />
-            <Text style={{color: 'white'}}>Home!</Text>
+            <Text style={{
+              fontFamily: 'SFUIText-Regular',
+              color: '#1488cc',
+              fontSize: 10,
+              textAlign: 'center',
+
+              //color: 'white'
+            }}>Главная</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={{
-              width: '34%',
-              height: '140%',
-              backgroundColor: 'rgb(46,33,80)',
+              flex: 1,
+              backgroundColor: '#2b264d',
               justifyContent: 'center',
               alignItems: 'center',
+              // width: '34%',
+              // height: '140%',
+              // backgroundColor: 'rgb(46,33,80)',
+              // justifyContent: 'center',
+              // alignItems: 'center',
             }}
             onPress={() => {
               this.props.navigation.navigate('Profile');
             }}>
             <Image
               source={Icon.USERHOME}
-              style={{width: 24, height: 24, tintColor: 'white'}}
+              style={{
+                width: 15,
+                height: 18,
+                // borderColor: '#1488cc',
+                resizeMode: 'contain',
+                tintColor: '#8a8a8f',
+                marginBottom: 5,
+                //width: 24, height: 24, tintColor: 'white'
+              }}
             />
-            <Text style={{color: 'white'}}>Profile</Text>
+            <Text style={{
+              fontFamily: 'SFUIText-Regular',
+              color: '#8a8a8f',
+              fontSize: 10,
+              textAlign: 'center',
+              //color: 'white'
+            }}>Профиль</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={{
-              width: '34%',
-              height: '140%',
-              backgroundColor: 'rgb(46,33,80)',
+              flex: 1,
+              borderColor: 'transparent',
+              borderWidth: 2,
+              backgroundColor: '#2b264d',
               justifyContent: 'center',
               alignItems: 'center',
+              //width: '34%',
+              // height: '140%',
+              // backgroundColor: 'rgb(46,33,80)',
+              // justifyContent: 'center',
+              // alignItems: 'center',
             }}
             onPress={() => {
-              this.props.navigation.navigate('Setting');
+              this.props.navigation.navigate('FavoriteScreen');
             }}>
             <Image
-              source={Icon.FAVORITE}
-              style={{width: 24, height: 24, tintColor: 'white'}}
+              source={Icon.HEARTN }
+              style={{
+                width: 18.8,
+                height: 16.7,
+                tintColor: '#8a8a8f',
+                marginBottom: 5,
+              //  width: 24, height: 24, tintColor: 'white'
+              }}
             />
-            <Text style={{color: 'white'}}>Setting</Text>
+            <Text style={{
+              fontFamily: 'SFUIText-Regular',
+              fontSize: 10,
+              letterSpacing: 0.12,
+              textAlign: 'center',
+              color: '#8a8a8f',
+              //color: 'white'
+            }}>Избранное</Text>
           </TouchableOpacity>
         </View>
         {/*// <View style={styles.secondcontainer}>

@@ -12,9 +12,11 @@ import {
   Image,
   ImageBackground,
   TouchableOpacity,
+  ScrollView
 } from 'react-native';
 import {h, w, isIphoneX} from '../../constants';
 import LinearGradient from 'react-native-linear-gradient';
+//import MeditationComponent from '../components/MeditationComponent';
 const IMAGE_HEIGHT =
   (h - (isIphoneX() ? 74 : 44) - (isIphoneX() ? 70 : 50)) / 3 - (19 + 25 + 13);
 
@@ -27,120 +29,153 @@ class HomeComponent extends React.Component {
     console.log('IMAGE_HEIGHT - ', IMAGE_HEIGHT);
 
     return (
-      <View>
+      <ScrollView
+        style={{
+          flex: 1,
+          alignSelf: 'stretch',
+          backgroundColor: 'transparent',
+          // paddingTop: isIphoneX() ? 74 : 44,
+        }}>
         {/* section */}
-        <View
-          style={{
-            alignSelf: 'stretch',
-            backgroundColor: 'transparent',
-            paddingTop: isIphoneX() ? 74 : 44,
-          }}>
-          {/* title */}
-          <View style={styles.container}>
-            <Text style={styles.textMed}>Медитации</Text>
-            <TouchableOpacity
-              onPress={() =>
-                navigation.navigate('MeditationScreen', {
-                })
-              }>
-              <Text style={styles.textMedall}>Смотреть все</Text>
-            </TouchableOpacity>
-          </View>
-          <FlatList
-            horizontal={true}
-            contentContainerStyle={styles.medcontentFlat}
-            data={DATA}
-            renderItem={({item, index}) => (
-              <View style={styles.viewMed}>
-                <Image
-                  style={styles.imagemed}
-                  source={{uri: item.urls.small}}
-                />
-                <LinearGradient
-                  colors={[
-                    'rgba(0, 0, 0, 0)',
-                    'rgba(15, 12, 41, 0.33)',
-                    'rgba(15, 12, 41, 0.9)',
-                  ]}
-                  style={styles.medGrad}>
-                  <Text style={styles.medText}>{item.user.name}</Text>
-                </LinearGradient>
-              </View>
-            )}
-            keyExtractor={({id}, index) => id}
-          />
-        </View>
 
         <View>
-          <View style={styles.sosView}>
-            <Text style={styles.sosText}>SOS практики</Text>
-            <TouchableOpacity
-              onPress={() => navigation.navigate('SosScreen', {})}>
-              <Text style={styles.textSosmed}>Смотреть все</Text>
-            </TouchableOpacity>
+          <View
+            style={{
+              alignSelf: 'stretch',
+              backgroundColor: 'transparent',
+              paddingTop: isIphoneX() ? 74 : 44,
+            }}>
+            {/* title */}
+            <View style={styles.container}>
+              <Text style={styles.textMed}>Медитации</Text>
+              <TouchableOpacity
+                //style={styles.touchProf}
+                onPress={() => {
+                  // this.props.navigation.navigate('Setting');
+                  // this.setState({
+                  //   MeditationScreen: true,
+                  //   HomeScreen: false,
+                  // });
+                  this.props.onAllMeditationPressed();
+                }}>
+                <Text style={styles.textMedall}>Смотреть все</Text>
+              </TouchableOpacity>
+
+              {/*//<Image source={this.state.FavoriteScreen ?  Icon.HEARTNB : Icon.HEARTN } style={this.state.FavoriteScreen ? styles.imgProfOn : styles.imgProf} />*/}
+              {/* <TouchableOpacity
+                onPress={() =>
+                  navigation.navigate('MeditationScreen', {
+                  })
+                }>
+                <Text style={styles.textMedall}>Смотреть все</Text>
+              </TouchableOpacity> */}
+            </View>
+            <FlatList
+              horizontal={true}
+              contentContainerStyle={styles.medcontentFlat}
+              data={DATA}
+              renderItem={({item, index}) => (
+                <View style={styles.viewMed}>
+                  <Image
+                    style={styles.imagemed}
+                    source={{uri: item.urls.small}}
+                  />
+                  <LinearGradient
+                    colors={[
+                      'rgba(0, 0, 0, 0)',
+                      'rgba(15, 12, 41, 0.33)',
+                      'rgba(15, 12, 41, 0.9)',
+                    ]}
+                    style={styles.medGrad}>
+                    <Text style={styles.medText}>{item.user.name}</Text>
+                  </LinearGradient>
+                </View>
+              )}
+              keyExtractor={({id}, index) => id}
+            />
           </View>
-          <FlatList
-            horizontal={true}
-            //onLayout={e => console.log('onLayout - ', e.nativeEvent)}
-            contentContainerStyle={styles.sosContentFlat}
-            data={DATA}
-            renderItem={({item, index}) => (
-              <View style={styles.viewImgSos}>
-                <Image style={styles.imgSos} source={{uri: item.urls.small}} />
-                <LinearGradient
-                  colors={[
-                    'rgba(0, 0, 0, 0)',
-                    'rgba(15, 12, 41, 0.33)',
-                    'rgba(15, 12, 41, 0.9)',
-                  ]}
-                  style={styles.sosGrad}>
-                  <Text style={styles.sosTextEnd}>{item.user.name}</Text>
-                </LinearGradient>
-              </View>
-            )}
-            keyExtractor={({id}, index) => id}
-          />
-        </View>
-        <View style={styles.viewMas}>
-          <View style={styles.viewTextMas}>
-            <Text style={styles.textMas}>Мастер-классы</Text>
-            <TouchableOpacity
-              onPress={() => navigation.navigate('KouchScreen', {})}>
-              <Text style={styles.textMasAll}>Смотреть все</Text>
-            </TouchableOpacity>
+
+          <View>
+            <View style={styles.sosView}>
+              <Text style={styles.sosText}>SOS практики</Text>
+              <TouchableOpacity
+                onPress={
+                  () => this.props.onAllSosPressed()
+                  //navigation.navigate('SosScreen', {})
+                }>
+                <Text style={styles.textSosmed}>Смотреть все</Text>
+              </TouchableOpacity>
+            </View>
+            <FlatList
+              horizontal={true}
+              //onLayout={e => console.log('onLayout - ', e.nativeEvent)}
+              contentContainerStyle={styles.sosContentFlat}
+              data={DATA}
+              renderItem={({item, index}) => (
+                <View style={styles.viewImgSos}>
+                  <Image
+                    style={styles.imgSos}
+                    source={{uri: item.urls.small}}
+                  />
+                  <LinearGradient
+                    colors={[
+                      'rgba(0, 0, 0, 0)',
+                      'rgba(15, 12, 41, 0.33)',
+                      'rgba(15, 12, 41, 0.9)',
+                    ]}
+                    style={styles.sosGrad}>
+                    <Text style={styles.sosTextEnd}>{item.user.name}</Text>
+                  </LinearGradient>
+                </View>
+              )}
+              keyExtractor={({id}, index) => id}
+            />
           </View>
-          <FlatList
-            horizontal={true}
-            contentContainerStyle={styles.masContentFlat}
-            data={DATA}
-            renderItem={({item, index}) => (
-              <View style={styles.viewImgMas}>
-                <Image
-                  style={styles.imagemed}
-                  source={{uri: item.urls.small}}
-                />
-                <LinearGradient
-                  colors={[
-                    'rgba(0, 0, 0, 0)',
-                    'rgba(15, 12, 41, 0.33)',
-                    'rgba(15, 12, 41, 0.9)',
-                  ]}
-                  style={styles.masGrad}>
-                  <Text style={styles.masText}>{item.user.name}</Text>
-                </LinearGradient>
-              </View>
-            )}
-            keyExtractor={({id}, index) => id}
-          />
+          <View style={styles.viewMas}>
+            <View style={styles.viewTextMas}>
+              <Text style={styles.textMas}>Мастер-классы</Text>
+              <TouchableOpacity
+                onPress={
+                  () => {
+                    this.props.onAllMasterPressed();
+                  }
+
+                  //navigation.navigate('KouchScreen', {})
+                }>
+                <Text style={styles.textMasAll}>Смотреть все</Text>
+              </TouchableOpacity>
+            </View>
+            <FlatList
+              horizontal={true}
+              contentContainerStyle={styles.masContentFlat}
+              data={DATA}
+              renderItem={({item, index}) => (
+                <View style={styles.viewImgMas}>
+                  <Image
+                    style={styles.imagemed}
+                    source={{uri: item.urls.small}}
+                  />
+                  <LinearGradient
+                    colors={[
+                      'rgba(0, 0, 0, 0)',
+                      'rgba(15, 12, 41, 0.33)',
+                      'rgba(15, 12, 41, 0.9)',
+                    ]}
+                    style={styles.masGrad}>
+                    <Text style={styles.masText}>{item.user.name}</Text>
+                  </LinearGradient>
+                </View>
+              )}
+              keyExtractor={({id}, index) => id}
+            />
+          </View>
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }
 const styles = StyleSheet.create({
-  header: {flex: 1,
-     backgroundColor: '#2b264d'
-   },
+  header: {flex: 1, backgroundColor: '#2b264d'},
   container: {
     flexDirection: 'row',
     marginBottom: 13,
@@ -363,11 +398,13 @@ const styles = StyleSheet.create({
     color: '#9b9b9b',
     fontFamily: 'SFUIText-Regular',
     fontSize: 12,
+    //width:81
   },
   textMed: {
     color: '#f1f1f2',
     fontFamily: 'SFUIText-Regular',
     fontSize: 16,
+    //width:90
   },
   secondcontainer: {
     flex: 1,

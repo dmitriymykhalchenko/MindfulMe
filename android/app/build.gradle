@@ -1,7 +1,12 @@
 apply plugin: "com.android.application"
+apply plugin: "io.fabric"
+
 
 import com.android.build.OutputFile
 
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
  * and bundleReleaseJsAndAssets).
@@ -182,7 +187,8 @@ dependencies {
     implementation project(':react-native-reanimated')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
-
+    implementation 'com.google.firebase:firebase-analytics:17.2.1'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
         debugImplementation files(hermesPath + "hermes-debug.aar")
@@ -200,3 +206,4 @@ task copyDownloadableDepsToLibs(type: Copy) {
 }
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+apply plugin: 'com.google.gms.google-services'

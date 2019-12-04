@@ -12,7 +12,6 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1852DF52900234066BD81D79 /* libPods-MindSelfTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2464533A46184D22D299C97B /* libPods-MindSelfTests.a */; };
 		29E80D1DB3B37C12F45E622B /* libPods-MindSelf-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD89B084FB5A4A5AD1CB3AC /* libPods-MindSelf-tvOSTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -22,12 +21,14 @@
 		462C1D71238AAC880072A63C /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */; };
 		462C1D72238AAC880072A63C /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */; };
 		462C1D73238AAC880072A63C /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */; };
+		465CE97323954DB700065956 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 465CE97223954DB700065956 /* GoogleService-Info.plist */; };
 		46938BCC238AC7D5006891DD /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46938BCB238AC7D5006891DD /* dummy.swift */; };
 		46BD9EAC238C1ADE0018299B /* SFUIText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46BD9EAB238C1ADD0018299B /* SFUIText-Regular.otf */; };
 		46BD9EB2238C29F00018299B /* SFUIText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46BD9EB1238C29F00018299B /* SFUIText-Bold.otf */; };
 		46BD9EB4238C2A0E0018299B /* SFUIText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46BD9EB3238C2A0E0018299B /* SFUIText-Light.otf */; };
+		7FA45F3D12CCDECE906DD256 /* Pods_MindSelfTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDAA33290DD7C34C07EE849 /* Pods_MindSelfTests.framework */; };
+		C8244B825524A98AE6EF3D76 /* Pods_MindSelf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2956648EFE5279D6E780052 /* Pods_MindSelf.framework */; };
 		E52ED0076306D829D50A48F5 /* libPods-MindSelf-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0162B37C84C0283C8BA71D04 /* libPods-MindSelf-tvOS.a */; };
-		F1504889FBD9E23BD880DCAC /* libPods-MindSelf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6CED487E550E5CF0FE94E0 /* libPods-MindSelf.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,11 +64,10 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MindfulMe/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MindfulMe/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MindfulMe/main.m; sourceTree = "<group>"; };
-		1F6CED487E550E5CF0FE94E0 /* libPods-MindSelf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MindSelf.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21FE67AC07BD0CC6A2AC1774 /* Pods-MindfulMe-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-MindfulMe-tvOSTests/Pods-MindfulMe-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		2464533A46184D22D299C97B /* libPods-MindSelfTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MindSelfTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* MindSelf-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindSelf-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* MindSelf-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MindSelf-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		465CE97223954DB700065956 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46938BCB238AC7D5006891DD /* dummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 		46938BD0238AEA61006891DD /* MindfulMe-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MindfulMe-Bridging-Header.h"; path = "../MindfulMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		46BD9EAB238C1ADD0018299B /* SFUIText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Regular.otf"; sourceTree = "<group>"; };
@@ -81,6 +81,8 @@
 		95882835AD5186F5DF201473 /* Pods-MindfulMe-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-MindfulMe-tvOS/Pods-MindfulMe-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		95DDB17D04525D2300B9C147 /* Pods-MindfulMe-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe-tvOS.release.xcconfig"; path = "Target Support Files/Pods-MindfulMe-tvOS/Pods-MindfulMe-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		A2A348FF22A8573293B9D11F /* Pods-MindfulMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe.release.xcconfig"; path = "Target Support Files/Pods-MindfulMe/Pods-MindfulMe.release.xcconfig"; sourceTree = "<group>"; };
+		B2956648EFE5279D6E780052 /* Pods_MindSelf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindSelf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCDAA33290DD7C34C07EE849 /* Pods_MindSelfTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindSelfTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C517D3AA6CCD242A55B886DF /* Pods-MindSelf-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSelf-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-MindSelf-tvOS/Pods-MindSelf-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C51BF284E693CDB68DE56BC2 /* Pods-MindfulMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe.debug.xcconfig"; path = "Target Support Files/Pods-MindfulMe/Pods-MindfulMe.debug.xcconfig"; sourceTree = "<group>"; };
 		C80B12E35F5DB6910184ABED /* Pods-MindfulMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMeTests.debug.xcconfig"; path = "Target Support Files/Pods-MindfulMeTests/Pods-MindfulMeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1852DF52900234066BD81D79 /* libPods-MindSelfTests.a in Frameworks */,
+				7FA45F3D12CCDECE906DD256 /* Pods_MindSelfTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1504889FBD9E23BD880DCAC /* libPods-MindSelf.a in Frameworks */,
+				C8244B825524A98AE6EF3D76 /* Pods_MindSelf.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +153,7 @@
 				46938BCB238AC7D5006891DD /* dummy.swift */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				465CE97223954DB700065956 /* GoogleService-Info.plist */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				46BD9EB3238C2A0E0018299B /* SFUIText-Light.otf */,
 				46BD9EB1238C29F00018299B /* SFUIText-Bold.otf */,
@@ -168,10 +171,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				1F6CED487E550E5CF0FE94E0 /* libPods-MindSelf.a */,
 				0162B37C84C0283C8BA71D04 /* libPods-MindSelf-tvOS.a */,
 				4BD89B084FB5A4A5AD1CB3AC /* libPods-MindSelf-tvOSTests.a */,
-				2464533A46184D22D299C97B /* libPods-MindSelfTests.a */,
+				B2956648EFE5279D6E780052 /* Pods_MindSelf.framework */,
+				BCDAA33290DD7C34C07EE849 /* Pods_MindSelfTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -281,6 +284,8 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				D6F1445D0F8BDFA99B0B24A0 /* [CP] Embed Pods Frameworks */,
+				465CE97123954CCE00065956 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -393,6 +398,7 @@
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				46BD9EB2238C29F00018299B /* SFUIText-Bold.otf in Resources */,
 				46BD9EAC238C1ADE0018299B /* SFUIText-Regular.otf in Resources */,
+				465CE97323954DB700065956 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +492,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		465CE97123954CCE00065956 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\"\n";
+		};
 		BBAB7EE712FB7D424C353CC2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -506,6 +530,80 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6F1445D0F8BDFA99B0B24A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MindSelf/Pods-MindSelf-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BVLinearGradient/BVLinearGradient.framework",
+				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
+				"${BUILT_PRODUCTS_DIR}/FBReactNativeSpec/FBReactNativeSpec.framework",
+				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/RCTTypeSafety/RCTTypeSafety.framework",
+				"${BUILT_PRODUCTS_DIR}/RNGestureHandler/RNGestureHandler.framework",
+				"${BUILT_PRODUCTS_DIR}/RNReanimated/RNReanimated.framework",
+				"${BUILT_PRODUCTS_DIR}/React-Core/React.framework",
+				"${BUILT_PRODUCTS_DIR}/React-CoreModules/CoreModules.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTActionSheet/RCTActionSheet.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTAnimation/RCTAnimation.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTBlob/RCTBlob.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTImage/RCTImage.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTLinking/RCTLinking.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTNetwork/RCTNetwork.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTSettings/RCTSettings.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTText/RCTText.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTVibration/RCTVibration.framework",
+				"${BUILT_PRODUCTS_DIR}/React-cxxreact/cxxreact.framework",
+				"${BUILT_PRODUCTS_DIR}/React-jsi/jsi.framework",
+				"${BUILT_PRODUCTS_DIR}/React-jsiexecutor/jsireact.framework",
+				"${BUILT_PRODUCTS_DIR}/React-jsinspector/jsinspector.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactCommon/ReactCommon.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/glog/glog.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/react-native-slider/react_native_slider.framework",
+				"${BUILT_PRODUCTS_DIR}/react-native-track-player/react_native_track_player.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BVLinearGradient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleConversion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBReactNativeSpec.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTTypeSafety.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNGestureHandler.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNReanimated.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreModules.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTActionSheet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTAnimation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTBlob.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTLinking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTNetwork.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTSettings.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTVibration.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cxxreact.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jsi.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jsireact.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jsinspector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactCommon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/react_native_slider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/react_native_track_player.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MindSelf/Pods-MindSelf-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FBEFA097C915A703FE0270D3 /* [CP] Check Pods Manifest.lock */ = {

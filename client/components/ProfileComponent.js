@@ -176,8 +176,23 @@ export default class ProfileComponent extends React.Component {
               </Text>
             </View>
           </View>
-          <TouchableOpacity style={{marginTop: 20,paddingLeft:20,width:w, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}>
-            <Text style={{fontWeight:'300',marginTop:12,marginBottom:12,color: '#f1f1f2',height:24,width:202,fontSize: 16,letterSpacing: 0.5,}}>
+          <TouchableOpacity style={{marginTop: 20,paddingLeft:20,width:w, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}
+          onPress={() => {
+            this.props.fonScreen()
+          }}>
+
+
+            <Text
+              style={{
+                fontWeight: '300',
+                marginTop: 12,
+                marginBottom: 12,
+                color: '#f1f1f2',
+                height: 24,
+                width: 202,
+                fontSize: 16,
+                letterSpacing: 0.5,
+              }}>
               Настройка фона и звука
             </Text>
           </TouchableOpacity>
@@ -196,12 +211,22 @@ export default class ProfileComponent extends React.Component {
               Загруженные
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{width:w,paddingLeft:20, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}>
+          <TouchableOpacity style={{width:w,paddingLeft:20, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}
+          onPress={() => {
+            this.props.InfoaccScreen()
+          }}>
             <Text style={{fontWeight:'300',marginTop:12,marginBottom:12,color: '#f1f1f2',height:24,width:202,fontSize: 16,}}>
               Информация об аккаунте
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{width:w,paddingLeft:20, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}>
+          <TouchableOpacity
+          style={{width:w,paddingLeft:20, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}
+          onPress={() => {
+            this.props.helpScreen()
+          }}>
+        {/*//style={{width:w,paddingLeft:20, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}>*/}
+
+
             <Text style={{fontWeight:'300',marginTop:12,marginBottom:12,color: '#f1f1f2',height:24,width:202,fontSize: 16,}}>
               Помощь
             </Text>
@@ -211,7 +236,7 @@ export default class ProfileComponent extends React.Component {
               Выйти
             </Text>
           </TouchableOpacity>
-          
+
         </LinearGradient>
 
       </ScrollView>
