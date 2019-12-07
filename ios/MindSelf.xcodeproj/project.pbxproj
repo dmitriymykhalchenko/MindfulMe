@@ -18,6 +18,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* MindfulMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MindfulMeTests.m */; };
 		39109668677142A3A012A168 /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */; };
+		461B2536239A4B6D00606BA4 /* SFUIText-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 461B2535239A4B6D00606BA4 /* SFUIText-Semibold.ttf */; };
 		462C1D71238AAC880072A63C /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */; };
 		462C1D72238AAC880072A63C /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */; };
 		462C1D73238AAC880072A63C /* RNPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B95A8E967412C89DE71BC /* RNPlaceholder.swift */; };
@@ -67,6 +68,7 @@
 		21FE67AC07BD0CC6A2AC1774 /* Pods-MindfulMe-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindfulMe-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-MindfulMe-tvOSTests/Pods-MindfulMe-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* MindSelf-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindSelf-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* MindSelf-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MindSelf-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		461B2535239A4B6D00606BA4 /* SFUIText-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Semibold.ttf"; path = "../../Downloads/SFUIText-Semibold.ttf"; sourceTree = "<group>"; };
 		465CE97223954DB700065956 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46938BCB238AC7D5006891DD /* dummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 		46938BD0238AEA61006891DD /* MindfulMe-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MindfulMe-Bridging-Header.h"; path = "../MindfulMe-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		13B07FAE1A68108700A75B9A /* MindfulMe */ = {
 			isa = PBXGroup;
 			children = (
+				461B2535239A4B6D00606BA4 /* SFUIText-Semibold.ttf */,
 				46938BD0238AEA61006891DD /* MindfulMe-Bridging-Header.h */,
 				46938BCB238AC7D5006891DD /* dummy.swift */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -398,6 +401,7 @@
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				46BD9EB2238C29F00018299B /* SFUIText-Bold.otf in Resources */,
 				46BD9EAC238C1ADE0018299B /* SFUIText-Regular.otf in Resources */,
+				461B2536239A4B6D00606BA4 /* SFUIText-Semibold.ttf in Resources */,
 				465CE97323954DB700065956 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

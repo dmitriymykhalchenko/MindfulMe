@@ -254,7 +254,7 @@ class FonComponent extends React.Component {
                   numberOfLines={2}
                   style={{
                     fontFamily: 'SFUIText-Light',
-                    fontSize: 16,
+                    fontSize: 12,
                     color: '#ffffff',
                     width: 172,
                   }}>
@@ -264,8 +264,8 @@ class FonComponent extends React.Component {
               <View
                 style={{
                   flexDirection: 'row',
-                  alignItems: 'center',
-
+                  alignItems: 'flex-start',
+                  justifyContent: 'center',
                 }}>
                 <TouchableOpacity
                   hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}
@@ -285,11 +285,15 @@ class FonComponent extends React.Component {
                 <Text
                   style={{
                     fontSize: 16,
-                    fontFamily: 'SFUIText-Regular',
+                    fontFamily: 'SFUIText-Light',
                     color: '#ffffff',
-                    justifyContent: 'center',
-
-                    textAlign: 'center',
+                    width:51,
+                    height:24,
+                  justifyContent: 'flex-start',
+                    alignSelf:'flex-start',
+// //alignItems:'flex-end',
+         textAlign: 'auto',
+                    paddingBottom:40
                     //margin: 20
                   }}>
                   {this.props.counter + '  мин.'}

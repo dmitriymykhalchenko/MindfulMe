@@ -9,7 +9,7 @@ import {
   FlatList,
   Image,
   TextInput,
-  Keyboard
+  Keyboard,
 } from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
@@ -124,18 +124,19 @@ export default class WriteComponent extends React.Component {
               marginTop: 13,
               paddingBottom: 31,
               flexDirection: 'row',
-              width:'85%',
-             //  alignItems: 'stretch',
-             // alignSelf:'stretch',
-justifyContent: 'space-between'
+              width: '85%',
+              //  alignItems: 'stretch',
+              // alignSelf:'stretch',
+              justifyContent: 'space-between',
               //justifyContent:'center'
             }}>
             <TouchableOpacity
               hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}
               style={{
-              //  width: 12, height: 7.4,
-              paddingRight:"25%",
-                justifyContent:'flex-start' }}
+                //  width: 12, height: 7.4,
+                paddingRight: '25%',
+                justifyContent: 'flex-start',
+              }}
               onPress={() => {
                 this.props.backPressed();
               }}>
@@ -143,125 +144,127 @@ justifyContent: 'space-between'
             </TouchableOpacity>
             <Text
               style={{
-                width:'60%',
+                width: '60%',
                 fontSize: 16,
                 color: '#ffffff',
                 fontFamily: 'SFUIText-Regular',
                 textAlign: 'center',
                 // width: 209,
                 // height: 18,
-
               }}>
               Написать нам
             </Text>
             <TouchableOpacity
-
               hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}
-              style={{width: 12, height: 7.4,marginRight:14}}
+              style={{width: 12, height: 7.4, marginRight: 14}}
               onPress={() => {
                 //Keyboard.dismiss()
                 // this.props.backPressed();
               }}>
               <Text
-                style={{fontSize: 12, color: '#ffffff',
-               width: 90,
-              height: 18
-              }}>
+                style={{fontSize: 12, color: '#ffffff', width: 90, height: 18}}>
                 Отправить
               </Text>
             </TouchableOpacity>
           </View>
-        {/*title*/}
-        <View style = {{flexDirection:'row',marginLeft:31}}>
-        <Text style ={{width:53,height:24,fontFamily:'SFUIText-Light',fontSize:16,color:'#ffffff'}}>
-        Кому:
-        </Text>
-        <TextInput
-                  placeholder= " AppMindfulSpace@gmail.com"
-                  placeholderTextColor="#f9fafb"
+          {/*title*/}
+          <View style={{flexDirection: 'row', marginLeft: 31}}>
+            <Text
+              style={{
+                width: 53,
+                height: 24,
+                fontFamily: 'SFUIText-Light',
+                fontSize: 16,
+                color: '#ffffff',
+              }}>
+              Кому:
+            </Text>
+            <TextInput
+              placeholder=" AppMindfulSpace@gmail.com"
+              placeholderTextColor="#f9fafb"
+              keyboardType="default"
+              editable={false}
+              style={{
+                fontSize: 16,
+                textAlign: 'center',
+                // marginTop: 5,
+                // marginLeft: 10,
+                // marginRight: 10,
+                // borderRadius: 5,
+                //  borderColor: 'gray',
+                //borderWidth: 0.5,
+                backgroundColor: 'transparent',
+              }}
+              //textAlign="left"
+              // onChangeText={(site) => {
+              //   console.log('site-', site)
+              //   this.setState({ site })
+              // }}
+              value={this.state.site}
+            />
+          </View>
+          <View style={{flexDirection: 'row', marginLeft: 31, marginTop: 24}}>
+            <Text
+              style={{
+                width: 53,
+                height: 24,
+                fontFamily: 'SFUIText-Light',
+                fontSize: 16,
+                color: '#ffffff',
+              }}>
+              Тема:
+            </Text>
+            <TextInput
+              placeholder=""
+              placeholderTextColor="#f9fafb"
+              keyboardType="default"
+              editable={true}
+              style={{
+                width: 236,
+                height: 24,
+                fontSize: 16,
+                textAlign: 'left',
+                color: '#ffffff',
+                // marginTop: 5,
+                // marginLeft: 10,
+                // marginRight: 10,
+                // borderRadius: 5,
+                //  borderColor: 'gray',
+                //borderWidth: 0.5,
+                backgroundColor: 'transparent',
+              }}
+              //textAlign="left"
+              // onChangeText={(site) => {
+              //   console.log('site-', site)
+              //   this.setState({ site })
+              // }}
+              value={this.state.site}
+            />
+          </View>
+          <View style={{flexDirection: 'row', marginTop: 192}}>
+            <TextInput
+              //onSubmitEditing={Keyboard.dismiss}
+              placeholder="Сообщение:"
+              placeholderTextColor="#f9fafb"
+              //numberOfLines={5}
+              numberOfLines={5}
+              keyboardType="default"
+              editable={true}
+              style={{
+                paddingLeft: 31,
+                width: w,
+                height: 48,
+                fontFamily: 'SFUIText-Light',
+                fontSize: 16,
+                textAlign: 'left',
+                color: '#ffffff',
+                textAlignVertical: 'top',
+                backgroundColor: '#2b264d',
+              }}
+            />
+          </View>
 
-                  keyboardType="default"
-                  editable={false}
-                  style={{
-                    fontSize:16,
-                    textAlign:'center',
-    // marginTop: 5,
-    // marginLeft: 10,
-    // marginRight: 10,
-    // borderRadius: 5,
-  //  borderColor: 'gray',
-    //borderWidth: 0.5,
-    backgroundColor: 'transparent'}}
-                  //textAlign="left"
-                  // onChangeText={(site) => {
-                  //   console.log('site-', site)
-                  //   this.setState({ site })
-                  // }}
-                  value={this.state.site}
-                />
-
-
-        </View>
-        <View style = {{flexDirection:'row',marginLeft:31,marginTop:24}}>
-        <Text style ={{width:53,height:24,fontFamily:'SFUIText-Light',fontSize:16,color:'#ffffff'}}>
-        Тема:
-        </Text>
-        <TextInput
-                  placeholder= ""
-                  placeholderTextColor="#f9fafb"
-
-                  keyboardType="default"
-                  editable={true}
-                  style={{
-                    width:236,
-                    height:24,
-                    fontSize:16,
-                    textAlign:'left',
-                    color:'#ffffff',
-    // marginTop: 5,
-    // marginLeft: 10,
-    // marginRight: 10,
-    // borderRadius: 5,
-  //  borderColor: 'gray',
-    //borderWidth: 0.5,
-    backgroundColor: 'transparent'}}
-                  //textAlign="left"
-                  // onChangeText={(site) => {
-                  //   console.log('site-', site)
-                  //   this.setState({ site })
-                  // }}
-                  value={this.state.site}
-                />
-
-
-        </View>
-        <View style = {{flexDirection:'row',marginTop:192}}>
-
-        <TextInput
-        //onSubmitEditing={Keyboard.dismiss}
-                  placeholder= "Сообщение:"
-                  placeholderTextColor="#f9fafb"
-                  //numberOfLines={5}
-numberOfLines={5}
-
-                  keyboardType="default"
-                  editable={true}
-                  style={{
-                    paddingLeft:31,
-                    width:w,
-                    height:48,
-                    fontSize:16,
-                    textAlign:'left',
-                    color:'#ffffff',
-textAlignVertical: 'top',
-    backgroundColor: '#2b264d'}}
-
-                />
-
-
-        </View>
-
-{/*
+          {/*
           //<View
           //   style={{
           //     //  flex: 3/1,

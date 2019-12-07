@@ -33,6 +33,7 @@ import HelpComponent from '../components/HelpComponent';
 import WriteComponent from '../components/WriteComponent';
 import FonComponent from '../components/FonComponent';
 import InfoaccComponent from '../components/InfoaccComponent';
+import LanguageComponent from '../components/LanguageComponent';
 
 // const IMAGE_HEIGHT =
 //   (h - (isIphoneX() ? 74 : 44) - (isIphoneX() ? 70 : 50)) / 3 - (19 + 25 + 13);
@@ -141,18 +142,12 @@ class HomeScreen extends React.Component {
                   fonScreen: true,
                 });
               }}
-              InfoaccScreen={() => {
+              infoaccScreen={() => {
                 this.setState({
                   profileScreen: false,
-                  InfoaccScreen: true,
+                  infoaccScreen: true,
                 });
               }}
-              // writeScreen={() => {
-              //   this.setState({
-              //     helpScreen: false,
-              //     writeScreen: true,
-              //   })
-              // }}
             />
           )}
 
@@ -167,13 +162,31 @@ class HomeScreen extends React.Component {
               }}
             />
           )}
-          {this.state.InfoaccScreen && (
+          {this.state.languageScreen && (
+            <LanguageComponent
+              navigation={navigation}
+              backPressed={() => {
+                this.setState({
+                  infoaccScreen: true,
+                  languageScreen: false,
+                });
+              }}
+            />
+          )}
+
+          {this.state.infoaccScreen && (
             <InfoaccComponent
               navigation={navigation}
               backPressed={() => {
                 this.setState({
                   profileScreen: true,
-                  InfoaccScreen: false,
+                  infoaccScreen: false,
+                });
+              }}
+              languageScreen={() => {
+                this.setState({
+                  infoaccScreen: false,
+                  languageScreen: true,
                 });
               }}
             />
@@ -265,7 +278,8 @@ class HomeScreen extends React.Component {
                 helpScreen: false,
                 writeScreen: false,
                 fonScreen: false,
-                InfoaccScreen:false,
+                infoaccScreen:false,
+                languageScreen:false,
               }); //clean on HomeScreen
               // this.props.navigation.navigate('homeScreen');
             }}>
@@ -299,7 +313,9 @@ class HomeScreen extends React.Component {
                 helpScreen: false,
                 writeScreen: false,
                 fonScreen: false,
-                InfoaccScreen:false,
+                infoaccScreen:false,
+                languageScreen:false,
+
               });
               // this.props.navigation.navigate('Profile');
             }}>
@@ -332,7 +348,9 @@ class HomeScreen extends React.Component {
                 helpScreen: false,
                 writeScreen: false,
                 fonScreen: false,
-                InfoaccScreen:false,
+                infoaccScreen:false,
+                languageScreen:false,
+
               });
             }}>
             <Image

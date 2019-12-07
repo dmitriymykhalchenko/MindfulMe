@@ -8,7 +8,7 @@ import {
   StyleSheet,
   FlatList,
   Image,
-  TextInput
+  TextInput,
 } from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
@@ -35,7 +35,7 @@ export default class InfoaccComponent extends React.Component {
       },
       headerTintColor: 'white',
       headerTitleStyle: {
-      //  flex: 1,
+        //  flex: 1,
         textAlign: 'center',
       },
       headerRight: <TouchableOpacity style={{height: 60, width: 60}} />,
@@ -86,26 +86,22 @@ export default class InfoaccComponent extends React.Component {
     const {navigation} = this.props;
     const DATA = this.state.dataSource;
     return (
-      <SafeAreaView
-        style={{flex: 1, backgroundColor: 'transparent'}}>
+      <SafeAreaView style={{flex: 1, backgroundColor: 'transparent'}}>
         <View
           style={{
             paddingLeft: 15,
             marginTop: 13,
-            paddingBottom:31,
+            paddingBottom: 22,
             flexDirection: 'row',
             alignItems: 'center',
           }}>
           <TouchableOpacity
-          hitSlop={{top:10,bottom:10,left:10,right:10}}
+            hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}
             style={{width: 12, height: 7.4}}
             onPress={() => {
               this.props.backPressed();
             }}>
-            <Image
-              source={Icon.BACK}
-                style={{tintColor: '#ffffff', }}
-            />
+            <Image source={Icon.BACK} style={{tintColor: '#ffffff'}} />
           </TouchableOpacity>
           <Text
             style={{
@@ -122,94 +118,302 @@ export default class InfoaccComponent extends React.Component {
 
         <View
           style={{
-          //  flex: 3/1,
-            marginTop: 34,
-            marginLeft: 25,
+            //  flex: 3/1,
+            //marginTop: 34,
+            //marginLeft: 25,
             backgroundColor: 'transparent',
           }}>
           <View
-            style={{
-              // flexDirection: 'row',
-              // flexWrap: 'wrap',
-              // width: w / 2,
-              // marginTop: 30,
-              // padding: 20,
-              // flexShrink: 2,
-            }}>
-<View>
-<Text>имя</Text>
-</View>
-            <View style = {{flexDirection:'row',marginLeft:31}}>
-            <Text style ={{width:53,height:24,fontFamily:'SFUIText-Light',fontSize:16,color:'#ffffff'}}>
-            Кому:
-            </Text>
-            <TextInput
-                      placeholder= " AppMindfulSpace@gmail.com"
-                      placeholderTextColor="#f9fafb"
-
-                      keyboardType="default"
-                      editable={false}
-                      style={{
-                        fontSize:16,
-                        textAlign:'center',
-            // marginTop: 5,
-            // marginLeft: 10,
-            // marginRight: 10,
-            // borderRadius: 5,
-            //  borderColor: 'gray',
-            //borderWidth: 0.5,
-            backgroundColor: 'transparent'}}
-                      //textAlign="left"
-                      // onChangeText={(site) => {
-                      //   console.log('site-', site)
-                      //   this.setState({ site })
-                      // }}
-                      value={this.state.site}
-                    />
-</View>
-
-
-              <TouchableOpacity>
+            style={
+              {
+                // flexDirection: 'row',
+                // flexWrap: 'wrap',
+                // width: w / 2,
+                // marginTop: 30,
+                // padding: 20,
+                // flexShrink: 2,
+              }
+            }>
+            <View style={{marginLeft: 30}}>
               <Text
                 style={{
                   fontFamily: 'SFUIText-Light',
-                  fontSize: 16,
+                  fontSize: 10,
                   color: '#ffffff',
                 }}>
-                Про MindfulMe
+                Имя
               </Text>
+            </View>
+            <View
+              style={{
+                flexDirection: 'row',
+                marginTop: 9,
+                marginLeft: 30,
+                justifyContent: 'space-between',
+              }}>
+              <TextInput
+                placeholder="Введите имя"
+                placeholderTextColor="#f9fafb"
+                keyboardType="default"
+                editable={true}
+                style={{
+                  fontSize: 16,
+                  textAlign: 'left',
+                  color: '#ffffff',
+                  fontFamily: 'SFUIText-Light',
+                  backgroundColor: 'transparent',
+                  width: '50%',
+                }}
+              />
+              <TouchableOpacity style={{marginRight: 30}}>
+                <Text
+                  style={{
+                    fontFamily: 'SFUIText-Light',
+                    fontSize: 11,
+                    color: '#ffffff',
+                  }}>
+                  Редактировать
+                </Text>
               </TouchableOpacity>
-              <TouchableOpacity style = {{paddingTop:24,paddingBottom:24}}>
+            </View>
+            <View style={{marginLeft: 30, marginTop: 17}}>
               <Text
                 style={{
                   fontFamily: 'SFUIText-Light',
-                  fontSize: 16,
+                  fontSize: 10,
                   color: '#ffffff',
                 }}>
-                Как использовать
+                Email
               </Text>
+            </View>
+            <View
+              style={{
+                flexDirection: 'row',
+                marginTop: 9,
+                marginLeft: 30,
+                justifyContent: 'space-between',
+              }}>
+              <TextInput
+                placeholder="name@gmail.com"
+                placeholderTextColor="#f9fafb"
+                keyboardType="default"
+                editable={true}
+                style={{
+                  fontSize: 16,
+                  textAlign: 'left',
+                  color: '#ffffff',
+                  fontFamily: 'SFUIText-Light',
+                  backgroundColor: 'transparent',
+                  width: '50%',
+                }}
+              />
+            </View>
+            <View style={{marginLeft: 30, marginTop: 17}}>
+              <Text
+                style={{
+                  fontFamily: 'SFUIText-Light',
+                  fontSize: 10,
+                  color: '#ffffff',
+                }}>
+                Пароль
+              </Text>
+            </View>
+            <View
+              style={{
+                flexDirection: 'row',
+                marginTop: 9,
+                marginBottom: 27,
+                marginLeft: 30,
+                justifyContent: 'space-between',
+              }}>
+              <TextInput
+                secureTextEntry={true}
+                placeholder="********"
+                placeholderTextColor="#f9fafb"
+                keyboardType="default"
+                editable={true}
+                style={{
+                  fontSize: 16,
+                  textAlign: 'left',
+                  color: '#ffffff',
+                  fontFamily: 'SFUIText-Light',
+                  backgroundColor: 'transparent',
+                  width: '50%',
+                }}
+              />
+              <TouchableOpacity style={{marginRight: 30}}>
+                <Text
+                  style={{
+                    fontFamily: 'SFUIText-Light',
+                    fontSize: 11,
+                    color: '#ffffff',
+                  }}>
+                  Редактировать
+                </Text>
               </TouchableOpacity>
+            </View>
+
+            <View
+              style={{
+                flexDirection: 'row',
+                marginTop: 9,
+                //marginBottom:27,
+                paddingLeft: 31,
+                paddingRight: 30,
+                justifyContent: 'space-between',
+                backgroundColor: 'rgba(43, 38, 77, 0.5)',
+              }}>
               <TouchableOpacity
               onPress={() => {
-                this.props.writeScreen()
-                }
-              }>
+                this.props.languageScreen()
+              }
+            }>
+                <Text
+                  style={{
+                    fontWeight: '300',
+                    marginTop: 12,
+                    marginBottom: 12,
+                    alignSelf: 'center',
+                    color: '#f1f1f2',
+                    height: 24,
+                    width: 202,
+                    fontSize: 16,
+                    letterSpacing: 0.5,
+                  }}>
+                  Язык приложения
+                </Text>
+              </TouchableOpacity>
               <Text
                 style={{
-                  fontFamily: 'SFUIText-Light',
-                  fontSize: 16,
+                  textAlign: 'right',
                   color: '#ffffff',
+                  fontFamily: 'SFUIText-Regular',
+                  justifyContent: 'center',
+                  alignSelf: 'center',
+                  fontSize:12
                 }}>
-                Написать нам
+                Русский
               </Text>
+            </View>
+            <View
+              style={{
+                paddingLeft: 31,
+                flexDirection: 'row',
+                paddingRight: 30,
+                justifyContent: 'space-between',
+                backgroundColor: 'rgba(43, 38, 77, 0.5)',
+              }}>
+              <TouchableOpacity>
+                <Text
+                  style={{
+                    fontWeight: '300',
+                    width: w,
+                    marginTop: 12,
+                    marginBottom: 12,
+                    color: '#f1f1f2',
+                    height: 24,
+                    fontSize: 16,
+                    letterSpacing: 0.5,
+                  }}>
+                  Общие положения и условия
+                </Text>
               </TouchableOpacity>
+            </View>
+            <View
+              style={{
+                paddingLeft: 31,
+                flexDirection: 'row',
+                paddingRight: 30,
+                justifyContent: 'space-between',
+                backgroundColor: 'rgba(43, 38, 77, 0.5)',
+              }}>
+              <TouchableOpacity>
+                <Text
+                  style={{
+                    fontWeight: '300',
+                    width: w,
+                    marginTop: 12,
+                    marginBottom: 12,
+                    color: '#f1f1f2',
+                    height: 24,
+                    fontSize: 16,
+                    letterSpacing: 0.5,
+                  }}>
+                  Политика конфиденциальности
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <View
+              style={{
+                paddingLeft: 31,
+                flexDirection: 'row',
+                paddingRight: 30,
+                justifyContent: 'space-between',
+                backgroundColor: 'rgba(43, 38, 77, 0.5)',
+              }}>
+              <TouchableOpacity
+              onPress={() => {
+                this.props.navigation.navigate('SubscriptionScreen');
+              }}
+              >
+                <Text
+                  style={{
+                    fontWeight: '300',
+                    width: w,
+                    marginTop: 12,
+                    marginBottom: 12,
+                    color: '#f1f1f2',
+                    height: 24,
+                    fontSize: 16,
+                    letterSpacing: 0.5,
+                  }}>
+                  Подписка
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <View>
+              <TouchableOpacity style={{
+                flexDirection: 'row',
+                marginBottom: 27,
+                paddingLeft: 31,
+                //justifyContent: 'space-between',
+                backgroundColor: 'rgba(43, 38, 77, 0.5)',
+              }}>
+                <Image
+                  source={Icon.INF}
+                  style={{
+                    tintColor: '#ffffff',
+                    alignSelf: 'center',
+                    width: 19,
+                    height: 21,
+                    tintColor: '#1488cc',
+                  }}
+                />
+
+                <Text
+                  style={{
+                    paddingLeft: 10,
+                    fontWeight: '300',
+                    //width: w,
+                    marginTop: 12,
+                    marginBottom: 12,
+                    color: '#f1f1f2',
+                    height: 24,
+                    fontSize: 16,
+                    letterSpacing: 0.5,
+                  }}>
+                  Пригласить
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
-         <View
+          <View
             style={{
               flexDirection: 'row',
-              marginTop:17,
-            }}>
-          </View>
+              marginTop: 17,
+            }}
+          />
         </View>
       </SafeAreaView>
     );

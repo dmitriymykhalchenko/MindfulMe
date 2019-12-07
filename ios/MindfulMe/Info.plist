@@ -47,6 +47,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>SFUIText-Semibold.ttf</string>
 		<string>SFUIText-Light.otf</string>
 		<string>SFUIText-Bold.otf</string>
 		<string>SFUIText-Regular.otf</string>

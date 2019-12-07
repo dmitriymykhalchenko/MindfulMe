@@ -196,14 +196,35 @@ export default class ProfileComponent extends React.Component {
               Настройка фона и звука
             </Text>
           </TouchableOpacity>
-          <View style={{paddingLeft:20,flexDirection: 'row',paddingRight:30, justifyContent: 'space-between',backgroundColor:'rgba(43, 38, 77, 0.5)'}}>
-            <Text style={{fontWeight:'300',marginTop:12,marginBottom:12,color: '#f1f1f2',height:24,width:202,fontSize: 16,letterSpacing: 0.5,}}>
+          <View
+            style={{
+              paddingLeft: 20,
+              flexDirection: 'row',
+              paddingRight: 30,
+              justifyContent: 'space-between',
+              backgroundColor: 'rgba(43, 38, 77, 0.5)',
+            }}>
+            <Text
+              style={{
+                fontWeight: '300',
+                marginTop: 12,
+                marginBottom: 12,
+                color: '#f1f1f2',
+                height: 24,
+                width: 202,
+                fontSize: 16,
+                letterSpacing: 0.5,
+              }}>
               Напоминания
             </Text>
             <Switch
-              style={{marginTop:8,backgroundColor: 'transparent', color: 'red',marginBottom:8,}}
-              onValueChange={this.toggleSwitch}
-              value={this.state.showPass}
+            thumbColor={'#1488cc'}
+            trackColor={{true: '#2b264d', false: '#2b264d'}}
+      onValueChange={this.toggleSwitch}
+      //value={false}
+              style={{marginTop:8, marginBottom:8,width:56,height:32}}
+              // onValueChange={this.toggleSwitch}
+              // value={this.state.showPass}
             />
           </View>
           <TouchableOpacity style={{width:w,paddingLeft:20, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}>
@@ -213,7 +234,7 @@ export default class ProfileComponent extends React.Component {
           </TouchableOpacity>
           <TouchableOpacity style={{width:w,paddingLeft:20, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}
           onPress={() => {
-            this.props.InfoaccScreen()
+            this.props.infoaccScreen()
           }}>
             <Text style={{fontWeight:'300',marginTop:12,marginBottom:12,color: '#f1f1f2',height:24,width:202,fontSize: 16,}}>
               Информация об аккаунте

@@ -16,6 +16,11 @@ export default Icons = {
   BACK: require('../img/back.png'),
   LEFT: require('../img/left.png'),
   RIGHT: require('../img/right.png'),
+  INF: require('../img/inf.png'),
+  CHECK: require('../img/check.png'),
+  CHECKSUB: require('../img/checksub.png'),
+  GREEN: require('../img/image-green.png'),
+
 
 //  RING2: require('../static/images/ring.png')
 

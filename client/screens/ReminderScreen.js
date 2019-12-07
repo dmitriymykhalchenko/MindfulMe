@@ -8,6 +8,7 @@ import {
   StyleSheet,
   FlatList,
   Image,
+  TextInput,
 } from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
@@ -20,10 +21,10 @@ const IMAGE_HEIGHT =
   (h - (isIphoneX() ? 74 : 44) - (isIphoneX() ? 70 : 50)) / 3 - (19 + 25 + 13);
 
 const IMAGE_WIDTH = (IMAGE_HEIGHT / 133) * 154;
-export default class HelpComponent extends React.Component {
+export default class ReminderScreen extends React.Component {
   static navigationOptions = ({navigation, navigationOptions}) => {
     return {
-      title: 'HelpComponent',
+      title: 'LanguageComponent',
       headerBackTitleStyle: {
         color: 'transparent',
       },
@@ -34,7 +35,7 @@ export default class HelpComponent extends React.Component {
       },
       headerTintColor: 'white',
       headerTitleStyle: {
-      //  flex: 1,
+        //  flex: 1,
         textAlign: 'center',
       },
       headerRight: <TouchableOpacity style={{height: 60, width: 60}} />,
@@ -85,26 +86,22 @@ export default class HelpComponent extends React.Component {
     const {navigation} = this.props;
     const DATA = this.state.dataSource;
     return (
-      <SafeAreaView
-        style={{flex: 1, backgroundColor: 'transparent'}}>
+      <SafeAreaView style={{flex: 1, backgroundColor: 'transparent'}}>
         <View
           style={{
             paddingLeft: 15,
             marginTop: 13,
-            paddingBottom:31,
+            paddingBottom: 22,
             flexDirection: 'row',
             alignItems: 'center',
           }}>
           <TouchableOpacity
-          hitSlop={{top:10,bottom:10,left:10,right:10}}
+            hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}
             style={{width: 12, height: 7.4}}
             onPress={() => {
               this.props.backPressed();
             }}>
-            <Image
-              source={Icon.BACK}
-                style={{tintColor: '#ffffff', }}
-            />
+            <Image source={Icon.BACK} style={{tintColor: '#ffffff'}} />
           </TouchableOpacity>
           <Text
             style={{
@@ -115,76 +112,116 @@ export default class HelpComponent extends React.Component {
               width: 335,
               height: 18,
             }}>
-            Помощь
+            Язык приложения
           </Text>
         </View>
 
         <View
           style={{
-          //  flex: 3/1,
-            marginTop: 34,
-            marginLeft: 25,
+            //  flex: 3/1,
+            //marginTop: 34,
+            //marginLeft: 25,
             backgroundColor: 'transparent',
           }}>
+          <View style={{}}>
+            <View
+              style={{
+                paddingLeft: 18,
+                paddingRight: 18,
+                flexDirection: 'row',
+                marginTop: 9,
+                //marginBottom:27,
+                marginLeft: 40,
+                marginRight: 40,
+                justifyContent: 'space-between',
+                backgroundColor: '#2b264d',
+                borderRadius: 10,
+              }}>
+              <TouchableOpacity
+                style={
+                  {
+                    //paddingLeft:20,
+                    //width:w, height:48,
+                  }
+                }
+                onPress={() => {}}>
+                <Text
+                  style={{
+                    fontWeight: '300',
+                    marginTop: 12,
+                    marginBottom: 12,
+                    alignSelf: 'center',
+                    color: '#f1f1f2',
+                    height: 24,
+                    width: 202,
+                    fontSize: 16,
+                    letterSpacing: 0.5,
+                  }}>
+                  Русский
+                </Text>
+              </TouchableOpacity>
+              <View
+                style={{
+                  width: 22,
+                  height: 22,
+                  borderRadius: 100,
+                  backgroundColor: '#1488cc',
+                  justifyContent: 'center',
+                  alignSelf: 'center',
+                }}>
+                <Image
+                  source={Icon.CHECK}
+                  style={{
+                    tintColor: '#ffffff',
+                    alignSelf: 'center',
+                  }}
+                />
+              </View>
+            </View>
+            <View
+              style={{
+                paddingLeft: 18,
+                paddingRight: 18,
+                flexDirection: 'row',
+                marginTop: 20,
+                //marginBottom:27,
+                marginLeft: 40,
+                marginRight: 40,
+                justifyContent: 'space-between',
+                backgroundColor: '#2b264d',
+                borderRadius: 10,
+              }}>
+              <TouchableOpacity
+                style={
+                  {
+                    //paddingLeft:20,
+                    //width:w, height:48,
+                  }
+                }
+                onPress={() => {}}>
+                <Text
+                  style={{
+                    fontWeight: '300',
+                    marginTop: 12,
+                    marginBottom: 12,
+                    alignSelf: 'center',
+                    color: '#f1f1f2',
+                    height: 24,
+                    width: 202,
+                    fontSize: 16,
+                    letterSpacing: 0.5,
+                  }}>
+                  English
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
           <View
             style={{
-              // flexDirection: 'row',
-              // flexWrap: 'wrap',
-              // width: w / 2,
-              // marginTop: 30,
-              // padding: 20,
-              // flexShrink: 2,
-            }}>
-              <TouchableOpacity
-              onPress={() => {
-                this.props.navigation.navigate('MindScreen');
-              }}
-              >
-              <Text
-                style={{
-                  fontFamily: 'SFUIText-Light',
-                  fontSize: 16,
-                  color: '#ffffff',
-                }}>
-                Про MindSelf
-              </Text>
-              </TouchableOpacity>
-            <TouchableOpacity
-              style={{paddingTop: 24, paddingBottom: 24}}
-              onPress={() => {
-                this.props.navigation.navigate('UseScreen');
-              }}
-              >
-              <Text
-                style={{
-                  fontFamily: 'SFUIText-Light',
-                  fontSize: 16,
-                  color: '#ffffff',
-                }}>
-                Как использовать
-              </Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-              onPress={() => {
-                this.props.writeScreen()
-                }
-              }>
-              <Text
-                style={{
-                  fontFamily: 'SFUIText-Light',
-                  fontSize: 16,
-                  color: '#ffffff',
-                }}>
-                Написать нам
-              </Text>
-              </TouchableOpacity>
-          </View>
-         <View
-            style={{
               flexDirection: 'row',
-              marginTop:17,
-            }}>
-          </View>
+              marginTop: 17,
+            }}
+          />
         </View>
       </SafeAreaView>
     );
