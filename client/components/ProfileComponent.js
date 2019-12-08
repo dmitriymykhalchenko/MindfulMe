@@ -220,11 +220,12 @@ export default class ProfileComponent extends React.Component {
             <Switch
             thumbColor={'#1488cc'}
             trackColor={{true: '#2b264d', false: '#2b264d'}}
-      onValueChange={this.toggleSwitch}
-      //value={false}
               style={{marginTop:8, marginBottom:8,width:56,height:32}}
-              // onValueChange={this.toggleSwitch}
-              // value={this.state.showPass}
+            onValueChange={() => {
+              this.props.navigation.navigate('ReminderScreen')
+            }}
+               value={this.state.showPass}
+               //value={this.props.navigation.navigate('ReminderScreen')}
             />
           </View>
           <TouchableOpacity style={{width:w,paddingLeft:20, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}>

@@ -65,10 +65,9 @@ export default class SubscriptionScreen extends React.Component {
   }
   render() {
     return (
-      <SafeAreaView style={{flex: 1, width: w}}>
+      <SafeAreaView style={{flex: 1, width: w,backgroundColor: 'rgba(41, 37, 87, 1)'}}>
         {/*<StatusBar hidden={false}/>
         <StatusBar backgroundColor="red" barStyle="dark-content" />*/}
-        <StatusBar hidden={true}/>
 <StatusBar backgroundColor="red" barStyle="dark-content" />
         {/* section */}
         <LinearGradient
@@ -83,7 +82,7 @@ export default class SubscriptionScreen extends React.Component {
           <View
             style={{
               //paddingLeft: 15,
-              marginTop: 23,
+              marginTop: 13,
               //paddingBottom: 31,
               flexDirection: 'row',
               //width: '85%',
@@ -383,7 +382,7 @@ export default class SubscriptionScreen extends React.Component {
               Подписаться
             </Text>
           </View>
-<View style={{marginLeft:30,marginRight:30,marginBottom:20,marginTop:31}}>
+<View style={{marginLeft:30,marginRight:30,marginTop:31}}>
 <Text style={{fontFamily:'SFUIText-Light',textAlign:'center',fontWeight:'300',color:'#ffffff',fontSize:9}}>
 Оплата списывается  с Вашего iTunes аккаунта. Управлять подписками и отключить автоматическое продление в Настройках Учетной записи. <Text style={{textDecorationLine: 'underline'}}>Условия</Text> и <Text style={{textDecorationLine: 'underline'}}>Положения</Text> MindSelf</Text>
 </View>

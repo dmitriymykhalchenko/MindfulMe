@@ -20,6 +20,11 @@ export default Icons = {
   CHECK: require('../img/check.png'),
   CHECKSUB: require('../img/checksub.png'),
   GREEN: require('../img/image-green.png'),
+  PAGES: require('../img/pages.png'),
+  TELEGRAM: require('../img/telegram.png'),
+  VIBER: require('../img/viber.png'),
+  MESSENGER: require('../img/Messenger.png'),
+  WHATSAPP: require('../img/WhatsApp.png'),
 
 
 //  RING2: require('../static/images/ring.png')

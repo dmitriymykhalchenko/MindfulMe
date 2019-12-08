@@ -215,6 +215,43 @@ export default class LanguageComponent extends React.Component {
                 </Text>
               </TouchableOpacity>
             </View>
+            <View
+              style={{
+                paddingLeft: 18,
+                paddingRight: 18,
+                flexDirection: 'row',
+                marginTop: 20,
+                //marginBottom:27,
+                marginLeft: 40,
+                marginRight: 40,
+                justifyContent: 'space-between',
+                backgroundColor: '#2b264d',
+                borderRadius: 10,
+              }}>
+              <TouchableOpacity
+                style={
+                  {
+                    //paddingLeft:20,
+                    //width:w, height:48,
+                  }
+                }
+                onPress={() => {}}>
+                <Text
+                  style={{
+                    fontWeight: '300',
+                    marginTop: 12,
+                    marginBottom: 12,
+                    alignSelf: 'center',
+                    color: '#f1f1f2',
+                    height: 24,
+                    width: 202,
+                    fontSize: 16,
+                    letterSpacing: 0.5,
+                  }}>
+                  Українська
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
           <View
             style={{

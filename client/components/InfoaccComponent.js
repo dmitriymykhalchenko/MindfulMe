@@ -379,7 +379,11 @@ export default class InfoaccComponent extends React.Component {
                 paddingLeft: 31,
                 //justifyContent: 'space-between',
                 backgroundColor: 'rgba(43, 38, 77, 0.5)',
-              }}>
+              }}
+              onPress={() => {
+                this.props.navigation.navigate('InviteScreen')
+              }}
+              >
                 <Image
                   source={Icon.INF}
                   style={{

@@ -59,6 +59,7 @@ import MindScreen from './client/screens/MindScreen';
 import UseScreen from './client/screens/UseScreen';
 import SubscriptionScreen from './client/screens/SubscriptionScreen';
 import ReminderScreen from './client/screens/ReminderScreen';
+import InviteScreen from './client/screens/InviteScreen';
 
 import {incrementCounter, decrementCounter} from './client/redux/actions';
 import {connect} from 'react-redux';
@@ -77,6 +78,7 @@ const RootStack = createStackNavigator(
     UseScreen:UseScreen,
     SubscriptionScreen:SubscriptionScreen,
     ReminderScreen:ReminderScreen,
+    InviteScreen:InviteScreen,
   },
   {
     initialRouteName: 'Home',

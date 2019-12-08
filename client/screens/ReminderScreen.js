@@ -3,276 +3,205 @@ import {
   Text,
   View,
   SafeAreaView,
-  ScrollView,
   TouchableOpacity,
-  StyleSheet,
-  FlatList,
+  Switch,
   Image,
-  TextInput,
+  StatusBar,
+DatePickerIOS,
+Button
 } from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {h, w, isIphoneX} from '../../constants';
 import Icon from '../styles/icon';
 import LinearGradient from 'react-native-linear-gradient';
+import DatePicker from 'react-native-date-picker';
 
-import {connect} from 'react-redux';
-const IMAGE_HEIGHT =
-  (h - (isIphoneX() ? 74 : 44) - (isIphoneX() ? 70 : 50)) / 3 - (19 + 25 + 13);
-
-const IMAGE_WIDTH = (IMAGE_HEIGHT / 133) * 154;
 export default class ReminderScreen extends React.Component {
   static navigationOptions = ({navigation, navigationOptions}) => {
     return {
-      title: 'LanguageComponent',
-      headerBackTitleStyle: {
-        color: 'transparent',
-      },
+      header: null,
       headerStyle: {
-        backgroundColor: 'rgb(24,12,53)',
+        backgroundColor: '#302b63',
         elevation: 0,
         borderBottomWidth: 0,
       },
-      headerTintColor: 'white',
+      headerLeft: null,
+      headerBackTitle: null,
+      headerTruncatedBackTitle: false,
+      //headerBackTitleVisible:false,
+      //header: null,
+      //title: 'Подписка',
+
+      headerTintColor: 'red',
       headerTitleStyle: {
-        //  flex: 1,
+        flex: 1,
         textAlign: 'center',
       },
       headerRight: <TouchableOpacity style={{height: 60, width: 60}} />,
-      // tabBarOptions: {
-      //   labelStyle: {
-      //     fontSize: 12,
-      //     tintColor:'red'
-      //   },
-      //   tabStyle: {
-      //     width: 10,
-      //   },
-      //   style: {
-      //     backgroundColor: 'green',
-      //   },
-      // },
+      tabBarOptions: {
+        labelStyle: {
+          fontSize: 16,
+        },
+        // tabStyle: {
+        //   width: 100,
+        // },
+      },
     };
   };
   constructor(props) {
     super(props);
+    this.toggleSwitch = this.toggleSwitch.bind(this);
+
     this.state = {
-      isLoading: true,
-      dataSource: [],
+      date: new Date(),
+      showPass: true,
     };
   }
 
-  componentDidMount() {
-    return fetch(
-      'https://api.unsplash.com/photos/?client_id=cf49c08b444ff4cb9e4d126b7e9f7513ba1ee58de7906e4360afc1a33d1bf4c0',
-    )
-      .then(response => response.json())
-      .then(responseJson => {
-        this.setState(
-          {
-            isLoading: false,
-            dataSource: responseJson,
-          },
-          () => {},
-        );
-        console.log('responseJson ', responseJson);
-      })
-      .catch(error => {
-        throw error;
-        console.error(error);
-      });
+
+
+
+  toggleSwitch() {
+    this.setState(
+      {showPass: !this.state.showPass},
+      // () => {
+      //   this.props.navigation.setParams({ rightActionButton: () => this.renderElement() })///????
+      // }
+    );
   }
-
   render() {
-    const {navigation} = this.props;
-    const DATA = this.state.dataSource;
-    return (
-      <SafeAreaView style={{flex: 1, backgroundColor: 'transparent'}}>
-        <View
-          style={{
-            paddingLeft: 15,
-            marginTop: 13,
-            paddingBottom: 22,
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}>
-          <TouchableOpacity
-            hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}
-            style={{width: 12, height: 7.4}}
-            onPress={() => {
-              this.props.backPressed();
-            }}>
-            <Image source={Icon.BACK} style={{tintColor: '#ffffff'}} />
-          </TouchableOpacity>
-          <Text
-            style={{
-              fontSize: 16,
-              color: '#ffffff',
-              fontFamily: 'SFUIText-Regular',
-              textAlign: 'center',
-              width: 335,
-              height: 18,
-            }}>
-            Язык приложения
-          </Text>
-        </View>
 
-        <View
-          style={{
-            //  flex: 3/1,
-            //marginTop: 34,
-            //marginLeft: 25,
-            backgroundColor: 'transparent',
-          }}>
-          <View style={{}}>
-            <View
+    return (
+      <SafeAreaView style={{flex: 1, width: w}}>
+        {/*<StatusBar hidden={false}/>
+        <StatusBar backgroundColor="red" barStyle="dark-content" />*/}
+        <StatusBar hidden={true} />
+        <StatusBar backgroundColor="red" barStyle="dark-content" />
+        {/* section */}
+        <LinearGradient
+          colors={[
+            'rgba(41, 37, 87, 1)',
+            'rgba(34, 31, 75, 0.99)',
+            'rgba(27, 25, 63, 0.99)',
+            'rgba(20, 20, 52, 0.98)',
+            'rgba(15, 12, 41, 0.98)',
+          ]}
+          style={{flex: 1}}>
+          <View
+            style={{
+              //paddingLeft: 15,
+              marginTop: 33,
+              //paddingBottom: 31,
+              flexDirection: 'row',
+              //width: '85%',
+              //  alignItems: 'stretch',
+              // alignSelf:'stretch',
+              justifyContent: 'space-between',
+              //justifyContent:'center'
+            }}>
+            <TouchableOpacity
+              hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}
               style={{
-                paddingLeft: 18,
-                paddingRight: 18,
-                flexDirection: 'row',
-                marginTop: 9,
-                //marginBottom:27,
-                marginLeft: 40,
-                marginRight: 40,
-                justifyContent: 'space-between',
-                backgroundColor: '#2b264d',
-                borderRadius: 10,
+                //  width: 12, height: 7.4,
+                //paddingRight: '25%',
+                justifyContent: 'flex-start',
+              }}
+              onPress={() => {
+                this.props.navigation.goBack(null);
               }}>
-              <TouchableOpacity
-                style={
-                  {
-                    //paddingLeft:20,
-                    //width:w, height:48,
-                  }
-                }
-                onPress={() => {}}>
-                <Text
-                  style={{
-                    fontWeight: '300',
-                    marginTop: 12,
-                    marginBottom: 12,
-                    alignSelf: 'center',
-                    color: '#f1f1f2',
-                    height: 24,
-                    width: 202,
-                    fontSize: 16,
-                    letterSpacing: 0.5,
-                  }}>
-                  Русский
-                </Text>
-              </TouchableOpacity>
-              <View
+              <Image
+                source={Icon.BACK}
                 style={{
-                  width: 22,
-                  height: 22,
-                  borderRadius: 100,
-                  backgroundColor: '#1488cc',
-                  justifyContent: 'center',
+                  tintColor: '#ffffff',
                   alignSelf: 'center',
+                  marginLeft: 15,
+                }}
+              />
+            </TouchableOpacity>
+            <View style={{backgroundColor: 'transparent', marginRight: '28%'}}>
+              <Text
+                style={{
+                  //width: '80%',
+                  fontSize: 16,
+                  color: '#ffffff',
+                  fontFamily: 'SFUIText-Regular',
+                  textAlign: 'center',
+                  // width: 209,
+                  // height: 18,
                 }}>
-                <Image
-                  source={Icon.CHECK}
-                  style={{
-                    tintColor: '#ffffff',
-                    alignSelf: 'center',
-                  }}
-                />
-              </View>
-            </View>
-            <View
-              style={{
-                paddingLeft: 18,
-                paddingRight: 18,
-                flexDirection: 'row',
-                marginTop: 20,
-                //marginBottom:27,
-                marginLeft: 40,
-                marginRight: 40,
-                justifyContent: 'space-between',
-                backgroundColor: '#2b264d',
-                borderRadius: 10,
-              }}>
-              <TouchableOpacity
-                style={
-                  {
-                    //paddingLeft:20,
-                    //width:w, height:48,
-                  }
-                }
-                onPress={() => {}}>
-                <Text
-                  style={{
-                    fontWeight: '300',
-                    marginTop: 12,
-                    marginBottom: 12,
-                    alignSelf: 'center',
-                    color: '#f1f1f2',
-                    height: 24,
-                    width: 202,
-                    fontSize: 16,
-                    letterSpacing: 0.5,
-                  }}>
-                  English
-                </Text>
-              </TouchableOpacity>
+                Время напоминаний
+              </Text>
             </View>
           </View>
+
+          <View
+            style={{
+              marginLeft: 40,
+              marginRight: 39,
+              marginTop: 73,
+              flexDirection: 'row',
+            }}>
+            <View style={{backgroundColor: 'transparent', paddingLeft: 14}}>
+              <Text
+                style={{
+                  fontSize: 12,
+                  fontWeight: '300',
+                  color: '#ffffff',
+                  fontFamily: 'SFUIText-Light',
+                  //lineHeight: 20,
+                }}>
+                Улучшайте сон, улучшайте концентрацию и повышайте качество своей
+                жизни, ежедневно практикуя осознанность
+              </Text>
+            </View>
+          </View>
+
           <View
             style={{
               flexDirection: 'row',
-              marginTop: 17,
-            }}
-          />
-        </View>
+              justifyContent: 'center',
+              marginTop: 25,
+              marginBottom:90,
+            }}>
+            <View style={{}}>
+            <DatePicker
+            mode={'time'}
+            textColor="#FFFFFF"
+            date={this.state.date}
+            onDateChange={date => this.setState({ date })}
+            />
+            </View>
+          </View>
+
+          <TouchableOpacity
+            style={{
+            //  marginTop:"30%",
+              width: 295,
+              height: 50,
+              backgroundColor: '#1488cc',
+              borderRadius: 10,
+              //marginRight: 12,
+              //marginTop: 31,
+              justifyContent:'center',
+              alignSelf: 'center',
+            }}>
+            <Text
+              style={{
+                //paddingTop: 10,
+                textAlign: 'center',
+                justifyContent: 'center',
+                // marginTop:16,
+                // marginBottom:15,
+                color: '#ffffff',
+                fontFamily: 'SFUIText-Light',
+                fontSize: 16,
+              }}>
+              Сохранить
+            </Text>
+          </TouchableOpacity>
+        </LinearGradient>
       </SafeAreaView>
     );
   }
 }
-const styles = StyleSheet.create({
-  container: {
-    //flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  secondcontainer: {
-    //flex: 1,
-    //paddingTop: 20,
-  },
-  touch: {
-    //flex: 1,
-    backgroundColor: 'transparent',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '50%',
-  },
-  image: {
-    width: 115,
-    height: 80,
-    margin: 17,
-    justifyContent: 'center',
-    borderRadius: 5,
-  },
-  text: {
-    width: 100,
-    textAlign: 'center',
-    color: 'white',
-  },
-  detView: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  imageBig: {
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-  },
-  active: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
