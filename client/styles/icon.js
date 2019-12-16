@@ -25,6 +25,10 @@ export default Icons = {
   VIBER: require('../img/viber.png'),
   MESSENGER: require('../img/Messenger.png'),
   WHATSAPP: require('../img/WhatsApp.png'),
+  SIGNUP: require('../img/group.png'),
+  F: require('../img/f.png'),
+  DOWNLOADLEAVES: require('../img/downloadleaves.png'),
+  DOWNLOADHEART: require('../img/downloadheart.png'),
 
 
 //  RING2: require('../static/images/ring.png')

@@ -34,6 +34,9 @@ import WriteComponent from '../components/WriteComponent';
 import FonComponent from '../components/FonComponent';
 import InfoaccComponent from '../components/InfoaccComponent';
 import LanguageComponent from '../components/LanguageComponent';
+import DownloadsComponent from '../components/DownloadsComponent';
+import DownloadssetsComponent from '../components/DownloadssetsComponent';
+import DownloadsaudioComponent from '../components/DownloadsaudioComponent';
 
 // const IMAGE_HEIGHT =
 //   (h - (isIphoneX() ? 74 : 44) - (isIphoneX() ? 70 : 50)) / 3 - (19 + 25 + 13);
@@ -142,6 +145,12 @@ class HomeScreen extends React.Component {
                   fonScreen: true,
                 });
               }}
+              downloadsScreen={() => {
+                this.setState({
+                  profileScreen: false,
+                  downloadsScreen: true,
+                });
+              }}
               infoaccScreen={() => {
                 this.setState({
                   profileScreen: false,
@@ -150,6 +159,54 @@ class HomeScreen extends React.Component {
               }}
             />
           )}
+
+          {this.state.downloadsScreen && (
+            <DownloadsComponent
+              navigation={navigation}
+              backPressed={() => {
+                this.setState({
+                  profileScreen: true,
+                  downloadsScreen: false,
+                });
+              }}
+              downloadsaudioScreen={() => {
+                this.setState({
+                  downloadsScreen: false,
+                  downloadsaudioScreen: true,
+                });
+              }}
+              downloadssetsScreen={() => {
+                this.setState({
+                  downloadsScreen: false,
+                  downloadssetsScreen: true,
+                });
+              }}
+            />
+          )}
+
+          {this.state.downloadsaudioScreen && (
+            <DownloadsaudioComponent
+              navigation={navigation}
+              backPressed={() => {
+                this.setState({
+                  downloadsScreen: true,
+                  downloadsaudioScreen: false,
+                });
+              }}
+            />
+          )}
+          {this.state.downloadssetsScreen && (
+            <DownloadssetsComponent
+              navigation={navigation}
+              backPressed={() => {
+                this.setState({
+                  downloadsScreen: true,
+                  downloadssetsScreen: false,
+                });
+              }}
+            />
+          )}
+
 
           {this.state.fonScreen && (
             <FonComponent
@@ -250,6 +307,7 @@ class HomeScreen extends React.Component {
               }}
             />
           )}
+
           {this.state.masterScreen && (
             <MasterComponent
               navigation={navigation}
@@ -261,6 +319,7 @@ class HomeScreen extends React.Component {
               }}
             />
           )}
+
         </LinearGradient>
 
         {/*Footer*/}
@@ -280,6 +339,9 @@ class HomeScreen extends React.Component {
                 fonScreen: false,
                 infoaccScreen:false,
                 languageScreen:false,
+                downloadsScreen:false,
+                downloadsaudioScreen:false,
+                downloadssetsScreen:false,
               }); //clean on HomeScreen
               // this.props.navigation.navigate('homeScreen');
             }}>
@@ -315,6 +377,10 @@ class HomeScreen extends React.Component {
                 fonScreen: false,
                 infoaccScreen:false,
                 languageScreen:false,
+                downloadsScreen:false,
+                downloadsaudioScreen:false,
+                downloadssetsScreen:false,
+
 
               });
               // this.props.navigation.navigate('Profile');
@@ -350,6 +416,10 @@ class HomeScreen extends React.Component {
                 fonScreen: false,
                 infoaccScreen:false,
                 languageScreen:false,
+                downloadsScreen:false,
+                downloadsaudioScreen:false,
+                downloadssetsScreen:false,
+
 
               });
             }}>

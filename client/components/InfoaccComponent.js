@@ -9,6 +9,7 @@ import {
   FlatList,
   Image,
   TextInput,
+  StatusBar
 } from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
@@ -87,6 +88,8 @@ export default class InfoaccComponent extends React.Component {
     const DATA = this.state.dataSource;
     return (
       <SafeAreaView style={{flex: 1, backgroundColor: 'transparent'}}>
+      {/*<StatusBar backgroundColor="#302b63" barStyle="light-content" />*/}
+      <StatusBar hidden={false}/>
         <View
           style={{
             paddingLeft: 15,

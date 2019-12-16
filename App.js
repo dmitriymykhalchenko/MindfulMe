@@ -60,6 +60,11 @@ import UseScreen from './client/screens/UseScreen';
 import SubscriptionScreen from './client/screens/SubscriptionScreen';
 import ReminderScreen from './client/screens/ReminderScreen';
 import InviteScreen from './client/screens/InviteScreen';
+import SignupScreen from './client/screens/SignupScreen';
+import EmailScreen from './client/screens/EmailScreen';
+import CreateScreen from './client/screens/CreateScreen';
+import SendScreen from './client/screens/SendScreen';
+import DischangeScreen from './client/screens/DischangeScreen';
 
 import {incrementCounter, decrementCounter} from './client/redux/actions';
 import {connect} from 'react-redux';
@@ -79,9 +84,14 @@ const RootStack = createStackNavigator(
     SubscriptionScreen:SubscriptionScreen,
     ReminderScreen:ReminderScreen,
     InviteScreen:InviteScreen,
+    SignupScreen:SignupScreen,
+    EmailScreen:EmailScreen,
+    CreateScreen:CreateScreen,
+    SendScreen:SendScreen,
+    DischangeScreen:DischangeScreen
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'CreateScreen',
   },
 );
 

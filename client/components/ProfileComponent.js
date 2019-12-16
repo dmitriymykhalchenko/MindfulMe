@@ -228,7 +228,10 @@ export default class ProfileComponent extends React.Component {
                //value={this.props.navigation.navigate('ReminderScreen')}
             />
           </View>
-          <TouchableOpacity style={{width:w,paddingLeft:20, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}>
+          <TouchableOpacity style={{width:w,paddingLeft:20, height:48, backgroundColor:'rgba(43, 38, 77, 0.5)'}}
+          onPress={() => {
+            this.props.downloadsScreen()
+          }}>
             <Text style={{fontWeight:'300',marginTop:12,marginBottom:12,color: '#f1f1f2',height:24,width:202,fontSize: 16,}}>
               Загруженные
             </Text>

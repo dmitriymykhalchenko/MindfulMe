@@ -20,7 +20,7 @@ const IMAGE_HEIGHT =
   (h - (isIphoneX() ? 74 : 44) - (isIphoneX() ? 70 : 50)) / 3 - (19 + 25 + 13);
 
 const IMAGE_WIDTH = (IMAGE_HEIGHT / 133) * 154;
-export default class MeditationComponent extends React.Component {
+export default class DownloadssetsComponent extends React.Component {
   static navigationOptions = ({navigation, navigationOptions}) => {
     return {
       title: 'Медитации1111',
@@ -86,11 +86,23 @@ export default class MeditationComponent extends React.Component {
     const DATA = this.state.dataSource;
     return (
       <SafeAreaView
-        style={{flex: 1, backgroundColor: 'transparent'}}>
+        style={{flex: 1, marginTop: -20, width: w}}>
+        <Image
+          source={Icon.MINDSELF}
+          style={{
+            width: w,
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0,
+            opacity: 0.12,
+          }}
+        />
         <View
           style={{
             paddingLeft: 15,
-            marginTop: 13,
+            marginTop: 33,
             paddingBottom:31,
             flexDirection: 'row',
             alignItems: 'center',
@@ -115,14 +127,14 @@ export default class MeditationComponent extends React.Component {
               width: 335,
               height: 18,
             }}>
-            SOS практики
+            Загруженные сеты
           </Text>
         </View>
 
         <View
           style={{
           //  flex: 3/1,
-            marginTop: 17,
+          //  marginTop: 17,
             marginLeft: 15,
             backgroundColor: 'transparent',
             justifyContent:'center',
@@ -144,7 +156,7 @@ export default class MeditationComponent extends React.Component {
           <View
             style={{
               flexDirection: 'row',
-              marginTop:17,
+            //  marginTop:17,
               // flexWrap: 'wrap',
               // width: w / 2,
               // marginTop: 30,
@@ -196,8 +208,8 @@ export default class MeditationComponent extends React.Component {
                       bottom: 12,
                       fontSize: 12,
                       fontFamily: 'SFUIText-Regular',
-                      color: '#ffffff',
-                      textShadowColor: 'rgba(0, 0, 0, 0.5)',
+                      color: 'rgba(255, 255,255, 0.5)',
+                      //textShadowColor: 'rgba(255, 255,255, 0.5)',
                     }}>
                     Гнев
                   </Text>
@@ -251,7 +263,7 @@ export default class MeditationComponent extends React.Component {
                       color: '#ffffff',
                       textShadowColor: 'rgba(0, 0, 0, 0.5)',
                     }}>
-                    Перенапряжение
+                    Концентрация
                   </Text>
                 </LinearGradient>
               </TouchableOpacity>

@@ -208,10 +208,10 @@ class FonComponent extends React.Component {
               thumbTintColor={'#1488cc'}
               customMinimumTrack={
                 <LinearGradient
-                  colors={[
-                    'rgba(0, 0, 0, 0)',
-                    'rgba(15, 12, 41, 0.33)',
-                    'rgba(15, 12, 41, 0.9)',
+                  colors={["transparent"
+                    // 'rgba(0, 0, 0, 0)',
+                    // 'rgba(15, 12, 41, 0.33)',
+                    // 'rgba(15, 12, 41, 0.9)',
                     //  '#2b32b2', '#1488cc'
                   ]}
                   style={{
@@ -271,15 +271,15 @@ class FonComponent extends React.Component {
                   hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}
                   style={{
                     marginLeft: 57,
-                    width: 12,
-                    height: 7.4,
+                    // width: 12,
+                    // height: 7.4,
                     marginRight: 5,
 
                   }}
                   onPress={() => {
                     this.props.decrementCounter();
                   }}>
-                  <Image source={Icon.LEFT} style={{tintColor: '#ffffff',}} />
+                  <Image source={Icon.LEFT} style={{tintColor: '#ffffff',backgroundColor:'red',}} />
                 </TouchableOpacity>
 
                 <Text
@@ -287,13 +287,13 @@ class FonComponent extends React.Component {
                     fontSize: 16,
                     fontFamily: 'SFUIText-Light',
                     color: '#ffffff',
-                    width:51,
-                    height:24,
-                  justifyContent: 'flex-start',
-                    alignSelf:'flex-start',
+                    // width:51,
+                    // height:24,
+                  // justifyContent: 'flex-start',
+                  //   alignSelf:'flex-start',
 // //alignItems:'flex-end',
-         textAlign: 'auto',
-                    paddingBottom:40
+         //textAlign: 'auto',
+              //      paddingBottom:40
                     //margin: 20
                   }}>
                   {this.props.counter + '  мин.'}

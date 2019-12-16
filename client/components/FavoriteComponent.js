@@ -36,9 +36,9 @@ export default class FavoriteComponent extends React.Component {
         tabStyle: {
           width: 10,
         },
-        style: {
-          backgroundColor: 'green',
-        },
+        // style: {
+        //   backgroundColor: 'green',
+        // },
       },
     };
   };

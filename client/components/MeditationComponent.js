@@ -123,8 +123,10 @@ export default class MeditationComponent extends React.Component {
           style={{
           //  flex: 3/1,
             marginTop: 17,
-            marginLeft: 25,
+            marginLeft: 15,
             backgroundColor: 'transparent',
+            justifyContent:'center',
+            alignSelf:'center',
           }}>
           <View
             style={{

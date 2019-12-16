@@ -166,6 +166,8 @@ export default class ReminderScreen extends React.Component {
             }}>
             <View style={{}}>
             <DatePicker
+            fadeToColor="transparent"
+            locale={'ru_UA'}
             mode={'time'}
             textColor="#FFFFFF"
             date={this.state.date}

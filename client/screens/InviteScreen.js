@@ -77,7 +77,7 @@ export default class InviteScreen extends React.Component {
         {/*<StatusBar hidden={false}/>
         <StatusBar backgroundColor="red" barStyle="dark-content" />*/}
 
-        <StatusBar backgroundColor="green" barStyle="light-content" />
+        <StatusBar backgroundColor="#302b63" barStyle="light-content" />
         {/* section */}
         <LinearGradient
           colors={[

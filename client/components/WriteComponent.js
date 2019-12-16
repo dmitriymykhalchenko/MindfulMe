@@ -10,12 +10,14 @@ import {
   Image,
   TextInput,
   Keyboard,
+  StatusBar
 } from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {h, w, isIphoneX} from '../../constants';
 import Icon from '../styles/icon';
 import LinearGradient from 'react-native-linear-gradient';
+//import KeyboardSpacer from 'react-native-keyboard-spacer';
 
 import {connect} from 'react-redux';
 const IMAGE_HEIGHT =
@@ -107,7 +109,10 @@ export default class WriteComponent extends React.Component {
     const {navigation} = this.props;
     const DATA = this.state.dataSource;
     return (
-      <SafeAreaView style={{flex: 1, backgroundColor: 'transparent'}}>
+      <SafeAreaView style={{flex: 1, backgroundColor: '#302b63'}}>
+      <StatusBar backgroundColor="#302b63" barStyle="light-content" />
+      <StatusBar hidden={false}/>
+
         <LinearGradient
           colors={[
             '#302b63',
@@ -117,14 +122,17 @@ export default class WriteComponent extends React.Component {
             'rgba(20, 20, 52, 0.98)',
             'rgba(15, 12, 41, 0.98)',
           ]}
-          style={{}}>
+          style={{flex:1}}>
+
           <View
             style={{
+              //flex:1/15,
               paddingLeft: 15,
               marginTop: 13,
               paddingBottom: 31,
               flexDirection: 'row',
               width: '85%',
+              backgroundColor:'transparent',
               //  alignItems: 'stretch',
               // alignSelf:'stretch',
               justifyContent: 'space-between',
@@ -168,25 +176,25 @@ export default class WriteComponent extends React.Component {
             </TouchableOpacity>
           </View>
           {/*title*/}
-          <View style={{flexDirection: 'row', marginLeft: 31}}>
+          <View style={{flexDirection: 'row',paddingTop:20,paddingBottom:12, paddingLeft: 31, backgroundColor:'#2b264d'}}>
             <Text
               style={{
-                width: 53,
-                height: 24,
+                textAlign:'center',
                 fontFamily: 'SFUIText-Light',
                 fontSize: 16,
-                color: '#ffffff',
+                color: 'rgba(255, 255, 255, 0.5)',
               }}>
               Кому:
             </Text>
-            <TextInput
-              placeholder=" AppMindfulSpace@gmail.com"
-              placeholderTextColor="#f9fafb"
-              keyboardType="default"
-              editable={false}
+            <Text
+
               style={{
-                fontSize: 16,
-                textAlign: 'center',
+                color: 'rgba(255, 255, 255, 0.65)',
+
+                fontFamily:'SFUIText-Light',
+                fontSize:16,
+                textAlign:'center',
+                //textAlign: 'center',
                 // marginTop: 5,
                 // marginLeft: 10,
                 // marginRight: 10,
@@ -195,22 +203,19 @@ export default class WriteComponent extends React.Component {
                 //borderWidth: 0.5,
                 backgroundColor: 'transparent',
               }}
-              //textAlign="left"
-              // onChangeText={(site) => {
-              //   console.log('site-', site)
-              //   this.setState({ site })
-              // }}
-              value={this.state.site}
-            />
+
+            >  AppMindfulSpace@gmail.com</Text>
           </View>
-          <View style={{flexDirection: 'row', marginLeft: 31, marginTop: 24}}>
+          <View style={{flexDirection: 'row',
+          paddingTop:12,paddingBottom:12, paddingLeft: 31,
+           backgroundColor:'#2b264d'}}>
             <Text
               style={{
-                width: 53,
-                height: 24,
+                color: 'rgba(255, 255, 255, 0.5)',
+                // width: 53,
+                // height: 24,
                 fontFamily: 'SFUIText-Light',
                 fontSize: 16,
-                color: '#ffffff',
               }}>
               Тема:
             </Text>
@@ -218,7 +223,7 @@ export default class WriteComponent extends React.Component {
               placeholder=""
               placeholderTextColor="#f9fafb"
               keyboardType="default"
-              editable={true}
+              //editable={true}
               style={{
                 width: 236,
                 height: 24,
@@ -226,45 +231,127 @@ export default class WriteComponent extends React.Component {
                 textAlign: 'left',
                 color: '#ffffff',
                 // marginTop: 5,
-                // marginLeft: 10,
+                 marginLeft: 10,
                 // marginRight: 10,
                 // borderRadius: 5,
                 //  borderColor: 'gray',
                 //borderWidth: 0.5,
                 backgroundColor: 'transparent',
               }}
-              //textAlign="left"
-              // onChangeText={(site) => {
-              //   console.log('site-', site)
-              //   this.setState({ site })
-              // }}
               value={this.state.site}
             />
           </View>
-          <View style={{flexDirection: 'row', marginTop: 192}}>
+          <View
+            style={{
+              flexDirection: 'column',
+              marginTop: 9,
+              paddingHorizontal:30,
+              paddingBottom:68,
+              // paddingLeft: 30,
+              // paddingRight:40,
+              backgroundColor:'#2b264d'
+              //justifyContent: 'space-between',
+            }}>
             <TextInput
-              //onSubmitEditing={Keyboard.dismiss}
+              autoFocus={true}
               placeholder="Сообщение:"
               placeholderTextColor="#f9fafb"
-              //numberOfLines={5}
-              numberOfLines={5}
               keyboardType="default"
               editable={true}
+              multiline={true}
+              maxLength={360}
+              numberOfLines={3}
               style={{
-                paddingLeft: 31,
-                width: w,
-                height: 48,
-                fontFamily: 'SFUIText-Light',
                 fontSize: 16,
                 textAlign: 'left',
                 color: '#ffffff',
-                textAlignVertical: 'top',
-                backgroundColor: '#2b264d',
+                fontFamily: 'SFUIText-Light',
+                backgroundColor: 'transparent',
+                width: '97%',
               }}
             />
+{/*<TextInput
+  autoFocus={true}
+  placeholder="Сообщение:"
+  placeholderTextColor="#f9fafb"
+  keyboardType="default"
+  editable={true}
+  multiline={true}
+  maxLength={360}
+  numberOfLines={3}
+  style={{
+    fontSize: 16,
+    textAlign: 'left',
+    color: '#ffffff',
+    fontFamily: 'SFUIText-Light',
+    backgroundColor: 'transparent',
+    width: '97%',
+  }}
+/>*/}
+
           </View>
 
+
+
           {/*
+            <View>
+                      <TextInput style={{left: 0, right: 0, height: "10%",paddingTop:'3%'
+                      //   fontFamily:'SFUIText-Light', fontSize:16,paddingLeft:31,color:"#ffffff",
+                      // justifyContent: 'center',
+                      // alignItems:'center',
+                      //  paddingTop:14,
+                      //alignSelf:'center'
+                      //paddingTop:13
+                      }}
+                            placeholder={'Сообщение:'}
+                            placeholderTextColor="#f9fafb"
+                            //placeholderStyle={{ fontFamily: "SFUIText-Light",fontSize:16,fontWeight:'300', textAlign:'center',color:"#ffffff",}}
+                            />
+                            </View>
+            //           <View style={[{flex:2/1,justifyContent:'flex-end'}]}>
+            //
+            //
+            //         <View style={{backgroundColor:'#2b264d',marginBottom:10,}}>
+            //         <TextInput style={{left: 0, right: 0, height: "10%",paddingTop:'3%'
+            //         //   fontFamily:'SFUIText-Light', fontSize:16,paddingLeft:31,color:"#ffffff",
+            //         // justifyContent: 'center',
+            //         // alignItems:'center',
+            //       //  paddingTop:14,
+            //         //alignSelf:'center'
+            //         //paddingTop:13
+            //       }}
+            //               placeholder={'Сообщение:'}
+            //               placeholderTextColor="#f9fafb"
+            //               //placeholderStyle={{ fontFamily: "SFUIText-Light",fontSize:16,fontWeight:'300', textAlign:'center',color:"#ffffff",}}
+            //               />
+            //
+            //         <KeyboardSpacer/>
+            //         </View>
+            // </View>
+
+          // <View style={{flexDirection: 'row', marginTop: 192}}>
+          //   <TextInput
+          //     //onSubmitEditing={Keyboard.dismiss}
+          //     placeholder="Сообщение:"
+          //     placeholderTextColor="#f9fafb"
+          //     //numberOfLines={5}
+          //     numberOfLines={5}
+          //     keyboardType="default"
+          //     editable={true}
+          //     style={{
+          //       paddingLeft: 31,
+          //       width: w,
+          //       height: 48,
+          //       fontFamily: 'SFUIText-Light',
+          //       fontSize: 16,
+          //       textAlign: 'left',
+          //       color: '#ffffff',
+          //       textAlignVertical: 'top',
+          //       backgroundColor: '#2b264d',
+          //     }}
+          //   />
+          // </View>
+
           //<View
           //   style={{
           //     //  flex: 3/1,
@@ -320,7 +407,8 @@ export default class WriteComponent extends React.Component {
           //       marginTop: 17,
           //     }}
           //   />
-          // </View>*/}
+          // </View>
+          */}
         </LinearGradient>
       </SafeAreaView>
     );
