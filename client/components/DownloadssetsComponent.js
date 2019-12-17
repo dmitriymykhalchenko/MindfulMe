@@ -107,6 +107,7 @@ export default class DownloadssetsComponent extends React.Component {
             flexDirection: 'row',
             alignItems: 'center',
           }}>
+          <View>
           <TouchableOpacity
           hitSlop={{top:10,bottom:10,left:10,right:10}}
             style={{width: 12, height: 7.4}}
@@ -118,19 +119,29 @@ export default class DownloadssetsComponent extends React.Component {
                 style={{tintColor: '#ffffff', }}
             />
           </TouchableOpacity>
+          </View>
+
+          <View style={{flex:1,
+            //paddingLeft: 15,
+            // marginTop: 33,
+            // paddingBottom:31,
+            //flexDirection: 'row',
+            alignItems: 'center',
+          }}>
           <Text
             style={{
               fontSize: 16,
               color: '#ffffff',
               fontFamily: 'SFUIText-Regular',
-              textAlign: 'center',
-              width: 335,
-              height: 18,
+            //  textAlign: 'center',
+              //width: 335,
+              //height: 18,
             }}>
             Загруженные сеты
           </Text>
         </View>
-
+<View style={{marginRight:14}}></View>
+</View>
         <View
           style={{
           //  flex: 3/1,
@@ -260,8 +271,8 @@ export default class DownloadssetsComponent extends React.Component {
                       bottom: 12,
                       fontSize: 12,
                       fontFamily: 'SFUIText-Regular',
-                      color: '#ffffff',
-                      textShadowColor: 'rgba(0, 0, 0, 0.5)',
+                      color: 'rgba(255, 255,255, 0.5)',
+                      //textShadowColor: 'rgba(0, 0, 0, 0.5)',
                     }}>
                     Концентрация
                   </Text>
@@ -323,8 +334,8 @@ export default class DownloadssetsComponent extends React.Component {
                       bottom: 12,
                       fontSize: 12,
                       fontFamily: 'SFUIText-Regular',
-                      color: '#ffffff',
-                      textShadowColor: 'rgba(0, 0, 0, 0.5)',
+                      color: 'rgba(255, 255,255, 0.5)',
+                      //textShadowColor: 'rgba(0, 0, 0, 0.5)',
                     }}>
                     Мгновенная концентрация
                   </Text>
@@ -375,8 +386,8 @@ export default class DownloadssetsComponent extends React.Component {
                       bottom: 12,
                       fontSize: 12,
                       fontFamily: 'SFUIText-Regular',
-                      color: '#ffffff',
-                      textShadowColor: 'rgba(0, 0, 0, 0.5)',
+                      color: 'rgba(255, 255,255, 0.5)',
+                      //textShadowColor: 'rgba(0, 0, 0, 0.5)',
                     }}>
                     Выгорание
                   </Text>
@@ -438,8 +449,8 @@ export default class DownloadssetsComponent extends React.Component {
                       bottom: 12,
                       fontSize: 12,
                       fontFamily: 'SFUIText-Regular',
-                      color: '#ffffff',
-                      textShadowColor: 'rgba(0, 0, 0, 0.5)',
+                      color: 'rgba(255, 255,255, 0.5)',
+                      //textShadowColor: 'rgba(0, 0, 0, 0.5)',
                     }}>
                     Душевная боль
                   </Text>

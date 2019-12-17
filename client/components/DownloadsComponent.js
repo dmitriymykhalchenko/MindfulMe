@@ -125,6 +125,7 @@ export default class DownloadsComponent extends React.Component {
                 flexDirection: 'row',
                 alignItems: 'center',
               }}>
+              <View>
               <TouchableOpacity
                 hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}
                 style={{width: 12, height: 7.4}}
@@ -133,17 +134,21 @@ export default class DownloadsComponent extends React.Component {
                 }}>
                 <Image source={Icon.BACK} style={{tintColor: '#ffffff'}} />
               </TouchableOpacity>
+              </View>
+              <View style={{flex:1}}>
               <Text
                 style={{
                   fontSize: 16,
                   color: '#ffffff',
                   fontFamily: 'SFUIText-Regular',
                   textAlign: 'center',
-                  width: 335,
-                  height: 18,
+                  // width: 335,
+                  // height: 18,
                 }}>
                 Загруженные
               </Text>
+            </View>
+            <View style={{marginRight:15}}></View>
             </View>
             <View
               style={{
@@ -508,6 +513,8 @@ export default class DownloadsComponent extends React.Component {
                   </Text>
                   <Text
                     style={{
+                      height:14,
+                      width:41,
                       fontSize: 12,
                       fontWeight: '300',
                       marginLeft: 53,
@@ -629,6 +636,8 @@ export default class DownloadsComponent extends React.Component {
                   </Text>
                   <Text
                     style={{
+                      height:14,
+                      width:41,
                       fontSize: 12,
                       fontWeight: '300',
                       marginLeft: 53,
@@ -749,6 +758,8 @@ export default class DownloadsComponent extends React.Component {
                   </Text>
                   <Text
                     style={{
+                      height:14,
+                      width:41,
                       fontSize: 12,
                       fontWeight: '300',
                       marginLeft: 53,
@@ -869,6 +880,8 @@ export default class DownloadsComponent extends React.Component {
                   </Text>
                   <Text
                     style={{
+                      height:14,
+                      width:41,
                       fontSize: 12,
                       fontWeight: '300',
                       marginLeft: 53,

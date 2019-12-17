@@ -107,6 +107,7 @@ export default class DownloadsaudioComponent extends React.Component {
             flexDirection: 'row',
             alignItems: 'center',
           }}>
+          <View>
           <TouchableOpacity
             hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}
             style={{width: 12, height: 7.4}}
@@ -115,6 +116,8 @@ export default class DownloadsaudioComponent extends React.Component {
             }}>
             <Image source={Icon.BACK} style={{tintColor: '#ffffff'}} />
           </TouchableOpacity>
+          </View>
+          <View style={{flex:1}}>
           <Text
             style={{
               fontSize: 16,
@@ -122,11 +125,13 @@ export default class DownloadsaudioComponent extends React.Component {
               fontFamily: 'SFUIText-Regular',
               textAlign: 'center',
               //justifyContent:'center',alignSelf:'center'
-              width: 335,
-              height: 18,
+              // width: 335,
+              // height: 18,
             }}>
             Загруженные аудиозаписи
           </Text>
+        </View>
+        <View style={{marginRight:14}}></View>
         </View>
 <ScrollView>
         <View

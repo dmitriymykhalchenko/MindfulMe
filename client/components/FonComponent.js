@@ -202,17 +202,25 @@ class FonComponent extends React.Component {
               // flexShrink: 2,
             }}>
             <Slider
+            style={{width: w, height: 10,
+              // color:'red',
+              // backgroundColor:'red'
+
+
+            }}
+
               minimumValue={1}
               maximumValue={100}
-              step={4}
+              step={0.4}
               thumbTintColor={'#1488cc'}
+              //thumbTintColor={'transparent'}
               customMinimumTrack={
                 <LinearGradient
-                  colors={["transparent"
-                    // 'rgba(0, 0, 0, 0)',
-                    // 'rgba(15, 12, 41, 0.33)',
-                    // 'rgba(15, 12, 41, 0.9)',
-                    //  '#2b32b2', '#1488cc'
+                  colors={[
+                    'rgba(0, 0, 0, 0)',
+                    'rgba(15, 12, 41, 0.33)',
+                    'rgba(15, 12, 41, 0.9)',
+                     '#2b32b2', '#1488cc'
                   ]}
                   style={{
                     width: '100%',
@@ -279,7 +287,7 @@ class FonComponent extends React.Component {
                   onPress={() => {
                     this.props.decrementCounter();
                   }}>
-                  <Image source={Icon.LEFT} style={{tintColor: '#ffffff',backgroundColor:'red',}} />
+                  <Image source={Icon.LEFT} style={{tintColor: '#ffffff',backgroundColor:'transparent',}} />
                 </TouchableOpacity>
 
                 <Text

@@ -223,7 +223,10 @@ export default class WriteComponent extends React.Component {
               placeholder=""
               placeholderTextColor="#f9fafb"
               keyboardType="default"
-              //editable={true}
+              editable={true}
+              multiline={true}
+              maxLength={360}
+              numberOfLines={3}
               style={{
                 width: 236,
                 height: 24,
