@@ -261,6 +261,7 @@ export default class EmailScreen extends React.Component {
             </Text>
           </TouchableOpacity>
         </View>
+        <View>
         <View
           style={{
             paddingTop: 15,
@@ -291,19 +292,21 @@ export default class EmailScreen extends React.Component {
             Создать
           </Text>
         </View>
-        <View style={{position: 'absolute', left: '20%', bottom: 21}}>
-          <Text
-            style={{
-              fontFamily: 'SFUIText-Light',
-              fontSize: 9,
-              //fontWeight: '300',
-              textAlign: 'center',
-              color: '#ababb6',
-            }}>
-            Используя MindSelf, вы соглашаетесь с нашими{' '}
-            <Text style={{textDecorationLine: 'underline'}}>Условиями</Text>
-          </Text>
+        <View style={{marginTop:'24%',marginHorizontal:16,marginBottom:21}}>
+
+        <Text
+          style={{
+            fontFamily: 'SFUIText-Light',
+            fontSize: 9,
+            //fontWeight: '300',
+            textAlign: 'center',
+            color: '#ababb6',
+          }}>
+          Используя MindSelf, вы соглашаетесь с нашими{' '}
+          <Text style={{textDecorationLine: 'underline'}}>Условиями</Text>
+        </Text>
         </View>
+</View>
         </ScrollView>
         </LinearGradient>
         {/*//  */}

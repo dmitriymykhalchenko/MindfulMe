@@ -37,6 +37,8 @@ import LanguageComponent from '../components/LanguageComponent';
 import DownloadsComponent from '../components/DownloadsComponent';
 import DownloadssetsComponent from '../components/DownloadssetsComponent';
 import DownloadsaudioComponent from '../components/DownloadsaudioComponent';
+import IndependentComponent from '../components/IndependentComponent';
+import TimeComponent from '../components/TimeComponent';
 
 // const IMAGE_HEIGHT =
 //   (h - (isIphoneX() ? 74 : 44) - (isIphoneX() ? 70 : 50)) / 3 - (19 + 25 + 13);
@@ -294,8 +296,48 @@ class HomeScreen extends React.Component {
                   meditationScreen: false,
                 });
               }}
+              independentScreen={() => {
+                this.setState({
+                  meditationScreen: false,
+                  independentScreen: true,
+                });
+              }}
             />
           )}
+          {this.state.independentScreen && (
+            <IndependentComponent
+              navigation={navigation}
+              backPressed={() => {
+                this.setState({
+                  meditationScreen: true,
+                  independentScreen: false,
+                });
+              }}
+              timeScreen={() => {
+                this.setState({
+                  independentScreen: false,
+                  timeScreen: true,
+                });
+              }}
+            />
+          )}
+
+
+
+
+          {this.state.timeScreen && (
+            <TimeComponent
+              navigation={navigation}
+              backPressed={() => {
+                this.setState({
+                  independentScreen: true,
+                  timeScreen: false,
+                });
+              }}
+            />
+          )}
+
+
           {this.state.SosScreen && (
             <SosComponent
               navigation={navigation}
@@ -342,6 +384,8 @@ class HomeScreen extends React.Component {
                 downloadsScreen:false,
                 downloadsaudioScreen:false,
                 downloadssetsScreen:false,
+                independentScreen:false,
+                timeScreen:false,
               }); //clean on HomeScreen
               // this.props.navigation.navigate('homeScreen');
             }}>
@@ -380,6 +424,8 @@ class HomeScreen extends React.Component {
                 downloadsScreen:false,
                 downloadsaudioScreen:false,
                 downloadssetsScreen:false,
+                independentScreen:false,
+                timeScreen:false,
 
 
               });
@@ -419,6 +465,8 @@ class HomeScreen extends React.Component {
                 downloadsScreen:false,
                 downloadsaudioScreen:false,
                 downloadssetsScreen:false,
+                independentScreen:false,
+                timeScreen:false,
 
 
               });

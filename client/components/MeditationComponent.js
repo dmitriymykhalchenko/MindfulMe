@@ -392,9 +392,14 @@ export default class MeditationComponent extends React.Component {
                 borderRadius: 8,
               }}>
               <TouchableOpacity
-                onPress={() => {
-                  //this.props.backPressed();
-                }}>
+              onPress={() => {
+                // this.props.navigation.navigate('Setting');
+                // this.setState({
+                //   MeditationScreen: true,
+                //   HomeScreen: false,
+                // });
+                this.props.independentScreen();
+              }}>
                 <Image
                   style={{
                     width: IMAGE_WIDTH,

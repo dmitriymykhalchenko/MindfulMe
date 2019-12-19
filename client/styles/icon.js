@@ -29,6 +29,9 @@ export default Icons = {
   F: require('../img/f.png'),
   DOWNLOADLEAVES: require('../img/downloadleaves.png'),
   DOWNLOADHEART: require('../img/downloadheart.png'),
+  INDEPENDENT: require('../img/independentshape.png'),
+  INDEPENDENTBG: require('../img/indbg.png'),
+  INDHEART: require('../img/indheart.png'),
 
 
 //  RING2: require('../static/images/ring.png')
