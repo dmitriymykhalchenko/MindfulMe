@@ -33,6 +33,15 @@ export default class IndependentComponent extends React.Component {
       isLoading: true,
       dataSource: [],
       showPass: false,
+      heart1:true,
+      heart2:true,
+      heart3:true,
+      heart4:true,
+      heart5:true,
+      heart6:true,
+      heart7:true,
+      heart8:true,
+      heart9:true,
     };
   }
   toggleSwitch() {
@@ -249,12 +258,32 @@ export default class IndependentComponent extends React.Component {
                 </Text>
 
                 <TouchableOpacity
+                onPress={() => {this.setState({heart1: !this.state.heart1})}}
+              //  console.log('this.state.heart - ', this.state.heart);
                   style={{
                     alignSelf: 'flex-end',
                     flex: 1,
                     justifyContent: 'flex-end',
                     marginLeft: 33,
                   }}>
+                  {!this.state.heart1 &&
+                  <Image
+                    source={Icon.INDHEART}
+                    style={{
+                      //backgroundColor:'#1488cc',
+                      resizeMode: 'cover',
+                      justifyContent: 'flex-end',
+                      // //alignItems:'flex-start',
+                      // alignSelf:'flex-start',
+                      // width: 18,
+                      // height: 16,
+                      //marginLeft:31,
+                      //tintColor: '#1488cc',
+                    }}
+                  />
+                }
+                {this.state.heart1 &&
+
                   <Image
                     source={Icon.DOWNLOADHEART}
                     style={{
@@ -269,8 +298,11 @@ export default class IndependentComponent extends React.Component {
                       tintColor: '#1488cc',
                     }}
                   />
+                }
                 </TouchableOpacity>
+
               </View>
+
             </View>
           </View>
           <View
@@ -338,12 +370,32 @@ export default class IndependentComponent extends React.Component {
                 </Text>
 
                 <TouchableOpacity
+                onPress={() => {this.setState({heart2: !this.state.heart2})}}
+
                   style={{
                     alignSelf: 'flex-end',
                     flex: 1,
                     justifyContent: 'flex-end',
                     marginLeft: 33,
                   }}>
+                  {this.state.heart2 &&
+
+                    <Image
+                      source={Icon.DOWNLOADHEART}
+                      style={{
+                        //backgroundColor:'#1488cc',
+                        resizeMode: 'cover',
+                        justifyContent: 'flex-end',
+                        // //alignItems:'flex-start',
+                        // alignSelf:'flex-start',
+                        // width: 18,
+                        // height: 16,
+                        //marginLeft:31,
+                        tintColor: '#1488cc',
+                      }}
+                    />
+                  }
+                  {!this.state.heart2 &&
                   <Image
                     source={Icon.INDHEART}
                     style={{
@@ -358,6 +410,7 @@ export default class IndependentComponent extends React.Component {
                       ////tintColor: '#1488cc',
                     }}
                   />
+                }
                 </TouchableOpacity>
               </View>
             </View>
@@ -427,12 +480,33 @@ export default class IndependentComponent extends React.Component {
                 </Text>
 
                 <TouchableOpacity
+                onPress={() => {this.setState({heart3: !this.state.heart3})}}
+
                   style={{
                     alignSelf: 'flex-end',
                     flex: 1,
                     justifyContent: 'flex-end',
                     marginLeft: 33,
                   }}>
+                  {this.state.heart3 &&
+
+                    <Image
+                      source={Icon.DOWNLOADHEART}
+                      style={{
+                        //backgroundColor:'#1488cc',
+                        resizeMode: 'cover',
+                        justifyContent: 'flex-end',
+                        // //alignItems:'flex-start',
+                        // alignSelf:'flex-start',
+                        // width: 18,
+                        // height: 16,
+                        //marginLeft:31,
+                        tintColor: '#1488cc',
+                      }}
+                    />
+                  }
+                  {!this.state.heart3 &&
+
                   <Image
                     source={Icon.INDHEART}
                     style={{
@@ -447,6 +521,7 @@ export default class IndependentComponent extends React.Component {
                       //tintColor: '#1488cc',
                     }}
                   />
+                }
                 </TouchableOpacity>
               </View>
             </View>
@@ -516,12 +591,32 @@ export default class IndependentComponent extends React.Component {
                 </Text>
 
                 <TouchableOpacity
+                onPress={() => {this.setState({heart4: !this.state.heart4})}}
+
                   style={{
                     alignSelf: 'flex-end',
                     flex: 1,
                     justifyContent: 'flex-end',
                     marginLeft: 33,
                   }}>
+                  {this.state.heart4 &&
+
+                    <Image
+                      source={Icon.DOWNLOADHEART}
+                      style={{
+                        //backgroundColor:'#1488cc',
+                        resizeMode: 'cover',
+                        justifyContent: 'flex-end',
+                        // //alignItems:'flex-start',
+                        // alignSelf:'flex-start',
+                        // width: 18,
+                        // height: 16,
+                        //marginLeft:31,
+                        tintColor: '#1488cc',
+                      }}
+                    />
+                  }
+                  {!this.state.heart4 &&
                   <Image
                     source={Icon.INDHEART}
                     style={{
@@ -536,6 +631,7 @@ export default class IndependentComponent extends React.Component {
                       //tintColor: '#1488cc',
                     }}
                   />
+                }
                 </TouchableOpacity>
               </View>
             </View>
@@ -605,12 +701,32 @@ export default class IndependentComponent extends React.Component {
                 </Text>
 
                 <TouchableOpacity
+                onPress={() => {this.setState({heart5: !this.state.heart5})}}
+
                   style={{
                     alignSelf: 'flex-end',
                     flex: 1,
                     justifyContent: 'flex-end',
                     marginLeft: 33,
                   }}>
+                  {this.state.heart5 &&
+
+                    <Image
+                      source={Icon.DOWNLOADHEART}
+                      style={{
+                        //backgroundColor:'#1488cc',
+                        resizeMode: 'cover',
+                        justifyContent: 'flex-end',
+                        // //alignItems:'flex-start',
+                        // alignSelf:'flex-start',
+                        // width: 18,
+                        // height: 16,
+                        //marginLeft:31,
+                        tintColor: '#1488cc',
+                      }}
+                    />
+                  }
+                  {!this.state.heart5 &&
                   <Image
                     source={Icon.INDHEART}
                     style={{
@@ -625,6 +741,7 @@ export default class IndependentComponent extends React.Component {
                       //tintColor: '#1488cc',
                     }}
                   />
+                }
                 </TouchableOpacity>
               </View>
             </View>
@@ -694,12 +811,32 @@ export default class IndependentComponent extends React.Component {
                 </Text>
 
                 <TouchableOpacity
+                onPress={() => {this.setState({heart6: !this.state.heart6})}}
+
                   style={{
                     alignSelf: 'flex-end',
                     flex: 1,
                     justifyContent: 'flex-end',
                     marginLeft: 33,
                   }}>
+                  {this.state.heart6 &&
+                    <Image
+                      source={Icon.DOWNLOADHEART}
+                      style={{
+                        //backgroundColor:'#1488cc',
+                        resizeMode: 'cover',
+                        justifyContent: 'flex-end',
+                        // //alignItems:'flex-start',
+                        // alignSelf:'flex-start',
+                        // width: 18,
+                        // height: 16,
+                        //marginLeft:31,
+                        tintColor: '#1488cc',
+                      }}
+                    />
+                  }
+                  {!this.state.heart6 &&
+
                   <Image
                     source={Icon.INDHEART}
                     style={{
@@ -714,6 +851,7 @@ export default class IndependentComponent extends React.Component {
                       //tintColor: '#1488cc',
                     }}
                   />
+                }
                 </TouchableOpacity>
               </View>
             </View>
@@ -793,12 +931,31 @@ export default class IndependentComponent extends React.Component {
                   </TouchableOpacity>
                 </View>
                 <TouchableOpacity
+                onPress={() => {this.setState({heart7: !this.state.heart7})}}
+
                   style={{
                     alignSelf: 'flex-end',
                     flex: 1,
                     justifyContent: 'flex-end',
                     marginLeft: 33,
                   }}>
+                  {this.state.heart7 &&
+                    <Image
+                      source={Icon.DOWNLOADHEART}
+                      style={{
+                        //backgroundColor:'#1488cc',
+                        resizeMode: 'cover',
+                        justifyContent: 'flex-end',
+                        // //alignItems:'flex-start',
+                        // alignSelf:'flex-start',
+                        // width: 18,
+                        // height: 16,
+                        //marginLeft:31,
+                        tintColor: '#1488cc',
+                      }}
+                    />
+                  }
+                  {!this.state.heart7 &&
                   <Image
                     source={Icon.INDHEART}
                     style={{
@@ -813,6 +970,7 @@ export default class IndependentComponent extends React.Component {
                       //tintColor: '#1488cc',
                     }}
                   />
+                }
                 </TouchableOpacity>
               </View>
             </View>
@@ -846,7 +1004,7 @@ export default class IndependentComponent extends React.Component {
                     fontFamily: 'SFUIText-Light',
                     color: '#ababb6',
                   }}>
-                  2
+                  8
                 </Text>
               </View>
               <View
@@ -881,12 +1039,15 @@ export default class IndependentComponent extends React.Component {
                 </Text>
 
                 <TouchableOpacity
+                onPress={() => {this.setState({heart8: !this.state.heart8})}}
+
                   style={{
                     alignSelf: 'flex-end',
                     flex: 1,
                     justifyContent: 'flex-end',
                     marginLeft: 33,
                   }}>
+                  {this.state.heart8 &&
                   <Image
                     source={Icon.DOWNLOADHEART}
                     style={{
@@ -900,6 +1061,23 @@ export default class IndependentComponent extends React.Component {
                       tintColor: '#1488cc',
                     }}
                   />
+                }
+                  {!this.state.heart8 &&
+                  <Image
+                    source={Icon.INDHEART}
+                    style={{
+                      //backgroundColor:'#1488cc',
+                      resizeMode: 'cover',
+                      justifyContent: 'flex-end',
+                      // //alignItems:'flex-start',
+                      // alignSelf:'flex-start',
+                      // width: 18,
+                      // height: 16,
+                      //marginLeft:31,
+                      //tintColor: '#1488cc',
+                    }}
+                  />
+                }
                 </TouchableOpacity>
               </View>
             </View>

@@ -32,6 +32,8 @@ export default Icons = {
   INDEPENDENT: require('../img/independentshape.png'),
   INDEPENDENTBG: require('../img/indbg.png'),
   INDHEART: require('../img/indheart.png'),
+  APPLE: require('../img/apple.png'),
+LOCK: require('../img/lock.png'),
 
 
 //  RING2: require('../static/images/ring.png')

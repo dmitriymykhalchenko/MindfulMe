@@ -39,6 +39,7 @@ import DownloadssetsComponent from '../components/DownloadssetsComponent';
 import DownloadsaudioComponent from '../components/DownloadsaudioComponent';
 import IndependentComponent from '../components/IndependentComponent';
 import TimeComponent from '../components/TimeComponent';
+import TransformationComponent from '../components/TransformationComponent';
 
 // const IMAGE_HEIGHT =
 //   (h - (isIphoneX() ? 74 : 44) - (isIphoneX() ? 70 : 50)) / 3 - (19 + 25 + 13);
@@ -359,6 +360,24 @@ class HomeScreen extends React.Component {
                   masterScreen: false,
                 });
               }}
+              transformationScreen={() => {
+                this.setState({
+                  masterScreen: false,
+                  transformationScreen: true,
+                });
+              }}
+            />
+          )}
+          {this.state.transformationScreen && (
+            <TransformationComponent
+              navigation={navigation}
+              backPressed={() => {
+                this.setState({
+                  masterScreen: true,
+                  transformationScreen: false,
+                });
+              }}
+
             />
           )}
 
